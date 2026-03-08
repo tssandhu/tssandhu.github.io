@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tejpal Sandhu · PhD Candidate in Economics</title>
+    <style>
+        /* Simple, clean styling inspired by zhaocheng-zhang.github.io */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50; /* Dark grey-blue, matches reference */
+            background-color: #ffffff;
+            max-width: 900px; /* Slightly wider, like reference */
+            margin: 2rem auto;
+            padding: 0 2.5rem;
+            position: relative;
+        }
+        
+        /* Top right navigation - more to the right */
+        .top-nav {
+            position: absolute;
+            top: -12px;
+            right: 0;
+            display: flex;
+            gap: 2.5rem;
+        }
+        
+        .top-nav a {
+            color: #2c3e50; /* Match body text color */
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 400;
+            transition: color 0.2s;
+            padding: 0.25rem 0;
+            border-bottom: 1px solid transparent; /* Thinner border */
+        }
+        
+        .top-nav a:hover {
+            color: #1a5a9c; /* Darker blue on hover, like reference */
+            border-bottom-color: #1a5a9c;
+        }
+        
+        /* Make only Home link a specific blue (reference uses same color for all links) */
+        .top-nav a:first-child {
+            color: #1a5a9c; /* Standard link blue */
+        }
+        
+        .top-nav a:first-child:hover {
+            color: #0a3a6c;
+            border-bottom-color: #0a3a6c;
+        }
+        
+        /* Profile section - two column layout */
+        .profile-row {
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start; /* Align to top, not center */
+            margin: 3rem 0 2rem 0;
+        }
+        
+        .profile-content {
+            flex: 2;
+        }
+        
+        .profile-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px; /* Slight downward adjustment */
+        }
+        
+        .profile-image img {
+            max-width: 220px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px; /* Slightly more rounded */
+            border: 1px solid #e1e4e8; /* Lighter border */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03); /* Very subtle shadow */
+        }
+        
+        /* Typography */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600; /* Bolder, like reference */
+            letter-spacing: normal;
+            margin-bottom: 1.2rem;
+            color: #1a2b3c; /* Slightly darker for the name */
+            line-height: 1.3;
+        }
+        
+        p {
+            margin: 1rem 0;
+            font-size: 1rem;
+            color: #2c3e50;
+        }
+        
+        .email {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+            color: #1a5a9c; /* Blue link color */
+            background: none; /* No background */
+            padding: 0;
+            border: none;
+            display: inline;
+        }
+        
+        .email:hover {
+            text-decoration: underline;
+        }
+        
+        /* Address block styling (like reference site) */
+        .address-block {
+            margin: 1.5rem 0 1rem 0;
+            padding-left: 0;
+            font-style: normal;
+            line-height: 1.7;
+            color: #3a4b5c;
+        }
+        
+        .address-block strong {
+            font-weight: 600;
+            color: #1a2b3c;
+        }
+        
+        /* Red links row under profile - changed to blue like reference */
+        .blue-links-row {
+            margin: 1.5rem 0 1.2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            align-items: center;
+            border-top: 1px solid #eaecef;
+            padding-top: 1.5rem;
+        }
+        
+        .blue-links-row a {
+            color: #1a5a9c; /* Standard blue */
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .blue-links-row a:hover {
+            color: #0a3a6c;
+            text-decoration: underline;
+        }
+        
+        .blue-links-row span.separator {
+            color: #95a5a6; /* Grey separator */
+            font-weight: 300;
+            font-size: 1.1rem;
+        }
+        
+        /* Placement and references */
+        .placement {
+            margin: 1.2rem 0 0.8rem 0;
+            font-size: 1rem;
+            color: #2c3e50;
+        }
+        
+        .references {
+            margin: 0.5rem 0 1.5rem 0;
+            font-size: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .references a {
+            color: #1a5a9c; /* Blue links */
+            text-decoration: none;
+        }
+        
+        .references a:hover {
+            text-decoration: underline;
+            color: #0a3a6c;
+        }
+        
+        .reference-sep {
+            color: #bdc3c7; /* Lighter separator */
+            font-weight: 300;
+        }
+        
+        /* Social icons at bottom center */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin: 2.5rem 0 1rem 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eaecef;
+        }
+        
+        .social-icons a {
+            color: #5a6b7c; /* Medium grey-blue */
+            text-decoration: none;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.85rem;
+        }
+        
+        .social-icons a:hover {
+            color: #1a5a9c; /* Blue on hover */
+            transform: translateY(-2px);
+        }
+        
+        .social-icons a svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+        
+        /* Responsive */
+        @media (max-width: 650px) {
+            body {
+                margin: 1.5rem auto;
+                padding: 0 1.5rem;
+            }
+            
+            .top-nav {
+                position: static;
+                justify-content: center;
+                margin-bottom: 1.5rem;
+                gap: 1.5rem;
+            }
+            
+            .profile-row {
+                flex-direction: column-reverse;
+                gap: 1.5rem;
+                margin-top: 1rem;
+            }
+            
+            .profile-image {
+                justify-content: center;
+                margin-top: 0;
+            }
+            
+            .profile-image img {
+                max-width: 200px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+            
+            .blue-links-row {
+                justify-content: center;
+            }
+            
+            .references {
+                justify-content: center;
+            }
+            
+            .address-block {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top right navigation - Home, Research, CV, Teaching -->
+    <div class="top-nav">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="cv.pdf">CV</a>
+        <a href="teaching.html">Teaching</a>
+    </div>
+    
+    <!-- Profile section with image on right -->
+    <div class="profile-row">
+        <div class="profile-content">
+            <h1>Tejpal Sandhu</h1>
+            
+            <p>
+                I am a Ph.D. candidate at the University of Essex. My research interests include microeconomic theory, industrial organisation and auctions.
+            </p>
+                        
+            <p>
+                I am on the 2025-2026 academic job market.
+            </p>
+            
+            <!-- Address block styled like reference site -->
+            <div class="address-block">
+                <strong>Department of Economics</strong><br>
+                University of Essex<br>
+                Wivenhoe Park<br>
+                Colchester, CO4 3SQ<br>
+                United Kingdom<br>
+                Email: <a href="mailto:tpsandhu.eco@gmail.com" class="email">tpsandhu.eco [at] gmail.com</a>
+            </div>
+        </div>
+        
+        <div class="profile-image">
+            <img src="2.jpg" alt="Tejpal Sandhu" onerror="this.src='https://via.placeholder.com/220x260?text=Photo'">
+        </div>
+    </div>
+    
+    <!-- Blue links row: Job Market Paper | Research | CV -->
+    <div class="blue-links-row">
+        <a href="#">Job Market Paper</a>
+        <span class="separator">|</span>
+        <a href="#">Research</a>
+        <span class="separator">|</span>
+        <a href="#">CV</a>
+    </div>
+    
+    <!-- Placement director -->
+    <div class="placement">
+        <strong>Placement director:</strong> Dr Lucas Siga
+    </div>
+    
+    <!-- References - now with blue links -->
+    <div class="references">
+        <strong>References:</strong> 
+        <a href="#">Prof Daniel F Garrett</a>
+        <span class="reference-sep">|</span>
+        <a href="#">Dr Albin Erlanson</a>
+    </div>
+    
+    <!-- Social icons at bottom center -->
+    <div class="social-icons">
+        <a href="mailto:tpsandhu.eco@gmail.com" title="Email">
+            <svg viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            <span>Email</span>
+        </a>
+        <a href="https://github.com/tssandhu" target="_blank" title="GitHub">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.9-.01-1.74-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1.01.07 1.54 1.03 1.54 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.8-.22 1.66-.33 2.5-.33s1.7.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .26.18.58.69.48 3.97-1.32 6.83-5.07 6.83-9.49C22 6.48 17.52 2 12 2z"/>
+            </svg>
+            <span>GitHub</span>
+        </a>
+        <a href="https://scholar.google.com/" target="_blank" title="Google Scholar">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2L2 7v10l10 5 10-5V7l-10-5zm0 2.5l7.5 3.7-7.5 3.7-7.5-3.7L12 4.5zm-8 8.5v-5.1l8 4v5.1l-8-4zm16 0l-8 4v-5.1l8-4v5.1z"/>
+            </svg>
+            <span>Scholar</span>
+        </a>
+        <a href="https://twitter.com/yourusername" target="_blank" title="X (Twitter)">
+            <svg viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            <span>X</span>
+        </a>
+    </div>
+</body>
+</html>
