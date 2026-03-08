@@ -15,15 +15,16 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #2c3e50; /* Dark grey-blue, matches reference */
+            color: #2c3e50;
             background-color: #ffffff;
-            max-width: 900px; /* Slightly wider, like reference */
+            max-width: 900px;
             margin: 2rem auto;
             padding: 0 2.5rem;
             position: relative;
+            min-height: 100vh;
         }
         
-        /* Top right navigation - more to the right */
+        /* Top right navigation - larger font size */
         .top-nav {
             position: absolute;
             top: -12px;
@@ -33,36 +34,41 @@
         }
         
         .top-nav a {
-            color: #2c3e50; /* Match body text color */
+            color: #2c3e50;
             text-decoration: none;
-            font-size: 1rem;
-            font-weight: 400;
-            transition: color 0.2s;
-            padding: 0.25rem 0;
-            border-bottom: 1px solid transparent; /* Thinner border */
+            font-size: 1.2rem; /* Increased from 1rem */
+            font-weight: 500;
+            transition: all 0.2s;
+            padding: 0.5rem 0; /* Slightly more padding */
+            border-bottom: 1px solid transparent;
         }
         
         .top-nav a:hover {
-            color: #1a5a9c; /* Darker blue on hover, like reference */
+            color: #1a5a9c;
             border-bottom-color: #1a5a9c;
         }
         
-        /* Make only Home link a specific blue (reference uses same color for all links) */
+        /* Make only Home link with dark red (cherry) background, white font */
         .top-nav a:first-child {
-            color: #1a5a9c; /* Standard link blue */
+            color: white !important;
+            background-color: #8B0000; /* Dark red/cherry color */
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            border-bottom: none;
         }
         
         .top-nav a:first-child:hover {
-            color: #0a3a6c;
-            border-bottom-color: #0a3a6c;
+            background-color: #6B0000; /* Darker cherry on hover */
+            color: white !important;
+            border-bottom: none;
         }
         
         /* Profile section - two column layout */
         .profile-row {
             display: flex;
             gap: 3rem;
-            align-items: flex-start; /* Align to top, not center */
-            margin: 3rem 0 2rem 0;
+            align-items: flex-start;
+            margin: 4rem 0 2rem 0; /* Increased top margin for scrolling */
         }
         
         .profile-content {
@@ -73,25 +79,25 @@
             flex: 1;
             display: flex;
             justify-content: flex-end;
-            margin-top: 10px; /* Slight downward adjustment */
+            margin-top: 40px; /* Increased to move photo down */
         }
         
         .profile-image img {
             max-width: 220px;
             width: 100%;
             height: auto;
-            border-radius: 8px; /* Slightly more rounded */
-            border: 1px solid #e1e4e8; /* Lighter border */
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03); /* Very subtle shadow */
+            border-radius: 8px;
+            border: 1px solid #e1e4e8;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
         }
         
         /* Typography */
         h1 {
             font-size: 2.2rem;
-            font-weight: 600; /* Bolder, like reference */
+            font-weight: 600;
             letter-spacing: normal;
             margin-bottom: 1.2rem;
-            color: #1a2b3c; /* Slightly darker for the name */
+            color: #8B0000; /* Dark red/cherry color for name */
             line-height: 1.3;
         }
         
@@ -101,21 +107,22 @@
             color: #2c3e50;
         }
         
+        /* Simple email style - no special formatting */
         .email {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 1rem;
-            color: #1a5a9c; /* Blue link color */
-            background: none; /* No background */
+            color: #2c3e50; /* Same as body text */
+            text-decoration: none;
+            font-family: inherit; /* Regular font, not monospace */
+            background: none;
             padding: 0;
             border: none;
-            display: inline;
         }
         
         .email:hover {
             text-decoration: underline;
+            color: #8B0000; /* Cherry color on hover */
         }
         
-        /* Address block styling (like reference site) */
+        /* Address block styling */
         .address-block {
             margin: 1.5rem 0 1rem 0;
             padding-left: 0;
@@ -129,9 +136,9 @@
             color: #1a2b3c;
         }
         
-        /* Red links row under profile - changed to blue like reference */
+        /* Links row under profile - blue like reference */
         .blue-links-row {
-            margin: 1.5rem 0 1.2rem 0;
+            margin: 2rem 0 1.5rem 0; /* Increased margin for scrolling */
             display: flex;
             flex-wrap: wrap;
             gap: 1.8rem;
@@ -141,7 +148,7 @@
         }
         
         .blue-links-row a {
-            color: #1a5a9c; /* Standard blue */
+            color: #1a5a9c;
             text-decoration: none;
             font-size: 1.1rem;
             font-weight: 500;
@@ -154,20 +161,20 @@
         }
         
         .blue-links-row span.separator {
-            color: #95a5a6; /* Grey separator */
+            color: #95a5a6;
             font-weight: 300;
             font-size: 1.1rem;
         }
         
         /* Placement and references */
         .placement {
-            margin: 1.2rem 0 0.8rem 0;
+            margin: 1.5rem 0 1rem 0; /* Increased margin */
             font-size: 1rem;
             color: #2c3e50;
         }
         
         .references {
-            margin: 0.5rem 0 1.5rem 0;
+            margin: 1rem 0 2rem 0; /* Increased margin */
             font-size: 1rem;
             display: flex;
             flex-wrap: wrap;
@@ -176,7 +183,7 @@
         }
         
         .references a {
-            color: #1a5a9c; /* Blue links */
+            color: #1a5a9c;
             text-decoration: none;
         }
         
@@ -186,7 +193,7 @@
         }
         
         .reference-sep {
-            color: #bdc3c7; /* Lighter separator */
+            color: #bdc3c7;
             font-weight: 300;
         }
         
@@ -195,30 +202,30 @@
             display: flex;
             justify-content: center;
             gap: 2.5rem;
-            margin: 2.5rem 0 1rem 0;
+            margin: 3rem 0 2rem 0; /* Increased margins */
             padding-top: 1.5rem;
             border-top: 1px solid #eaecef;
         }
         
         .social-icons a {
-            color: #5a6b7c; /* Medium grey-blue */
+            color: #5a6b7c;
             text-decoration: none;
             transition: all 0.2s;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 0.3rem;
-            font-size: 0.85rem;
+            font-size: 0.9rem; /* Slightly larger */
         }
         
         .social-icons a:hover {
-            color: #1a5a9c; /* Blue on hover */
+            color: #8B0000; /* Cherry color on hover */
             transform: translateY(-2px);
         }
         
         .social-icons a svg {
-            width: 22px;
-            height: 22px;
+            width: 24px; /* Slightly larger */
+            height: 24px;
             fill: currentColor;
         }
         
@@ -232,8 +239,13 @@
             .top-nav {
                 position: static;
                 justify-content: center;
-                margin-bottom: 1.5rem;
-                gap: 1.5rem;
+                margin-bottom: 2rem;
+                gap: 1.2rem;
+                flex-wrap: wrap;
+            }
+            
+            .top-nav a:first-child {
+                padding: 0.4rem 0.8rem;
             }
             
             .profile-row {
@@ -244,7 +256,7 @@
             
             .profile-image {
                 justify-content: center;
-                margin-top: 0;
+                margin-top: 20px; /* Adjusted for mobile */
             }
             
             .profile-image img {
@@ -292,7 +304,7 @@
                 I am on the 2025-2026 academic job market.
             </p>
             
-            <!-- Address block styled like reference site -->
+            <!-- Address block -->
             <div class="address-block">
                 <strong>Department of Economics</strong><br>
                 University of Essex<br>
@@ -322,7 +334,7 @@
         <strong>Placement director:</strong> Dr Lucas Siga
     </div>
     
-    <!-- References - now with blue links -->
+    <!-- References -->
     <div class="references">
         <strong>References:</strong> 
         <a href="#">Prof Daniel F Garrett</a>
