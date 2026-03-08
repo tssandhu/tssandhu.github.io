@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name · PhD Candidate in Economics</title>
+    <style>
+        /* --- Global Styles & Variables (Inspired by Clean Academic Design) --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1e293b; /* A soft, dark blue-grey for text */
+            background-color: #ffffff;
+            max-width: 1000px; /* Comfortable reading width */
+            margin: 0 auto;
+            padding: 2rem 2.5rem;
+        }
+
+        h1, h2, h3 {
+            font-weight: 500; /* Medium weight, clean look */
+            color: #0f172a; /* Slightly darker for headings */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.25rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 2.5rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e2e8f0; /* Light grey separator */
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin: 1.8rem 0 0.8rem 0;
+            font-weight: 600; /* Slightly bolder for subsections */
+        }
+
+        a {
+            color: #2563eb; /* A clean, professional blue */
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        /* --- Layout Components --- */
+        .profile-header {
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+            margin: 1.5rem 0 2.5rem 0;
+        }
+
+        .profile-info {
+            flex: 2;
+        }
+
+        .profile-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .profile-image img {
+            max-width: 220px;
+            width: 100%;
+            height: auto;
+            border-radius: 4px; /* Slightly rounded corners */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+        }
+
+        .photo-credit {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 0.25rem;
+            text-align: right;
+        }
+
+        .job-market-tag {
+            display: inline-block;
+            background-color: #e6f0ff; /* Very light blue */
+            color: #1e3a8a;
+            padding: 0.2rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin: 1rem 0;
+        }
+
+        .contact-line {
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* --- Research & Teaching Listings (Clean, readable blocks) --- */
+        .paper-item {
+            margin-bottom: 2rem;
+        }
+
+        .paper-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .paper-authors {
+            font-size: 0.95rem;
+            color: #475569;
+            margin: 0.2rem 0;
+        }
+
+        .paper-venue {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: #64748b;
+            margin-bottom: 0.3rem;
+        }
+
+        .paper-abstract {
+            font-size: 0.95rem;
+            color: #334155;
+            margin-top: 0.5rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #e2e8f0; /* Subtle indicator for abstract */
+        }
+
+        .teaching-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .teaching-course {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #0f172a;
+        }
+
+        .teaching-details {
+            font-size: 0.95rem;
+            color: #475569;
+            margin: 0.2rem 0 0.2rem 0;
+        }
+
+        .teaching-links a, .material-links a {
+            margin-right: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .material-links {
+            margin-top: 0.3rem;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+            margin: 2rem 0;
+        }
+
+        /* --- Footer / Update Info --- */
+        .footer-note {
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.5rem;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 700px) {
+            body {
+                padding: 1.5rem;
+            }
+
+            .profile-header {
+                flex-direction: column-reverse;
+                gap: 1.5rem;
+            }
+
+            .profile-image {
+                text-align: center;
+            }
+
+            .profile-image img {
+                max-width: 200px;
+            }
+
+            h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .photo-credit {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Name -->
+    <h1>Your Full Name</h1>
+
+    <!-- Profile Section: Info and Image -->
+    <div class="profile-header">
+        <div class="profile-info">
+            <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">
+                I am a PhD candidate in Economics at <strong>Your University</strong>.
+            </p>
+            <p>
+                Prior to [University], I received my [Degree] from [Previous University] in [Subject].
+            </p>
+            <p>
+                My research interests are in <strong>field 1, field 2, and field 3</strong>. 
+                My current projects focus on [brief description of research focus]. 
+                I am fortunate to be advised by <a href="#">Professor One</a> and <a href="#">Professor Two</a>.
+            </p>
+
+            <!-- Job Market Tag -->
+            <div class="job-market-tag">
+                📢 I am on the academic job market in 2025-26.
+            </div>
+
+            <!-- CV and Contact -->
+            <p>
+                You can find my <a href="#">CV here</a>.
+            </p>
+            <p class="contact-line">
+                You can contact me at <a href="mailto:your.email@university.edu">your.email@university.edu</a>.
+            </p>
+        </div>
+
+        <div class="profile-image">
+            <!-- Replace 'your-photo.jpg' with your actual photo file name -->
+            <img src="your-photo.jpg" alt="Your Name" onerror="this.src='https://via.placeholder.com/220x260?text=Photo'">
+            <div class="photo-credit">Photo by [Your Name or Photographer]</div>
+        </div>
+    </div>
+
+    <!-- ========== RESEARCH SECTION ========== -->
+    <h2>Research</h2>
+
+    <!-- Work in Progress Subsection -->
+    <h3>Work in Progress</h3>
+
+    <div class="paper-item">
+        <div class="paper-title">Title of Your Job Market Paper</div>
+        <div class="paper-authors">(Job Market Paper)</div>
+        <div class="paper-abstract">
+            <strong>Abstract:</strong> This is where you place the abstract for your job market paper. Describe the research question, methodology, and key findings in a few clear sentences. This gives readers a quick overview of your main work.
+        </div>
+    </div>
+
+    <div class="paper-item">
+        <div class="paper-title">Another Working Paper Title</div>
+        <div class="paper-authors">with Co-author Name</div>
+        <div class="paper-abstract">
+            <strong>Abstract:</strong> A brief description of this paper. Explain its contribution and main results. Keep it concise but informative.
+        </div>
+    </div>
+
+    <!-- Publications Subsection -->
+    <h3>Publications</h3>
+
+    <div class="paper-item">
+        <div class="paper-title">Title of Published Paper</div>
+        <div class="paper-authors">with Co-author(s) Name(s)</div>
+        <div class="paper-venue"><em>Journal Name</em>, Year, Volume(Issue), Pages</div>
+        <div class="paper-abstract">
+            <strong>Abstract:</strong> A short summary of the published paper. You can use the journal's official abstract.
+        </div>
+    </div>
+
+    <!-- ========== TEACHING SECTION ========== -->
+    <h2>Teaching</h2>
+
+    <p>
+        I am passionate about teaching [your subjects]. My goal is to [describe your teaching philosophy briefly]. 
+    </p>
+
+    <!-- Optional: Teaching Awards -->
+    <p>
+        <strong>Teaching Awards & Recognition</strong><br>
+        • University Name, Department: Description of Award (Year)<br>
+        • University Name: Another Recognition (Year)
+    </p>
+
+    <!-- Teaching Materials / Courses -->
+    <h3>Teaching Materials</h3>
+
+    <div class="teaching-item">
+        <div class="teaching-course">ECON 101: Course Title</div>
+        <div class="teaching-details">University Name | Level | Term</div>
+        <div class="teaching-details">Role: Teaching Assistant</div>
+        <div class="material-links">
+            <a href="#">[teaching evaluations]</a>
+            <a href="#">[section notes]</a>
+            <a href="#">[data sets]</a>
+        </div>
+    </div>
+
+    <div class="teaching-item">
+        <div class="teaching-course">ECON 202: Another Course</div>
+        <div class="teaching-details">University Name | Level | Term</div>
+        <div class="teaching-details">Role: Course Designer & Teaching Assistant</div>
+        <div class="material-links">
+            <a href="#">[teaching evaluations]</a>
+            <a href="#">[section notes]</a>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <div class="footer-note">
+        页面更新时间：March 2026 <!-- Kept the original style from reference -->
+    </div>
+
+</body>
+</html>
