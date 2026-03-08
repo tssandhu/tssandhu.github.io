@@ -17,14 +17,17 @@
             line-height: 1.6;
             color: #333333;
             background-color: #ffffff;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 2rem;
+            height: 100vh;
+            overflow-y: auto;
+            scroll-behavior: smooth;
         }
         
         /* Cherry color strip at top */
         .cherry-strip {
-            background-color: #8B0000; /* Cherry color */
+            background-color: #8B0000;
             width: 100%;
             position: fixed;
             top: 0;
@@ -35,7 +38,7 @@
         }
         
         .strip-content {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0.8rem 2rem;
             display: flex;
@@ -43,13 +46,13 @@
             align-items: center;
         }
         
-        /* Name on top left - moved to corner */
+        /* Name on top left - moved to corner - made thinner */
         .site-title {
             font-size: 1.8rem;
-            font-weight: 600;
+            font-weight: 400; /* Changed from 600 to 400 (thinner) */
             color: white;
             letter-spacing: 0.5px;
-            margin-left: -1rem; /* Move to left corner */
+            margin-left: -1rem;
         }
         
         /* Top right navigation - moved to corner */
@@ -57,7 +60,7 @@
             display: flex;
             gap: 2rem;
             align-items: center;
-            margin-right: -1rem; /* Move to right corner */
+            margin-right: -1rem;
         }
         
         .top-nav a {
@@ -78,7 +81,7 @@
             font-weight: 700;
         }
         
-        /* Inactive Research link - greyed out but still clickable */
+        /* Inactive Research link */
         .top-nav a.inactive-link {
             opacity: 0.6;
             position: relative;
@@ -101,7 +104,7 @@
             white-space: nowrap;
         }
         
-        /* Search icon - white and clearly visible */
+        /* Search icon */
         .search-icon {
             color: white;
             font-size: 1.4rem;
@@ -129,22 +132,36 @@
             fill: white;
         }
         
-        /* Main content - add top padding for fixed strip */
+        /* Main content */
         .main-content {
-            margin-top: 80px; /* Space for fixed cherry strip */
-            padding: 2rem 0;
+            margin-top: 80px;
+            padding: 1rem 0 2rem 0;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
         }
         
-        /* Profile section - photo on left */
+        /* Welcome heading - bold black */
+        .welcome-heading {
+            font-size: 2rem;
+            font-weight: 700; /* Bold */
+            color: #000000; /* Black */
+            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Profile section */
         .profile-section {
             display: flex;
-            gap: 3rem;
-            margin-bottom: 2.5rem;
-            align-items: flex-start;
+            gap: 2.5rem;
+            align-items: center;
+            margin: 0.5rem 0 1rem 0;
+            flex: 0 0 auto;
         }
         
         .profile-image {
-            flex: 0 0 280px; /* Fixed width for photo */
+            flex: 0 0 260px;
+            margin-top: 10px;
         }
         
         .profile-image img {
@@ -160,12 +177,12 @@
         }
         
         p {
-            margin: 1rem 0;
-            font-size: 1.05rem;
+            margin: 0.8rem 0;
+            font-size: 1rem;
             color: #444444;
         }
         
-        /* Cherry color for CV and email links */
+        /* Cherry color links */
         .cherry-link {
             color: #8B0000;
             text-decoration: none;
@@ -181,7 +198,7 @@
         h2 {
             font-size: 1.8rem;
             font-weight: 600;
-            color: #8B0000; /* Cherry color for section headings */
+            color: #8B0000;
             margin: 2rem 0 1rem 0;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid #8B0000;
@@ -190,11 +207,16 @@
         h3 {
             font-size: 1.4rem;
             font-weight: 600;
-            color: #8B0000; /* Cherry color for subsection headings */
+            color: #8B0000;
             margin: 1.5rem 0 0.8rem 0;
         }
         
-        /* INACTIVE RESEARCH SECTION STYLES */
+        /* Research section */
+        .research-section {
+            margin-top: 2rem;
+            padding-top: 1rem;
+        }
+        
         .inactive-section {
             opacity: 0.6;
             position: relative;
@@ -232,7 +254,7 @@
             color: #666;
         }
         
-        /* Paper titles in cherry (for when active) */
+        /* Paper titles */
         .paper-title {
             font-size: 1.2rem;
             font-weight: 600;
@@ -253,23 +275,15 @@
             margin-bottom: 0.3rem;
         }
         
-        .paper-abstract {
-            font-size: 0.95rem;
-            color: #444444;
-            margin: 0.5rem 0 1.5rem 0;
-            padding-left: 0.5rem;
-            border-left: 3px solid #8B0000;
-        }
-        
-        /* Teaching items - updated styling */
+        /* Teaching items */
         .teaching-item {
             margin-bottom: 2rem;
         }
         
         .teaching-course {
-            font-weight: 700; /* Bold */
+            font-weight: 700;
             font-size: 1.2rem;
-            color: #000000; /* Black */
+            color: #000000;
             margin-bottom: 0.2rem;
         }
         
@@ -281,8 +295,8 @@
         }
         
         .teaching-role {
-            font-weight: 700; /* Bold */
-            color: #000000; /* Black */
+            font-weight: 700;
+            color: #000000;
             margin-top: 0.1rem;
         }
         
@@ -295,22 +309,7 @@
             font-weight: 500;
         }
         
-        .material-links {
-            margin-top: 0.3rem;
-        }
-        
-        .material-links a {
-            color: #8B0000;
-            text-decoration: none;
-            margin-right: 1rem;
-            font-size: 0.9rem;
-        }
-        
-        .material-links a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Advisor names */
+        /* Advisor links */
         .advisor-link {
             color: #8B0000;
             text-decoration: none;
@@ -323,12 +322,21 @@
         
         /* Footer */
         .footer-note {
-            margin-top: 3rem;
+            margin-top: 2rem;
             padding-top: 1.5rem;
             border-top: 1px solid #e0e0e0;
             text-align: center;
             font-size: 0.9rem;
             color: #777777;
+        }
+        
+        /* Scroll indicator */
+        .scroll-indicator {
+            text-align: center;
+            margin-top: 1rem;
+            color: #8B0000;
+            font-size: 0.9rem;
+            opacity: 0.7;
         }
         
         /* Responsive */
@@ -340,33 +348,32 @@
             }
             
             .site-title {
-                margin-left: 0; /* Reset on mobile */
+                margin-left: 0;
             }
             
             .top-nav {
-                margin-right: 0; /* Reset on mobile */
+                margin-right: 0;
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 1rem;
             }
             
-            .top-nav a.inactive-link::after {
-                top: -15px;
-                right: -10px;
-            }
-            
             .profile-section {
                 flex-direction: column;
+                gap: 1.5rem;
             }
             
             .profile-image {
-                flex: 0 0 auto;
-                max-width: 250px;
+                max-width: 240px;
                 margin: 0 auto;
             }
             
             .main-content {
-                margin-top: 120px; /* More space for stacked strip on mobile */
+                margin-top: 120px;
+            }
+            
+            .welcome-heading {
+                text-align: center;
             }
         }
         
@@ -379,17 +386,8 @@
                 gap: 0.8rem;
             }
             
-            .top-nav a {
-                font-size: 1rem;
-            }
-            
-            .top-nav a.inactive-link::after {
-                font-size: 0.6rem;
-                padding: 1px 3px;
-            }
-            
-            .search-icon {
-                font-size: 1.2rem;
+            .welcome-heading {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -398,16 +396,16 @@
     <!-- Cherry color strip at top -->
     <div class="cherry-strip">
         <div class="strip-content">
-            <!-- Name on top left - moved to corner -->
+            <!-- Name on top left - thinner now -->
             <div class="site-title">Tejpal S Sandhu</div>
             
-            <!-- Top right navigation and search - moved to corner -->
+            <!-- Top right navigation and search -->
             <div class="top-nav">
                 <a href="index.html">Home</a>
                 <a href="#" class="inactive-link">Research</a>
                 <a href="#teaching">Teaching</a>
                 
-                <!-- Search icon - white and clearly visible -->
+                <!-- Search icon -->
                 <button class="search-icon" title="Search">
                     <svg viewBox="0 0 24 24" width="20" height="20">
                         <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
@@ -419,10 +417,13 @@
     
     <!-- Main content -->
     <div class="main-content">
+        <!-- Welcome heading - bold black -->
+        <div class="welcome-heading">Welcome!</div>
+        
         <!-- Profile section with photo on left -->
         <div class="profile-section">
             <div class="profile-image">
-                <img src="2.jpg" alt="Tejpal S Sandhu" onerror="this.src='https://via.placeholder.com/280x320?text=Photo'">
+                <img src="2.jpg" alt="Tejpal S Sandhu" onerror="this.src='https://via.placeholder.com/260x300?text=Photo'">
             </div>
             
             <div class="profile-info">
@@ -430,7 +431,7 @@
                     I am a PhD candidate in Economics at the <strong>University of Essex</strong>. I also completed my MSc and MRes here. My research interests include <strong>microeconomic theory, industrial organisation, and auctions</strong>.
                 </p>
                 
-                <!-- CV and Email in cherry color - JOB MARKET LINE REMOVED -->
+                <!-- CV and Email links -->
                 <p>
                     📄 You can find my <a href="TS_CV" class="cherry-link">CV here</a>.
                 </p>
@@ -450,84 +451,91 @@
             </div>
         </div>
         
-        <!-- ========== RESEARCH SECTION - INACTIVE ========== -->
-        <div class="inactive-section">
-            <div class="inactive-badge">COMING SOON</div>
-            
-            <h2>Research</h2>
-            
-            <div class="coming-soon-message">
-                <p>📚 Research section is currently being updated.</p>
-                <p>Paper details and abstracts will appear here soon.</p>
-                <p style="font-size: 0.9rem; margin-top: 1rem;">Check back later for working papers and publications.</p>
-            </div>
-            
-            <!-- Placeholder structure (greyed out) -->
-            <h3 style="opacity: 0.7;">Work in Progress</h3>
-            
-            <div style="opacity: 0.5;">
-                <div class="paper-item">
-                    <div class="paper-title">Job Market Paper Title</div>
-                    <div class="paper-authors">(Job Market Paper)</div>
+        <!-- Subtle scroll indicator -->
+        <div class="scroll-indicator">
+            ▼ Scroll down for Research & Teaching ▼
+        </div>
+        
+        <!-- ========== RESEARCH SECTION ========== -->
+        <div class="research-section">
+            <div class="inactive-section">
+                <div class="inactive-badge">COMING SOON</div>
+                
+                <h2>Research</h2>
+                
+                <div class="coming-soon-message">
+                    <p>📚 Research section is currently being updated.</p>
+                    <p>Paper details and abstracts will appear here soon.</p>
+                    <p style="font-size: 0.9rem; margin-top: 1rem;">Check back later for working papers and publications.</p>
                 </div>
                 
-                <div class="paper-item">
-                    <div class="paper-title">Another Working Paper</div>
-                    <div class="paper-authors">with Co-author Name</div>
+                <!-- Placeholder structure -->
+                <h3 style="opacity: 0.7;">Work in Progress</h3>
+                
+                <div style="opacity: 0.5;">
+                    <div class="paper-item">
+                        <div class="paper-title">Job Market Paper Title</div>
+                        <div class="paper-authors">(Job Market Paper)</div>
+                    </div>
+                    
+                    <div class="paper-item">
+                        <div class="paper-title">Another Working Paper</div>
+                        <div class="paper-authors">with Co-author Name</div>
+                    </div>
+                </div>
+                
+                <h3 style="opacity: 0.7; margin-top: 1.5rem;">Publications</h3>
+                
+                <div style="opacity: 0.5;">
+                    <div class="paper-item">
+                        <div class="paper-title">Published Paper Title</div>
+                        <div class="paper-authors">with Co-author(s)</div>
+                        <div class="paper-venue"><em>Journal Name</em>, Year</div>
+                    </div>
                 </div>
             </div>
             
-            <h3 style="opacity: 0.7; margin-top: 1.5rem;">Publications</h3>
+            <!-- ========== TEACHING SECTION ========== -->
+            <h2 id="teaching">Teaching</h2>
             
-            <div style="opacity: 0.5;">
-                <div class="paper-item">
-                    <div class="paper-title">Published Paper Title</div>
-                    <div class="paper-authors">with Co-author(s)</div>
-                    <div class="paper-venue"><em>Journal Name</em>, Year</div>
-                </div>
+            <p>
+                I am passionate about teaching microeconomic theory and industrial organisation. My goal is to create an engaging and supportive learning environment where students can develop the confidence to apply complex methods to real-world problems.
+            </p>
+            
+            <h3>Teaching Experience</h3>
+            
+            <!-- EC 202 -->
+            <div class="teaching-item">
+                <div class="teaching-course">EC 202: Microeconomics (Intermediate)</div>
+                <div class="teaching-details">University of Essex | Undergraduate Level | Autumn 2024 & Spring 2025</div>
+                <div class="teaching-role">Role: Assistant Lecturer</div>
             </div>
-        </div>
-        
-        <!-- ========== TEACHING SECTION ========== -->
-        <h2 id="teaching">Teaching</h2>
-        
-        <p>
-            I am passionate about teaching microeconomic theory and industrial organisation. My goal is to create an engaging and supportive learning environment where students can develop the confidence to apply complex methods to real-world problems.
-        </p>
-        
-        <h3>Teaching Experience</h3>
-        
-        <!-- EC 202 -->
-        <div class="teaching-item">
-            <div class="teaching-course">EC 202: Microeconomics (Intermediate)</div>
-            <div class="teaching-details">University of Essex | Undergraduate Level | Autumn 2024 & Spring 2025</div>
-            <div class="teaching-role">Role: Assistant Lecturer</div>
-        </div>
-        
-        <!-- EC 201 -->
-        <div class="teaching-item">
-            <div class="teaching-course">EC 201: Macroeconomics (Intermediate)</div>
-            <div class="teaching-details">University of Essex | Undergraduate Level | Spring 2025</div>
-            <div class="teaching-role">Role: Assistant Lecturer</div>
-        </div>
-        
-        <!-- EC 111 -->
-        <div class="teaching-item">
-            <div class="teaching-course">EC 111: Introduction to Economics</div>
-            <div class="teaching-details">University of Essex | Undergraduate Level | Autumn 2023 & Spring 2024</div>
-            <div class="teaching-role">Role: Assistant Lecturer</div>
-        </div>
-        
-        <!-- EC 115 -->
-        <div class="teaching-item">
-            <div class="teaching-course">EC 115: Methods of Economic Analysis</div>
-            <div class="teaching-details">University of Essex | Undergraduate Level | Autumn 2023 & Spring 2024</div>
-            <div class="teaching-role">Role: Assistant Lecturer</div>
-        </div>
-        
-        <!-- Teaching recognition -->
-        <div class="teaching-highlight">
-            Associate Fellow of the Higher Education Academy (Feb 2025)
+            
+            <!-- EC 201 -->
+            <div class="teaching-item">
+                <div class="teaching-course">EC 201: Macroeconomics (Intermediate)</div>
+                <div class="teaching-details">University of Essex | Undergraduate Level | Spring 2025</div>
+                <div class="teaching-role">Role: Assistant Lecturer</div>
+            </div>
+            
+            <!-- EC 111 -->
+            <div class="teaching-item">
+                <div class="teaching-course">EC 111: Introduction to Economics</div>
+                <div class="teaching-details">University of Essex | Undergraduate Level | Autumn 2023 & Spring 2024</div>
+                <div class="teaching-role">Role: Assistant Lecturer</div>
+            </div>
+            
+            <!-- EC 115 -->
+            <div class="teaching-item">
+                <div class="teaching-course">EC 115: Methods of Economic Analysis</div>
+                <div class="teaching-details">University of Essex | Undergraduate Level | Autumn 2023 & Spring 2024</div>
+                <div class="teaching-role">Role: Assistant Lecturer</div>
+            </div>
+            
+            <!-- Teaching recognition -->
+            <div class="teaching-highlight">
+                Associate Fellow of the Higher Education Academy (Feb 2025)
+            </div>
         </div>
         
         <!-- ========== FOOTER ========== -->
