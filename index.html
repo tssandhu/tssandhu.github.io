@@ -156,41 +156,20 @@
             position: relative;
         }
         
-        /* Welcome heading container - positioned on extreme right */
-        .welcome-container {
-            position: relative;
-            width: 100%;
-            height: 60px; /* Fixed height for positioning */
-            margin-top: 15px; /* Start a little bit down from top of photo */
-            margin-bottom: 5px;
-        }
-        
-        .welcome-heading {
-            position: absolute;
-            right: 0; /* Extreme right */
-            font-size: 2rem;
-            font-weight: 400;
-            color: #1a1a1a;
-            text-align: right;
-            /* Align with halfway of profile - using transform to fine-tune */
-            transform: translateY(50%);
-            /* The top value can be adjusted to align with photo midpoint */
-            top: 10px;
-        }
-        
-        /* Alternative positioning using flex for more precise control */
+        /* Welcome heading - positioned on extreme right and moved down */
         .welcome-wrapper {
             display: flex;
             justify-content: flex-end;
             width: 100%;
-            margin-top: 20px; /* Start down from top */
-            margin-bottom: 5px;
+            margin-top: 60px; /* Increased to move welcome further down */
+            margin-bottom: 10px;
         }
         
-        .welcome-wrapper .welcome-heading {
-            position: static;
-            transform: none;
-            top: auto;
+        .welcome-heading {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #1a1a1a;
+            text-align: right;
         }
         
         /* Profile section */
@@ -204,7 +183,7 @@
         
         .profile-image {
             flex: 0 0 260px;
-            margin-top: 0; /* Reset margin */
+            margin-top: 0;
         }
         
         .profile-image img {
@@ -226,10 +205,9 @@
             line-height: 1.6;
         }
         
-        /* Strong text */
-        strong {
-            font-weight: 600;
-            color: #1a1a1a;
+        /* University and field names - not bold */
+        .university-name, .field-name {
+            font-weight: 400;
         }
         
         /* Cherry color links */
@@ -385,6 +363,23 @@
             color: #666666;
         }
         
+        /* Social media icons */
+        .social-icons {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .social-icons a {
+            margin: 0 12px;
+            font-size: 22px;
+            text-decoration: none;
+            color: #444;
+        }
+        
+        .social-icons a:hover {
+            color: #8B0000;
+        }
+        
         /* Responsive */
         @media (max-width: 800px) {
             body {
@@ -414,14 +409,12 @@
                 overflow: visible;
             }
             
-            .welcome-container, .welcome-wrapper {
-                margin-top: 10px;
+            .welcome-wrapper {
+                margin-top: 30px;
                 justify-content: center;
             }
             
             .welcome-heading {
-                position: static;
-                transform: none;
                 text-align: center;
                 font-size: 1.8rem;
             }
@@ -453,8 +446,16 @@
             .welcome-heading {
                 font-size: 1.6rem;
             }
+            
+            .social-icons a {
+                margin: 0 8px;
+                font-size: 20px;
+            }
         }
     </style>
+    
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <!-- Cherry color strip at top -->
@@ -483,7 +484,7 @@
     <div class="main-content">
         <!-- First page - exactly viewport height -->
         <div class="first-page">
-            <!-- Welcome heading - positioned on extreme right, down from top, aligned with halfway of profile -->
+            <!-- Welcome heading - positioned on extreme right and moved down -->
             <div class="welcome-wrapper">
                 <div class="welcome-heading">Welcome!</div>
             </div>
@@ -496,7 +497,7 @@
                 
                 <div class="profile-info">
                     <p>
-                        I am a PhD candidate in Economics at the <strong>University of Essex</strong>. I also completed my MSc and MRes here. My research interests include <strong>microeconomic theory, industrial organisation, and auctions</strong>.
+                        I am a PhD candidate in Economics at the <a href="https://www.essex.ac.uk" class="cherry-link" target="_blank">University of Essex</a>. I also completed my MSc and MRes here. My research interests include microeconomic theory, industrial organisation, and auctions.
                     </p>
                     
                     <!-- CV and Email links - icons removed -->
@@ -599,6 +600,14 @@
             <!-- Teaching recognition -->
             <div class="teaching-highlight">
                 Associate Fellow of the Higher Education Academy (Feb 2025)
+            </div>
+            
+            <!-- ========== SOCIAL ICONS ========== -->
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-google-scholar"></i></a>
+                <a href="#"><i class="fa-brands fa-orcid"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
         </div>
         
