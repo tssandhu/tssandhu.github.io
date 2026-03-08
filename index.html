@@ -17,7 +17,7 @@
             line-height: 1.5;
             color: #202124;
             background-color: #ffffff;
-            max-width: 1100px;
+            max-width: 1200px; /* Slightly increased max-width */
             margin: 0 auto;
             padding: 0 2rem;
             height: 100vh;
@@ -41,7 +41,7 @@
         }
         
         .strip-content {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0.8rem 2rem;
             display: flex;
@@ -156,33 +156,19 @@
             position: relative;
         }
         
-        /* Welcome heading - positioned on extreme right and moved down */
-        .welcome-wrapper {
-            display: flex;
-            justify-content: flex-end;
-            width: 100%;
-            margin-top: 60px; /* Increased to move welcome further down */
-            margin-bottom: 10px;
-        }
-        
-        .welcome-heading {
-            font-size: 2rem;
-            font-weight: 400;
-            color: #1a1a1a;
-            text-align: right;
-        }
+        /* Welcome heading - DELETED */
         
         /* Profile section */
         .profile-section {
             display: flex;
-            gap: 2.5rem;
+            gap: 3rem; /* Increased gap */
             align-items: flex-start;
-            margin: 0 0 1rem 0;
+            margin: 40px 0 1rem 0; /* Added top margin */
             flex: 0 0 auto;
         }
         
         .profile-image {
-            flex: 0 0 260px;
+            flex: 0 0 320px; /* INCREASED from 260px to 320px */
             margin-top: 0;
         }
         
@@ -196,6 +182,7 @@
         
         .profile-info {
             flex: 1;
+            max-width: 550px; /* REDUCED from 640px to 550px */
         }
         
         p {
@@ -203,6 +190,7 @@
             font-size: 1rem;
             color: #202124;
             line-height: 1.6;
+            text-align: left; /* Ensures left alignment */
         }
         
         /* University and field names - not bold */
@@ -409,23 +397,13 @@
                 overflow: visible;
             }
             
-            .welcome-wrapper {
-                margin-top: 30px;
-                justify-content: center;
-            }
-            
-            .welcome-heading {
-                text-align: center;
-                font-size: 1.8rem;
-            }
-            
             .profile-section {
                 flex-direction: column;
                 gap: 1.5rem;
             }
             
             .profile-image {
-                max-width: 240px;
+                max-width: 280px;
                 margin: 0 auto;
             }
             
@@ -441,10 +419,6 @@
             
             .top-nav a {
                 font-size: 0.9rem;
-            }
-            
-            .welcome-heading {
-                font-size: 1.6rem;
             }
             
             .social-icons a {
@@ -484,15 +458,12 @@
     <div class="main-content">
         <!-- First page - exactly viewport height -->
         <div class="first-page">
-            <!-- Welcome heading - positioned on extreme right and moved down -->
-            <div class="welcome-wrapper">
-                <div class="welcome-heading">Welcome!</div>
-            </div>
+            <!-- Welcome heading - DELETED -->
             
             <!-- Profile section with photo on left -->
             <div class="profile-section">
                 <div class="profile-image">
-                    <img src="2.jpg" alt="Tejpal S Sandhu" onerror="this.src='https://via.placeholder.com/260x300?text=Photo'">
+                    <img src="2.jpg" alt="Tejpal S Sandhu" onerror="this.src='https://via.placeholder.com/320x380?text=Photo'">
                 </div>
                 
                 <div class="profile-info">
