@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tejpal Sandhu · PhD Candidate in Economics</title>
+    <title>Tejpal S Sandhu · PhD Candidate in Economics</title>
     <style>
         /* Simple, clean styling inspired by zhaocheng-zhang.github.io */
         * {
@@ -14,20 +14,22 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.5; /* Reduced from 1.6 */
             color: #2c3e50;
             background-color: #ffffff;
             max-width: 900px;
-            margin: 2rem auto;
+            margin: 1rem auto; /* Reduced from 2rem */
             padding: 0 2.5rem;
             position: relative;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
         /* Top right navigation - larger font size */
         .top-nav {
             position: absolute;
-            top: -12px;
+            top: -10px; /* Adjusted */
             right: 0;
             display: flex;
             gap: 2.5rem;
@@ -36,10 +38,10 @@
         .top-nav a {
             color: #2c3e50;
             text-decoration: none;
-            font-size: 1.2rem; /* Increased from 1rem */
+            font-size: 1.2rem;
             font-weight: 500;
             transition: all 0.2s;
-            padding: 0.5rem 0; /* Slightly more padding */
+            padding: 0.4rem 0; /* Slightly reduced */
             border-bottom: 1px solid transparent;
         }
         
@@ -51,14 +53,14 @@
         /* Make only Home link with dark red (cherry) background, white font */
         .top-nav a:first-child {
             color: white !important;
-            background-color: #8B0000; /* Dark red/cherry color */
-            padding: 0.5rem 1rem;
+            background-color: #8B0000;
+            padding: 0.4rem 1rem; /* Slightly reduced */
             border-radius: 4px;
             border-bottom: none;
         }
         
         .top-nav a:first-child:hover {
-            background-color: #6B0000; /* Darker cherry on hover */
+            background-color: #6B0000;
             color: white !important;
             border-bottom: none;
         }
@@ -68,7 +70,7 @@
             display: flex;
             gap: 3rem;
             align-items: flex-start;
-            margin: 4rem 0 2rem 0; /* Increased top margin for scrolling */
+            margin: 3rem 0 1.5rem 0; /* Reduced top margin from 4rem */
         }
         
         .profile-content {
@@ -79,11 +81,11 @@
             flex: 1;
             display: flex;
             justify-content: flex-end;
-            margin-top: 40px; /* Increased to move photo down */
+            margin-top: 30px; /* Slightly reduced from 40px */
         }
         
         .profile-image img {
-            max-width: 220px;
+            max-width: 210px; /* Slightly reduced from 220px */
             width: 100%;
             height: auto;
             border-radius: 8px;
@@ -96,22 +98,22 @@
             font-size: 2.2rem;
             font-weight: 600;
             letter-spacing: normal;
-            margin-bottom: 1.2rem;
-            color: #8B0000; /* Dark red/cherry color for name */
-            line-height: 1.3;
+            margin-bottom: 1rem; /* Reduced from 1.2rem */
+            color: #8B0000;
+            line-height: 1.2;
         }
         
         p {
-            margin: 1rem 0;
+            margin: 0.8rem 0; /* Reduced from 1rem */
             font-size: 1rem;
             color: #2c3e50;
         }
         
         /* Simple email style - no special formatting */
         .email {
-            color: #2c3e50; /* Same as body text */
+            color: #2c3e50;
             text-decoration: none;
-            font-family: inherit; /* Regular font, not monospace */
+            font-family: inherit;
             background: none;
             padding: 0;
             border: none;
@@ -119,15 +121,15 @@
         
         .email:hover {
             text-decoration: underline;
-            color: #8B0000; /* Cherry color on hover */
+            color: #8B0000;
         }
         
         /* Address block styling */
         .address-block {
-            margin: 1.5rem 0 1rem 0;
+            margin: 1rem 0 0.5rem 0; /* Reduced from 1.5rem */
             padding-left: 0;
             font-style: normal;
-            line-height: 1.7;
+            line-height: 1.6; /* Reduced from 1.7 */
             color: #3a4b5c;
         }
         
@@ -138,13 +140,13 @@
         
         /* Links row under profile - blue like reference */
         .blue-links-row {
-            margin: 2rem 0 1.5rem 0; /* Increased margin for scrolling */
+            margin: 1.5rem 0 1.2rem 0; /* Reduced from 2rem 0 1.5rem */
             display: flex;
             flex-wrap: wrap;
             gap: 1.8rem;
             align-items: center;
             border-top: 1px solid #eaecef;
-            padding-top: 1.5rem;
+            padding-top: 1.2rem; /* Reduced from 1.5rem */
         }
         
         .blue-links-row a {
@@ -168,13 +170,13 @@
         
         /* Placement and references */
         .placement {
-            margin: 1.5rem 0 1rem 0; /* Increased margin */
+            margin: 1rem 0 0.8rem 0; /* Reduced from 1.5rem 0 1rem */
             font-size: 1rem;
             color: #2c3e50;
         }
         
         .references {
-            margin: 1rem 0 2rem 0; /* Increased margin */
+            margin: 0.8rem 0 1.5rem 0; /* Reduced from 1rem 0 2rem */
             font-size: 1rem;
             display: flex;
             flex-wrap: wrap;
@@ -202,8 +204,8 @@
             display: flex;
             justify-content: center;
             gap: 2.5rem;
-            margin: 3rem 0 2rem 0; /* Increased margins */
-            padding-top: 1.5rem;
+            margin: 1.5rem 0 0.5rem 0; /* Reduced from 3rem 0 2rem */
+            padding-top: 1rem; /* Reduced from 1.5rem */
             border-top: 1px solid #eaecef;
         }
         
@@ -214,33 +216,33 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0.3rem;
-            font-size: 0.9rem; /* Slightly larger */
+            gap: 0.2rem; /* Reduced from 0.3rem */
+            font-size: 0.85rem; /* Slightly reduced */
         }
         
         .social-icons a:hover {
-            color: #8B0000; /* Cherry color on hover */
+            color: #8B0000;
             transform: translateY(-2px);
         }
         
         .social-icons a svg {
-            width: 24px; /* Slightly larger */
-            height: 24px;
+            width: 22px; /* Reduced from 24px */
+            height: 22px;
             fill: currentColor;
         }
         
         /* Responsive */
         @media (max-width: 650px) {
             body {
-                margin: 1.5rem auto;
+                margin: 1rem auto;
                 padding: 0 1.5rem;
             }
             
             .top-nav {
                 position: static;
                 justify-content: center;
-                margin-bottom: 2rem;
-                gap: 1.2rem;
+                margin-bottom: 1.5rem; /* Reduced from 2rem */
+                gap: 1rem;
                 flex-wrap: wrap;
             }
             
@@ -250,26 +252,28 @@
             
             .profile-row {
                 flex-direction: column-reverse;
-                gap: 1.5rem;
-                margin-top: 1rem;
+                gap: 1rem; /* Reduced from 1.5rem */
+                margin-top: 0.5rem; /* Reduced from 1rem */
             }
             
             .profile-image {
                 justify-content: center;
-                margin-top: 20px; /* Adjusted for mobile */
+                margin-top: 15px; /* Reduced from 20px */
             }
             
             .profile-image img {
-                max-width: 200px;
+                max-width: 180px; /* Reduced from 200px */
             }
             
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem; /* Reduced from 2rem */
                 text-align: center;
+                margin-bottom: 0.5rem;
             }
             
             .blue-links-row {
                 justify-content: center;
+                margin-top: 1rem;
             }
             
             .references {
@@ -278,6 +282,11 @@
             
             .address-block {
                 text-align: left;
+            }
+            
+            .social-icons {
+                gap: 1.5rem;
+                margin-top: 1rem;
             }
         }
     </style>
@@ -294,13 +303,12 @@
     <!-- Profile section with image on right -->
     <div class="profile-row">
         <div class="profile-content">
-            <h1>Tejpal Sandhu</h1>
+            <h1>Tejpal S Sandhu</h1>
             
             <p>
                 I am a Ph.D. candidate at the University of Essex. My research interests include microeconomic theory, industrial organisation and auctions.
             </p>
                         
-           
             <!-- Address block -->
             <div class="address-block">
                 <strong>Department of Economics</strong><br>
@@ -313,7 +321,7 @@
         </div>
         
         <div class="profile-image">
-            <img src="2.jpg" alt="Tejpal Sandhu" onerror="this.src='https://via.placeholder.com/220x260?text=Photo'">
+            <img src="2.jpg" alt="Tejpal S Sandhu" onerror="this.src='https://via.placeholder.com/210x250?text=Photo'">
         </div>
     </div>
     
