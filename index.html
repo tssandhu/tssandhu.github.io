@@ -76,45 +76,20 @@
             font-weight: 700;
         }
         
-        /* Search container */
-        .search-container {
-            display: flex;
-            align-items: center;
-            background-color: rgba(255, 255, 255, 0.15);
-            border-radius: 4px;
-            padding: 0.3rem 0.8rem;
-            margin-left: 1rem;
-        }
-        
-        .search-container input {
-            background: transparent;
-            border: none;
+        /* Search icon only */
+        .search-icon {
             color: white;
-            font-size: 0.95rem;
-            padding: 0.2rem;
-            width: 140px;
-        }
-        
-        .search-container input::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
-        .search-container input:focus {
-            outline: none;
-        }
-        
-        .search-container button {
-            background: transparent;
-            border: none;
-            color: white;
+            font-size: 1.3rem;
             cursor: pointer;
-            font-size: 1rem;
+            margin-left: 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
+            background: transparent;
+            border: none;
         }
         
-        .search-container button:hover {
+        .search-icon:hover {
             opacity: 0.8;
         }
         
@@ -148,22 +123,13 @@
             flex: 1;
         }
         
-        /* Name in main content (if needed, but we already have it in strip) */
-        .profile-info h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: #8B0000; /* Cherry color for name in main content */
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-        
         p {
             margin: 1rem 0;
             font-size: 1.05rem;
             color: #444444;
         }
         
-        /* Cherry color for CV and email */
+        /* Cherry color for CV and email links */
         .cherry-link {
             color: #8B0000;
             text-decoration: none;
@@ -230,12 +196,23 @@
             font-weight: 600;
             font-size: 1.1rem;
             color: #8B0000;
+            margin-bottom: 0.2rem;
         }
         
         .teaching-details {
-            font-size: 0.95rem;
-            color: #555555;
-            margin: 0.2rem 0;
+            font-size: 1rem;
+            color: #444444;
+            margin: 0.3rem 0;
+            line-height: 1.6;
+        }
+        
+        .teaching-highlight {
+            background-color: #f9f0f0;
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+            border-left: 3px solid #8B0000;
+            margin: 1.2rem 0;
+            font-weight: 500;
         }
         
         .material-links {
@@ -300,11 +277,6 @@
                 gap: 1rem;
             }
             
-            .search-container {
-                margin-left: 0;
-                margin-top: 0.3rem;
-            }
-            
             .profile-section {
                 flex-direction: column;
             }
@@ -321,12 +293,16 @@
         }
         
         @media (max-width: 500px) {
-            .search-container input {
-                width: 100px;
-            }
-            
             .site-title {
                 font-size: 1.5rem;
+            }
+            
+            .top-nav {
+                gap: 0.8rem;
+            }
+            
+            .top-nav a {
+                font-size: 1rem;
             }
         }
     </style>
@@ -335,20 +311,17 @@
     <!-- Cherry color strip at top -->
     <div class="cherry-strip">
         <div class="strip-content">
-            <!-- Name on top left -->
+            <!-- Name on top left (not in corner, but with padding) -->
             <div class="site-title">Tejpal S Sandhu</div>
             
-            <!-- Top right navigation with search -->
+            <!-- Top right navigation and search -->
             <div class="top-nav">
                 <a href="index.html">Home</a>
                 <a href="research.html">Research</a>
                 <a href="teaching.html">Teaching</a>
                 
-                <!-- Search option -->
-                <div class="search-container">
-                    <input type="text" placeholder="Search...">
-                    <button type="submit">🔍</button>
-                </div>
+                <!-- Search icon only (no text) -->
+                <button class="search-icon" title="Search">🔍</button>
             </div>
         </div>
     </div>
@@ -358,11 +331,10 @@
         <!-- Profile section with photo on left -->
         <div class="profile-section">
             <div class="profile-image">
-                <img src="your-photo.jpg" alt="Tejpal S Sandhu" onerror="this.src='https://via.placeholder.com/280x320?text=Photo'">
+                <img src="2.jpg" alt="Tejpal S Sandhu" onerror="this.src='https://via.placeholder.com/280x320?text=Photo'">
             </div>
             
             <div class="profile-info">
-                <!-- Note: Name in strip above, but keeping this for structure -->
                 <p>
                     I am a PhD candidate in Economics at the <strong>University of Essex</strong>. I also completed my MSc and MRes here. My research interests include <strong>microeconomic theory, industrial organisation, and auctions</strong>.
                 </p>
@@ -372,10 +344,15 @@
                     📢 I am on the 2025-2026 academic job market.
                 </div>
                 
-                <!-- CV and Email in cherry color -->
+                <!-- CV and Email in cherry color with specified text -->
                 <p>
-                    📄 <a href="cv.pdf" class="cherry-link">CV</a><br>
-                    📧 <a href="mailto:tpsandhu.eco@gmail.com" class="cherry-link">tpsandhu.eco [at] gmail.com</a>
+                    📄 You can find my <a href="TS.CV" class="cherry-link">CV here</a>.
+                </p>
+                <p>
+                    📧 You can contact me at <a href="mailto:tejpal.s.sandhu@essex.ac.uk" class="cherry-link">tejpal.s.sandhu@essex.ac.uk</a>.
+                </p>
+                <p>
+                    📧 Personal email: <a href="mailto:tpsandhu.eco@gmail.com" class="cherry-link">tpsandhu.eco@gmail.com</a>
                 </p>
                 
                 <!-- Advisors -->
@@ -428,26 +405,25 @@
             I am passionate about teaching microeconomic theory and industrial organisation. My goal is to create an engaging and supportive learning environment where students can develop the confidence to apply complex methods to real-world problems.
         </p>
         
-        <h3>Teaching Materials</h3>
+        <h3>Teaching Experience</h3>
         
         <div class="teaching-item">
-            <div class="teaching-course">ECON 101: Microeconomic Theory</div>
-            <div class="teaching-details">University of Essex | Undergraduate Level | Term</div>
-            <div class="teaching-details">Role: Teaching Assistant</div>
-            <div class="material-links">
-                <a href="#">[teaching evaluations]</a>
-                <a href="#">[section notes]</a>
+            <div class="teaching-course">2024-2025</div>
+            <div class="teaching-details">
+                • Microeconomics (Intermediate) (EC202), Macroeconomics (Intermediate) (EC201), Mathematical Methods in Economics (EC251) (Essex)
             </div>
         </div>
         
         <div class="teaching-item">
-            <div class="teaching-course">ECON 202: Industrial Organisation</div>
-            <div class="teaching-details">University of Essex | Graduate Level | Term</div>
-            <div class="teaching-details">Role: Course Designer & Teaching Assistant</div>
-            <div class="material-links">
-                <a href="#">[teaching evaluations]</a>
-                <a href="#">[section notes]</a>
+            <div class="teaching-course">2023-2024</div>
+            <div class="teaching-details">
+                • EC 111 - Introduction to Economics, EC115 - Methods of Economic Analysis (Essex)
             </div>
+        </div>
+        
+        <!-- Teaching recognition -->
+        <div class="teaching-highlight">
+            Associate Fellow of the Higher Education Academy (Feb 2025)
         </div>
         
         <!-- ========== FOOTER ========== -->
