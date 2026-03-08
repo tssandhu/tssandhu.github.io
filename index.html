@@ -5,45 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name · Academic Profile</title>
     <style>
-        /* Simple, clean styling inspired by minimalist academic sites */
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: #1a1e24;
-            max-width: 650px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
             background-color: #ffffff;
         }
+        
+        /* Navigation bar with icons */
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #eaecef;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: #24292e;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: #0066cc;
+        }
+        
+        .nav-links a svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+        
+        /* Main container */
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        /* Two-column layout */
+        .profile-row {
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+        
+        .profile-content {
+            flex: 2;
+        }
+        
+        .profile-image {
+            flex: 1;
+            text-align: right;
+        }
+        
+        .profile-image img {
+            max-width: 250px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid #eaecef;
+        }
+        
+        /* Typography */
         h1 {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             font-weight: 500;
             letter-spacing: -0.5px;
             margin-bottom: 1rem;
             color: #000000;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 2rem 0 1rem 0;
+            color: #24292e;
             border-bottom: 1px solid #eaecef;
             padding-bottom: 0.5rem;
         }
+        
         p {
             margin: 1.2rem 0;
             font-size: 1.1rem;
         }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-            color: #003d99;
-        }
-        .email {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #f6f8fa;
-            padding: 0.2rem 0.4rem;
-            border-radius: 6px;
-            font-size: 1rem;
-            border: 1px solid #e1e4e8;
-        }
+        
         .job-market-tag {
             display: inline-block;
             background-color: #e7f3ff;
@@ -55,80 +120,245 @@
             border: 1px solid #b3d7ff;
             margin: 1rem 0 0.5rem;
         }
-        hr {
-            border: 0;
-            height: 0;
-            border-top: 1px solid rgba(0,0,0,0.1);
-            border-bottom: 1px solid rgba(255,255,255,0.5);
-            margin: 2rem 0;
+        
+        .email {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f6f8fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            border: 1px solid #e1e4e8;
+            display: inline-block;
         }
+        
+        /* Publication list */
+        .pub-list {
+            list-style: none;
+        }
+        
+        .pub-list li {
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px dashed #eaecef;
+        }
+        
+        .pub-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .pub-title {
+            font-weight: 600;
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .pub-title:hover {
+            text-decoration: underline;
+        }
+        
+        .pub-authors {
+            font-size: 0.95rem;
+            color: #586069;
+        }
+        
+        .pub-venue {
+            font-style: italic;
+            color: #586069;
+        }
+        
+        .pub-links {
+            margin-left: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .pub-links a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 0.5rem;
+        }
+        
+        .pub-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Footer */
         footer {
             font-size: 0.9rem;
             color: #586069;
-            margin-top: 2.5rem;
+            margin-top: 3rem;
             border-top: 1px solid #eaecef;
             padding-top: 1.5rem;
+            text-align: center;
         }
-        /* Responsive adjustment for very small screens */
+        
+        footer a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .profile-row {
+                flex-direction: column-reverse;
+                gap: 1.5rem;
+            }
+            
+            .profile-image {
+                text-align: center;
+            }
+            
+            .profile-image img {
+                max-width: 200px;
+            }
+            
+            .navbar {
+                justify-content: center;
+                padding: 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+        }
+        
         @media (max-width: 480px) {
-            body { margin: 1.5rem auto; }
-            h1 { font-size: 1.9rem; }
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .nav-links a span {
+                display: none; /* Hide text labels on very small screens */
+            }
+            
+            .nav-links a svg {
+                width: 24px;
+                height: 24px;
+            }
+            
+            .nav-links {
+                gap: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Main content: your name, affiliation, research, contact -->
-    <h1>Your Full Name</h1>
+    <!-- Navigation bar with icons (top right) -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#working-papers">
+                <svg viewBox="0 0 24 24">
+                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                </svg>
+                <span>Papers</span>
+            </a>
+            <a href="#publications">
+                <svg viewBox="0 0 24 24">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 8h-4v4h4v-4z"/>
+                </svg>
+                <span>Publications</span>
+            </a>
+            <a href="cv.pdf" target="_blank">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm4-3H19v1h1.5V11H19v2h-1.5V7h3v1.5zM9 9.5h1v-1H9v1zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm10 5.5h1v-3h-1v3z"/>
+                </svg>
+                <span>CV</span>
+            </a>
+        </div>
+    </nav>
 
-    <!-- Optional: Academic status marker -->
-    <div class="job-market-tag">📢 2025-2026 Academic Job Market Candidate</div>
+    <!-- Main container -->
+    <div class="container">
+        <!-- Profile section with image on right -->
+        <div class="profile-row">
+            <div class="profile-content">
+                <h1>Your Full Name</h1>
+                
+                <!-- Optional: Academic status marker -->
+                <div class="job-market-tag">📢 2025-2026 Academic Job Market Candidate</div>
+                
+                <!-- Core introduction paragraph -->
+                <p>
+                    I am a Ph.D. candidate at <strong>Your University Name</strong>. 
+                    My research interests include 
+                    <strong>macroeconomics, growth, firm dynamics, and fiscal policy</strong>.
+                </p>
+                
+                <!-- Contact information -->
+                <p>
+                    <strong>Email</strong>: 
+                    <span class="email">your.name [at] university.ac.uk</span>
+                </p>
+                
+                <!-- Placement information (if needed) -->
+                <p>
+                    <strong>Placement director</strong>: Professor Full Name
+                </p>
+            </div>
+            
+            <div class="profile-image">
+                <!-- Replace with your photo path -->
+                <img src="profile-photo.jpg" alt="Your Name" onerror="this.src='https://via.placeholder.com/250x300?text=Photo'">
+                <p style="font-size:0.8rem; color:#586069; margin-top:0.5rem;">Your Name</p>
+            </div>
+        </div>
 
-    <!-- Core introduction paragraph -->
-    <p>
-        I am a Ph.D. candidate at <strong>Your University Name</strong>. 
-        My research interests include 
-        <strong>macroeconomics, growth, firm dynamics, and fiscal policy</strong>. 
-        You can tailor this sentence to perfectly reflect your own fields.
-    </p>
+        <!-- Working Papers section -->
+        <h2 id="working-papers">📄 Working Papers</h2>
+        <ul class="pub-list">
+            <li>
+                <a href="#" class="pub-title">"Title of Your Job Market Paper"</a>
+                <span class="pub-links">
+                    <a href="#">[PDF]</a>
+                    <a href="#">[slides]</a>
+                </span><br>
+                <span class="pub-authors">Your Name (Job Market Paper)</span><br>
+                <span class="pub-venue">Revise and Resubmit, Journal Name</span>
+            </li>
+            <li>
+                <a href="#" class="pub-title">"Another Working Paper Title"</a>
+                <span class="pub-links">
+                    <a href="#">[PDF]</a>
+                </span><br>
+                <span class="pub-authors">with Co-author Name</span><br>
+                <span class="pub-venue">Working Paper</span>
+            </li>
+        </ul>
 
-    <!-- Contact information: email is essential -->
-    <p>
-        📧 <strong>Email</strong>: 
-        <span class="email">your.name [at] university.ac.uk</span>
-    </p>
+        <!-- Publications section -->
+        <h2 id="publications">📚 Publications</h2>
+        <ul class="pub-list">
+            <li>
+                <a href="#" class="pub-title">"Published Paper Title"</a>
+                <span class="pub-links">
+                    <a href="#">[link]</a>
+                    <a href="#">[PDF]</a>
+                </span><br>
+                <span class="pub-authors">Your Name, Co-author Name</span><br>
+                <span class="pub-venue">Journal Name, 2024, 15(2), 100-125</span>
+            </li>
+        </ul>
 
-    <!-- Optional: Placement information (common in economics) -->
-    <p>
-        <strong>Placement director</strong>: Professor Full Name<br>
-        <em>(Delete this line if not relevant to your field)</em>
-    </p>
-
-    <!-- Simple separator -->
-    <hr>
-
-    <!-- Optional additional sections: you can easily expand these -->
-    <h2 style="font-weight: 500;">Working Papers</h2>
-    <p>
-        • "Title of Your Job Market Paper" (Job Market Paper) <a href="#">[PDF]</a><br>
-        • "Another Working Paper Title" with co-authors <a href="#">[draft]</a>
-    </p>
-
-    <h2 style="font-weight: 500;">Publications</h2>
-    <p>
-        • "Published Paper Title" (2024). <em>Journal Name</em>. <a href="#">[link]</a>
-    </p>
-
-    <!-- Footer with links to other profiles (optional) -->
-    <footer>
-        <p style="margin:0;">
-            <a href="#">Google Scholar</a> · 
-            <a href="#">CV (PDF)</a> · 
-            <a href="#">Twitter</a> · 
-            <a href="https://github.com/yourusername">GitHub</a>
-        </p>
-        <p style="font-size:0.8rem; margin-top:1rem;">
-            © 2025 Your Name. Source code on <a href="https://github.com/yourusername/your-repo">GitHub</a>.
-        </p>
-    </footer>
+        <!-- Footer with additional links -->
+        <footer>
+            <p>
+                <a href="https://scholar.google.com/">Google Scholar</a> · 
+                <a href="cv.pdf">CV (PDF)</a> · 
+                <a href="https://twitter.com/">Twitter</a> · 
+                <a href="https://github.com/yourusername">GitHub</a>
+            </p>
+            <p style="font-size:0.8rem; margin-top:1rem;">
+                © 2025 Your Name. Hosted on <a href="https://github.com">GitHub Pages</a>.
+            </p>
+        </footer>
+    </div>
 </body>
-</html>
+</html> 
