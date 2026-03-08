@@ -15,7 +15,7 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             line-height: 1.5;
-            color: #202124; /* Darker, more visible black */
+            color: #202124;
             background-color: #ffffff;
             max-width: 1100px;
             margin: 0 auto;
@@ -81,7 +81,7 @@
             border-bottom-color: rgba(255,255,255,0.3);
         }
         
-        /* Home link - normal weight (not bold) to match Lea's style */
+        /* Home link - normal weight */
         .top-nav a:first-child {
             font-weight: 400;
         }
@@ -140,7 +140,7 @@
         /* Main content */
         .main-content {
             margin-top: 75px;
-            padding: 1.5rem 0 0 0;
+            padding: 0 0 0 0;
             min-height: calc(100vh - 75px);
             display: flex;
             flex-direction: column;
@@ -153,21 +153,44 @@
             flex-direction: column;
             justify-content: flex-start;
             overflow: hidden;
+            position: relative;
         }
         
-        /* Welcome heading container */
+        /* Welcome heading container - positioned on extreme right */
         .welcome-container {
-            display: flex;
-            justify-content: flex-end;
+            position: relative;
             width: 100%;
-            margin-bottom: 0.75rem;
+            height: 60px; /* Fixed height for positioning */
+            margin-top: 15px; /* Start a little bit down from top of photo */
+            margin-bottom: 5px;
         }
         
         .welcome-heading {
+            position: absolute;
+            right: 0; /* Extreme right */
             font-size: 2rem;
-            font-weight: 400; /* Lighter weight like Lea's site */
+            font-weight: 400;
             color: #1a1a1a;
             text-align: right;
+            /* Align with halfway of profile - using transform to fine-tune */
+            transform: translateY(50%);
+            /* The top value can be adjusted to align with photo midpoint */
+            top: 10px;
+        }
+        
+        /* Alternative positioning using flex for more precise control */
+        .welcome-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            margin-top: 20px; /* Start down from top */
+            margin-bottom: 5px;
+        }
+        
+        .welcome-wrapper .welcome-heading {
+            position: static;
+            transform: none;
+            top: auto;
         }
         
         /* Profile section */
@@ -181,15 +204,15 @@
         
         .profile-image {
             flex: 0 0 260px;
-            margin-top: 5px;
+            margin-top: 0; /* Reset margin */
         }
         
         .profile-image img {
             width: 100%;
             height: auto;
-            border-radius: 4px; /* Subtle rounding like Lea's */
+            border-radius: 4px;
             border: 1px solid #eaecef;
-            box-shadow: none; /* Remove shadow for cleaner look */
+            box-shadow: none;
         }
         
         .profile-info {
@@ -199,7 +222,7 @@
         p {
             margin: 0.8rem 0;
             font-size: 1rem;
-            color: #202124; /* Darker, more visible */
+            color: #202124;
             line-height: 1.6;
         }
         
@@ -209,7 +232,7 @@
             color: #1a1a1a;
         }
         
-        /* Cherry color links - icons removed */
+        /* Cherry color links */
         .cherry-link {
             color: #8B0000;
             text-decoration: none;
@@ -222,14 +245,14 @@
             border-bottom-color: #8B0000;
         }
         
-        /* Section headings - Lea Bottmer style */
+        /* Section headings */
         h2 {
             font-size: 1.8rem;
-            font-weight: 400; /* Lighter weight */
+            font-weight: 400;
             color: #8B0000;
             margin: 2rem 0 1.2rem 0;
             padding-bottom: 0.3rem;
-            border-bottom: 1px solid #e0e0e0; /* Thinner border */
+            border-bottom: 1px solid #e0e0e0;
             letter-spacing: normal;
         }
         
@@ -391,6 +414,18 @@
                 overflow: visible;
             }
             
+            .welcome-container, .welcome-wrapper {
+                margin-top: 10px;
+                justify-content: center;
+            }
+            
+            .welcome-heading {
+                position: static;
+                transform: none;
+                text-align: center;
+                font-size: 1.8rem;
+            }
+            
             .profile-section {
                 flex-direction: column;
                 gap: 1.5rem;
@@ -403,16 +438,6 @@
             
             .main-content {
                 margin-top: 110px;
-            }
-            
-            .welcome-container {
-                justify-content: center;
-                margin-top: 0.5rem;
-            }
-            
-            .welcome-heading {
-                text-align: center;
-                font-size: 1.8rem;
             }
         }
         
@@ -458,8 +483,8 @@
     <div class="main-content">
         <!-- First page - exactly viewport height -->
         <div class="first-page">
-            <!-- Welcome heading on right side -->
-            <div class="welcome-container">
+            <!-- Welcome heading - positioned on extreme right, down from top, aligned with halfway of profile -->
+            <div class="welcome-wrapper">
                 <div class="welcome-heading">Welcome!</div>
             </div>
             
@@ -474,9 +499,9 @@
                         I am a PhD candidate in Economics at the <strong>University of Essex</strong>. I also completed my MSc and MRes here. My research interests include <strong>microeconomic theory, industrial organisation, and auctions</strong>.
                     </p>
                     
-                    <!-- CV and Email links - ICONS REMOVED -->
+                    <!-- CV and Email links - icons removed -->
                     <p>
-                        You can find my <a href="TS_CV" class="cherry-link">CV here</a>.
+                        You can find my <a href="TS_CV.PDF" class="cherry-link">CV here</a>.
                     </p>
                     <p>
                         You can contact me at <a href="mailto:tejpal.s.sandhu@essex.ac.uk" class="cherry-link">tejpal.s.sandhu@essex.ac.uk</a>.
