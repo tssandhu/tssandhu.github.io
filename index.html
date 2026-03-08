@@ -155,22 +155,25 @@
             overflow: hidden;
             position: relative;
         }
-        
-        /* Welcome heading - positioned on extreme right and moved down */
-        .welcome-wrapper {
-            display: flex;
-            justify-content: centre;
-            width: 100%;
-            margin-top: 40px; /* Increased to move welcome further down */
-            margin-bottom: 15px;
-        }
-        
-        .welcome-heading {
-            font-size: 2rem;
-            font-weight: 400;
-            color: #1a1a1a;
-            text-align: centre;
-        }
+     /* Welcome heading aligned with profile summary */
+
+.welcome-wrapper {
+    display: flex;
+    justify-content: flex-end;   /* push welcome to right column */
+    width: 100%;
+    margin-top: 70px;            /* slightly below top of photo */
+    margin-bottom: 15px;
+}
+
+.welcome-heading {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    text-align: left;
+    
+    /* align with profile text column */
+    width: 680px;      /* same width as profile summary */
+}
         
         /* Profile section */
         .profile-section {
