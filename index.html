@@ -144,7 +144,7 @@
             min-height: calc(100vh - 85px);
         }
         
-        /* Name section - José Inguanzo style */
+        /* Name section - José Inguanzo style with improved contrast */
         .name-section {
             margin: 20px 0 30px 0;
             text-align: left;
@@ -153,26 +153,29 @@
         .main-name {
             font-size: 3.5rem;
             font-weight: 700;
-            color: #1a1a1a; /* Dark almost black for best contrast */
+            color: #000000; /* Pure black for maximum contrast */
             margin-bottom: 10px;
             line-height: 1.2;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.05);
         }
         
         .main-title {
             font-size: 1.5rem;
             font-weight: 400;
-            color: #333333;
+            color: #333333; /* Dark grey for good contrast */
             margin-bottom: 5px;
         }
         
         .university-link {
             color: #8C1515; /* Stanford Red */
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600; /* Slightly bolder for better contrast */
+            border-bottom: 1px solid transparent;
+            transition: border-bottom-color 0.2s;
         }
         
         .university-link:hover {
-            text-decoration: underline;
+            border-bottom-color: #8C1515;
         }
         
         /* Profile section */
@@ -203,7 +206,7 @@
         p {
             margin: 1rem 0;
             font-size: 1.1rem;
-            color: #222222;
+            color: #222222; /* Dark grey for good contrast */
             line-height: 1.7;
             text-align: left;
         }
@@ -212,7 +215,7 @@
         .stanford-link {
             color: #8C1515;
             text-decoration: none;
-            font-weight: 400;
+            font-weight: 500;
             border-bottom: 1px solid transparent;
             transition: border-bottom-color 0.2s;
         }
@@ -225,7 +228,7 @@
         .advisor-link {
             color: #8C1515;
             text-decoration: none;
-            font-weight: 400;
+            font-weight: 500;
             border-bottom: 1px solid transparent;
             transition: border-bottom-color 0.2s;
         }
@@ -234,10 +237,10 @@
             border-bottom-color: #8C1515;
         }
         
-        /* Section Headings */
+        /* Section Headings - Simplified */
         h2 {
-            font-size: 2rem;
-            font-weight: 500;
+            font-size: 2.2rem;
+            font-weight: 600;
             color: #8C1515;
             margin: 3rem 0 1.5rem 0;
             padding-bottom: 0.5rem;
@@ -245,57 +248,26 @@
         }
         
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 500;
             color: #8C1515;
             margin: 2rem 0 1rem 0;
         }
         
-        /* Research section - matching above style */
+        /* Research section - simplified with just headings */
         .research-section {
             margin-top: 2rem;
         }
         
-        .paper-item {
-            margin-bottom: 2rem;
-            padding-left: 1rem;
-            border-left: 3px solid #8C1515;
-        }
-        
-        .paper-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #222222;
-            margin-bottom: 0.3rem;
-        }
-        
-        .paper-title a {
-            color: #8C1515;
-            text-decoration: none;
-        }
-        
-        .paper-title a:hover {
-            text-decoration: underline;
-        }
-        
-        .paper-authors {
-            font-size: 1rem;
+        .research-placeholder {
+            margin: 1.5rem 0 2rem 0;
+            padding: 1.5rem;
+            background-color: #ffffff;
+            border-radius: 6px;
+            border-left: 4px solid #8C1515;
             color: #444444;
-            margin: 0.2rem 0;
             font-style: italic;
-        }
-        
-        .paper-venue {
-            font-size: 0.95rem;
-            color: #666666;
-            margin-bottom: 0.5rem;
-        }
-        
-        .paper-abstract {
-            font-size: 0.95rem;
-            color: #333333;
-            margin-top: 0.5rem;
-            line-height: 1.6;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
         }
         
         /* Teaching items */
@@ -394,8 +366,8 @@
                 padding: 1.5rem;
             }
             
-            h2 { font-size: 1.8rem; }
-            h3 { font-size: 1.4rem; }
+            h2 { font-size: 2rem; }
+            h3 { font-size: 1.6rem; }
         }
         
         @media (max-width: 500px) {
@@ -441,7 +413,7 @@
     
     <!-- Main content with cream background -->
     <div class="main-content">
-        <!-- Name section - José Inguanzo style -->
+        <!-- Name section - José Inguanzo style with improved contrast -->
         <div class="name-section">
             <div class="main-name">Tejpal S Sandhu</div>
             <div class="main-title">Ph.D. Candidate in Economics, <a href="https://www.essex.ac.uk" class="university-link" target="_blank" rel="noopener noreferrer">University of Essex</a></div>
@@ -481,25 +453,19 @@
         <!-- ========== RESEARCH SECTION ========== -->
         <h2>Research</h2>
         
-        <!-- Working Papers -->
         <h3>Working Papers</h3>
-        
-        <div class="paper-item">
-            <div class="paper-title"><a href="#" target="_blank" rel="noopener noreferrer">The Optimal Level of Consultation (Job Market Paper)</a></div>
-            <div class="paper-authors">(Job Market Paper)</div>
-            <div class="paper-abstract">
-                <strong>Abstract:</strong> We study how an information provider optimally manages information precision to maximize revenue from a consumer who pays to learn before taking an irreversible action. The principal chooses the precision of a drift-diffusion signal process, and the agent decides when to stop learning and take an action. We find that the principal optimally provides the least informative signals to the most uncertain agent because the principal can exploit the agent's high willingness to pay for information to prolong engagement and extract rents. This generates a U-shaped relationship between optimal precision and the agent's prior belief. When the agent's prior is his private information, standard screening breaks down, and any menu of contracts collapses to a single pooling contract, limiting the principal's ability to differentiate across types and excluding agents with sufficiently extreme priors. Applications include digital search platforms and advisory markets.
-            </div>
+        <div class="research-placeholder">
+            Working paper details will appear here. Click on paper titles to view PDFs.
         </div>
         
         <h3>Work in Progress</h3>
-        
-        <div class="paper-item">
-            <div class="paper-title"><a href="#" target="_blank" rel="noopener noreferrer">Experimentation with Asymmetric Observation</a></div>
+        <div class="research-placeholder">
+            Work in progress details will appear here.
         </div>
         
-        <div class="paper-item">
-            <div class="paper-title"><a href="#" target="_blank" rel="noopener noreferrer">Evolving Social Norms on Networks</a></div>
+        <h3>Publications</h3>
+        <div class="research-placeholder">
+            Publication details will appear here.
         </div>
         
         <!-- ========== TEACHING SECTION ========== -->
