@@ -29,27 +29,22 @@
             top: 0;
             right: 2rem;
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
         }
         
         .top-nav a {
             color: #555;
             text-decoration: none;
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
+            font-size: 1rem;
+            font-weight: 500;
             transition: color 0.2s;
+            padding: 0.25rem 0;
+            border-bottom: 2px solid transparent;
         }
         
         .top-nav a:hover {
             color: #0066cc;
-        }
-        
-        .top-nav a svg {
-            width: 18px;
-            height: 18px;
-            fill: currentColor;
+            border-bottom-color: #0066cc;
         }
         
         /* Profile section - two column layout */
@@ -57,7 +52,7 @@
             display: flex;
             gap: 3rem;
             align-items: flex-start;
-            margin: 3rem 0 2rem 0;
+            margin: 4rem 0 2rem 0;
         }
         
         .profile-content {
@@ -102,62 +97,32 @@
             display: inline-block;
         }
         
-        /* Links row at bottom */
-        .links-row {
+        /* Red links row under profile */
+        .red-links-row {
             margin: 2rem 0 1.5rem 0;
             display: flex;
             flex-wrap: wrap;
             gap: 1.5rem;
             align-items: center;
-            border-top: 1px solid #eaecef;
-            padding-top: 1.5rem;
         }
         
-        .links-row a {
-            color: #0066cc;
+        .red-links-row a {
+            color: #cc0000;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 500;
+            transition: color 0.2s;
         }
         
-        .links-row a:hover {
+        .red-links-row a:hover {
+            color: #990000;
             text-decoration: underline;
-            color: #003d99;
         }
         
-        .links-row span.separator {
-            color: #ccc;
+        .red-links-row span.separator {
+            color: #cc0000;
             font-weight: 300;
-        }
-        
-        /* Social icons at bottom center */
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0 1.5rem 0;
-        }
-        
-        .social-icons a {
-            color: #555;
-            text-decoration: none;
-            transition: all 0.2s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.3rem;
-            font-size: 0.85rem;
-        }
-        
-        .social-icons a:hover {
-            color: #0066cc;
-            transform: translateY(-2px);
-        }
-        
-        .social-icons a svg {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
+            font-size: 1.2rem;
         }
         
         /* Placement and references */
@@ -190,6 +155,38 @@
             font-weight: 300;
         }
         
+        /* Social icons at bottom center */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0 1.5rem 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eaecef;
+        }
+        
+        .social-icons a {
+            color: #555;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.85rem;
+        }
+        
+        .social-icons a:hover {
+            color: #0066cc;
+            transform: translateY(-2px);
+        }
+        
+        .social-icons a svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+        
         /* Responsive */
         @media (max-width: 600px) {
             body {
@@ -200,7 +197,8 @@
             .top-nav {
                 position: static;
                 justify-content: center;
-                margin-bottom: 1rem;
+                margin-bottom: 2rem;
+                gap: 1.5rem;
             }
             
             .profile-row {
@@ -222,8 +220,7 @@
                 text-align: center;
             }
             
-            .links-row {
-                gap: 1rem;
+            .red-links-row {
                 justify-content: center;
             }
             
@@ -238,14 +235,12 @@
     </style>
 </head>
 <body>
-    <!-- Top right navigation - Work in Progress icon -->
+    <!-- Top right navigation - Home, Research, CV, Teaching -->
     <div class="top-nav">
-        <a href="#">
-            <svg viewBox="0 0 24 24">
-                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 8h-4v4h-4v-4H6V9h4V5h4v4h4v2z"/>
-            </svg>
-            Work in Progress
-        </a>
+        <a href="#">Home</a>
+        <a href="#">Research</a>
+        <a href="#">CV</a>
+        <a href="#">Teaching</a>
     </div>
     
     <!-- Profile section with image on right -->
@@ -254,11 +249,11 @@
             <h1>Stephan Hobler</h1>
             
             <p>
-                I am a Ph.D. candidate at the University of Essex. My research interests include microeconomic Theory, industrial organization and auctions.
+                I am a Ph.D. candidate at the University of Essex. My research interests include microeconomic theory, industrial organisation and auctions.
             </p>
             
             <p>
-                My email is <span class="email">tpsandhu.eco [at] gmail.com</span>
+                My email is <span class="email">tpsandhu.eco [at] gmail.com/span>
             </p>
             
             <p>
@@ -267,12 +262,12 @@
         </div>
         
         <div class="profile-image">
-            <img src="profilepic.jpg" alt="Stephan Hobler" onerror="this.src='https://via.placeholder.com/200x240?text=Photo'">
+            <img src="profilepic.jpg" alt="Tejpal Sandhu" onerror="this.src='https://via.placeholder.com/200x240?text=Photo'">
         </div>
     </div>
     
-    <!-- Links row: Job Market Paper | Research | CV -->
-    <div class="links-row">
+    <!-- Red links row: Job Market Paper | Research | CV -->
+    <div class="red-links-row">
         <a href="#">Job Market Paper</a>
         <span class="separator">|</span>
         <a href="#">Research</a>
@@ -282,24 +277,21 @@
     
     <!-- Placement director -->
     <div class="placement">
-        <strong>Placement director:</strong> Matthias Doepke
+        <strong>Placement director:</strong> Dr Lucas Siga
     </div>
     
     <!-- References -->
     <div class="references">
         <strong>References:</strong> 
-        <a href="#">Wouter Den Haan</a>
+        <a href="#">Prof Daniel F Garrett/a>
         <span class="reference-sep">|</span>
-        <a href="#">Maarten De Ridder</a>
-        <span class="reference-sep">|</span>
-        <a href="#">Matthias Doepke</a>
-        <span class="reference-sep">|</span>
-        <a href="#">Jonathon Hazell</a>
+        <a href="#">Dr Albin Erlanson</a>
+       
     </div>
     
     <!-- Social icons at bottom center -->
     <div class="social-icons">
-        <a href="mailto:s.j.hobler@lse.ac.uk" title="Email">
+        <a href="mailto:tpsandhu.eco@gmail.com" title="Email">
             <svg viewBox="0 0 24 24">
                 <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
             </svg>
