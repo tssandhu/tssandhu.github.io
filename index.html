@@ -101,10 +101,10 @@
             white-space: nowrap;
         }
         
-        /* Search icon - changed to white */
+        /* Search icon - white and clearly visible */
         .search-icon {
             color: white;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             cursor: pointer;
             margin-left: 0.5rem;
             display: flex;
@@ -112,10 +112,21 @@
             justify-content: center;
             background: transparent;
             border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
         }
         
         .search-icon:hover {
-            opacity: 0.8;
+            background-color: rgba(255, 255, 255, 0.2);
+            opacity: 1;
+        }
+        
+        .search-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
         }
         
         /* Main content - add top padding for fixed strip */
@@ -310,18 +321,6 @@
             text-decoration: underline;
         }
         
-        /* Job market tag */
-        .job-market-tag {
-            display: inline-block;
-            background-color: #8B0000;
-            color: white;
-            padding: 0.3rem 1.2rem;
-            border-radius: 30px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            margin: 1rem 0;
-        }
-        
         /* Footer */
         .footer-note {
             margin-top: 3rem;
@@ -388,6 +387,10 @@
                 font-size: 0.6rem;
                 padding: 1px 3px;
             }
+            
+            .search-icon {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -404,8 +407,12 @@
                 <a href="#" class="inactive-link">Research</a>
                 <a href="#teaching">Teaching</a>
                 
-                <!-- Search icon - white color -->
-                <button class="search-icon" title="Search">🔍</button>
+                <!-- Search icon - white and clearly visible -->
+                <button class="search-icon" title="Search">
+                    <svg viewBox="0 0 24 24" width="20" height="20">
+                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
@@ -422,10 +429,8 @@
                 <p>
                     I am a PhD candidate in Economics at the <strong>University of Essex</strong>. I also completed my MSc and MRes here. My research interests include <strong>microeconomic theory, industrial organisation, and auctions</strong>.
                 </p>
-               
-                </div>
                 
-                <!-- CV and Email in cherry color -->
+                <!-- CV and Email in cherry color - JOB MARKET LINE REMOVED -->
                 <p>
                     📄 You can find my <a href="TS_CV" class="cherry-link">CV here</a>.
                 </p>
