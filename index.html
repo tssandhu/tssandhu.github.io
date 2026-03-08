@@ -14,19 +14,22 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.5; /* Reduced from 1.6 */
             color: #1a1e24;
             background-color: #ffffff;
             max-width: 800px;
-            margin: 2rem auto;
+            margin: 1rem auto; /* Reduced from 2rem */
             padding: 0 2rem;
             position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
         /* Top right navigation - more to the right */
         .top-nav {
             position: absolute;
-            top: -20px;
+            top: -15px; /* Adjusted */
             right: 0;
             display: flex;
             gap: 2.5rem;
@@ -57,12 +60,19 @@
             border-bottom-color: #cc0000;
         }
         
+        /* Main content wrapper to push footer down */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
         /* Profile section - two column layout with profile left, photo right-middle */
         .profile-row {
             display: flex;
-            gap: 4rem;
+            gap: 3rem; /* Reduced from 4rem */
             align-items: center;
-            margin: 4rem 0 2rem 0;
+            margin: 2.5rem 0 1rem 0; /* Reduced top margin from 4rem */
         }
         
         .profile-content {
@@ -75,11 +85,11 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            margin-top: 60px;
+            margin-top: 40px; /* Reduced from 60px */
         }
         
         .profile-image img {
-            max-width: 220px;
+            max-width: 200px; /* Slightly reduced from 220px */
             width: 100%;
             height: auto;
             border-radius: 6px;
@@ -89,28 +99,28 @@
         
         /* Typography */
         h1 {
-            font-size: 2.4rem;
+            font-size: 2.2rem; /* Slightly reduced from 2.4rem */
             font-weight: 500;
             letter-spacing: -0.5px;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem; /* Reduced from 1rem */
             color: #000000;
             line-height: 1.2;
         }
         
         p {
-            margin: 1.2rem 0;
-            font-size: 1.1rem;
+            margin: 0.8rem 0; /* Reduced from 1.2rem */
+            font-size: 1rem; /* Slightly reduced from 1.1rem */
         }
         
         .email {
             font-family: 'Courier New', Courier, monospace;
             font-size: 1rem;
-            color: #1a1e24;  /* Matches your text color */
+            color: #1a1e24;
         }
         
         /* Red links row under profile */
         .red-links-row {
-            margin: 2rem 0 1.5rem 0;
+            margin: 1rem 0 1rem 0; /* Reduced from 2rem 0 1.5rem */
             display: flex;
             flex-wrap: wrap;
             gap: 1.5rem;
@@ -120,7 +130,7 @@
         .red-links-row a {
             color: #cc0000;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.1rem; /* Slightly reduced from 1.2rem */
             font-weight: 500;
             transition: color 0.2s;
         }
@@ -133,18 +143,18 @@
         .red-links-row span.separator {
             color: #cc0000;
             font-weight: 300;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
         
         /* Placement and references */
         .placement {
-            margin: 1.5rem 0;
+            margin: 0.8rem 0; /* Reduced from 1.5rem */
             font-size: 1rem;
             color: #24292e;
         }
         
         .references {
-            margin: 0.5rem 0 1rem 0;
+            margin: 0.5rem 0 0.5rem 0; /* Reduced bottom margin */
             font-size: 1rem;
             display: flex;
             flex-wrap: wrap;
@@ -153,13 +163,13 @@
         }
         
         .references a {
-            color: #000000; /* Changed to black */
+            color: #000000;
             text-decoration: none;
         }
         
         .references a:hover {
             text-decoration: underline;
-            color: #0066cc; /* Blue on hover for interactivity */
+            color: #0066cc;
         }
         
         .reference-sep {
@@ -172,8 +182,8 @@
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin: 3rem 0 1.5rem 0;
-            padding-top: 1.5rem;
+            margin: 1.5rem 0 0.5rem 0; /* Reduced top margin from 3rem */
+            padding-top: 1rem; /* Reduced from 1.5rem */
             border-top: 1px solid #eaecef;
         }
         
@@ -184,8 +194,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0.3rem;
-            font-size: 0.85rem;
+            gap: 0.2rem; /* Reduced from 0.3rem */
+            font-size: 0.8rem; /* Slightly reduced */
         }
         
         .social-icons a:hover {
@@ -194,45 +204,46 @@
         }
         
         .social-icons a svg {
-            width: 24px;
-            height: 24px;
+            width: 22px; /* Slightly reduced from 24px */
+            height: 22px;
             fill: currentColor;
         }
         
         /* Responsive */
         @media (max-width: 600px) {
             body {
-                margin: 1.5rem auto;
+                margin: 1rem auto;
                 padding: 0 1.5rem;
             }
             
             .top-nav {
                 position: static;
                 justify-content: center;
-                margin-bottom: 2rem;
+                margin-bottom: 1.5rem; /* Reduced from 2rem */
                 gap: 1.5rem;
             }
             
             .profile-row {
                 flex-direction: column-reverse;
-                gap: 1.5rem;
-                margin-top: 1rem;
+                gap: 1rem; /* Reduced from 1.5rem */
+                margin-top: 0.5rem; /* Reduced from 1rem */
             }
             
             .profile-content {
-                margin-left: 0; /* Reset on mobile */
+                margin-left: 0;
             }
             
             .profile-image {
                 justify-content: center;
+                margin-top: 20px; /* Reduced from 60px */
             }
             
             .profile-image img {
-                max-width: 180px;
+                max-width: 160px; /* Reduced from 180px */
             }
             
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem; /* Reduced from 2rem */
                 text-align: center;
             }
             
@@ -245,7 +256,8 @@
             }
             
             .social-icons {
-                gap: 1.5rem;
+                gap: 1.2rem; /* Reduced from 1.5rem */
+                margin-top: 1rem;
             }
         }
     </style>
@@ -259,77 +271,80 @@
         <a href="#">Teaching</a>
     </div>
     
-    <!-- Profile section with image on right-middle -->
-    <div class="profile-row">
-        <div class="profile-content">
-            <h1>Tejpal Sandhu</h1>
+    <!-- Main content wrapper -->
+    <div class="main-content">
+        <!-- Profile section with image on right-middle -->
+        <div class="profile-row">
+            <div class="profile-content">
+                <h1>Tejpal Sandhu</h1>
+                
+                <p>
+                    I am a Ph.D. candidate at the University of Essex. My research interests include microeconomic theory, industrial organisation and auctions.
+                </p>
+                
+                <p>
+                    My email is tpsandhu.eco [at] gmail.com
+                </p>
+                
+                <p>
+                    I am on the 2025-2026 academic job market.
+                </p>
+            </div>
             
-            <p>
-                I am a Ph.D. candidate at the University of Essex. My research interests include microeconomic theory, industrial organisation and auctions.
-            </p>
-            
-            <p>
-                My email is tpsandhu.eco [at] gmail.com
-            </p>
-            
-            <p>
-                I am on the 2025-2026 academic job market.
-            </p>
+            <div class="profile-image">
+                <img src="2.jpg" alt="Tejpal Sandhu" onerror="this.src='https://via.placeholder.com/200x240?text=Photo'">
+            </div>
         </div>
         
-        <div class="profile-image">
-            <img src="2.jpg" alt="Tejpal Sandhu" onerror="this.src='https://via.placeholder.com/200x240?text=Photo'">
+        <!-- Red links row: Job Market Paper | Research | CV -->
+        <div class="red-links-row">
+            <a href="#">Job Market Paper</a>
+            <span class="separator">|</span>
+            <a href="#">Research</a>
+            <span class="separator">|</span>
+            <a href="#">CV</a>
         </div>
-    </div>
-    
-    <!-- Red links row: Job Market Paper | Research | CV -->
-    <div class="red-links-row">
-        <a href="#">Job Market Paper</a>
-        <span class="separator">|</span>
-        <a href="#">Research</a>
-        <span class="separator">|</span>
-        <a href="#">CV</a>
-    </div>
-    
-    <!-- Placement director -->
-    <div class="placement">
-        <strong>Placement director:</strong> Dr Lucas Siga
-    </div>
-    
-    <!-- References - names in black -->
-    <div class="references">
-        <strong>References:</strong> 
-        <a href="#">Prof Daniel F Garrett</a>
-        <span class="reference-sep">|</span>
-        <a href="#">Dr Albin Erlanson</a>
-    </div>
-    
-    <!-- Social icons at bottom center -->
-    <div class="social-icons">
-        <a href="mailto:tpsandhu.eco@gmail.com" title="Email">
-            <svg viewBox="0 0 24 24">
-                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>
-            <span>Email</span>
-        </a>
-        <a href="https://github.com/yourusername" target="_blank" title="GitHub">
-            <svg viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.9-.01-1.74-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1.01.07 1.54 1.03 1.54 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.8-.22 1.66-.33 2.5-.33s1.7.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .26.18.58.69.48 3.97-1.32 6.83-5.07 6.83-9.49C22 6.48 17.52 2 12 2z"/>
-            </svg>
-            <span>GitHub</span>
-        </a>
-        <a href="https://scholar.google.com/" target="_blank" title="Google Scholar">
-            <svg viewBox="0 0 24 24">
-                <path d="M12 2L2 7v10l10 5 10-5V7l-10-5zm0 2.5l7.5 3.7-7.5 3.7-7.5-3.7L12 4.5zm-8 8.5v-5.1l8 4v5.1l-8-4zm16 0l-8 4v-5.1l8-4v5.1z"/>
-            </svg>
-            <span>Scholar</span>
-        </a>
-        <a href="https://twitter.com/yourusername" target="_blank" title="X (Twitter)">
-            <svg viewBox="0 0 24 24">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-            </svg>
-            <span>X</span>
-        </a>
+        
+        <!-- Placement director -->
+        <div class="placement">
+            <strong>Placement director:</strong> Dr Lucas Siga
+        </div>
+        
+        <!-- References - names in black -->
+        <div class="references">
+            <strong>References:</strong> 
+            <a href="#">Prof Daniel F Garrett</a>
+            <span class="reference-sep">|</span>
+            <a href="#">Dr Albin Erlanson</a>
+        </div>
+        
+        <!-- Social icons at bottom center -->
+        <div class="social-icons">
+            <a href="mailto:tpsandhu.eco@gmail.com" title="Email">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                <span>Email</span>
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" title="GitHub">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.9-.01-1.74-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1.01.07 1.54 1.03 1.54 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.8-.22 1.66-.33 2.5-.33s1.7.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .26.18.58.69.48 3.97-1.32 6.83-5.07 6.83-9.49C22 6.48 17.52 2 12 2z"/>
+                </svg>
+                <span>GitHub</span>
+            </a>
+            <a href="https://scholar.google.com/" target="_blank" title="Google Scholar">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2L2 7v10l10 5 10-5V7l-10-5zm0 2.5l7.5 3.7-7.5 3.7-7.5-3.7L12 4.5zm-8 8.5v-5.1l8 4v5.1l-8-4zm16 0l-8 4v-5.1l8-4v5.1z"/>
+                </svg>
+                <span>Scholar</span>
+            </a>
+            <a href="https://twitter.com/yourusername" target="_blank" title="X (Twitter)">
+                <svg viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                <span>X</span>
+            </a>
+        </div>
     </div>
 </body>
 </html>
