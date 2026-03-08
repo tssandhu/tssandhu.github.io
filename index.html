@@ -17,19 +17,19 @@
             line-height: 1.6;
             color: #1a1e24;
             background-color: #ffffff;
-            max-width: 700px;
+            max-width: 800px;
             margin: 2rem auto;
             padding: 0 2rem;
             position: relative;
         }
         
-        /* Top right navigation */
+        /* Top right navigation - more to the right */
         .top-nav {
             position: absolute;
             top: 0;
-            right: 2rem;
+            right: 0;
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
         }
         
         .top-nav a {
@@ -47,29 +47,33 @@
             border-bottom-color: #0066cc;
         }
         
-        /* Profile section - two column layout */
+        /* Profile section - two column layout with profile left, photo right-middle */
         .profile-row {
             display: flex;
-            gap: 3rem;
-            align-items: flex-start;
+            gap: 4rem;
+            align-items: center;
             margin: 4rem 0 2rem 0;
         }
         
         .profile-content {
-            flex: 2;
+            flex: 1.5;
+            margin-left: -1rem; /* Shift profile area slightly to left */
         }
         
         .profile-image {
             flex: 1;
-            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
         }
         
         .profile-image img {
-            max-width: 200px;
+            max-width: 220px;
             width: 100%;
             height: auto;
             border-radius: 6px;
             border: 1px solid #eaecef;
+            align-self: center;
         }
         
         /* Typography */
@@ -142,12 +146,13 @@
         }
         
         .references a {
-            color: #0066cc;
+            color: #000000; /* Changed to black */
             text-decoration: none;
         }
         
         .references a:hover {
             text-decoration: underline;
+            color: #0066cc; /* Blue on hover for interactivity */
         }
         
         .reference-sep {
@@ -207,8 +212,12 @@
                 margin-top: 1rem;
             }
             
+            .profile-content {
+                margin-left: 0; /* Reset on mobile */
+            }
+            
             .profile-image {
-                text-align: center;
+                justify-content: center;
             }
             
             .profile-image img {
@@ -243,7 +252,7 @@
         <a href="#">Teaching</a>
     </div>
     
-    <!-- Profile section with image on right -->
+    <!-- Profile section with image on right-middle -->
     <div class="profile-row">
         <div class="profile-content">
             <h1>Tejpal Sandhu</h1>
@@ -253,7 +262,7 @@
             </p>
             
             <p>
-                My email is <span class="email">tpsandhu.eco [at] gmail.com/span>
+                My email is <span class="email">tpsandhu.eco [at] gmail.com</span>
             </p>
             
             <p>
@@ -280,13 +289,12 @@
         <strong>Placement director:</strong> Dr Lucas Siga
     </div>
     
-    <!-- References -->
+    <!-- References - names in black -->
     <div class="references">
         <strong>References:</strong> 
-        <a href="#">Prof Daniel F Garrett/a>
+        <a href="#">Prof Daniel F Garrett</a>
         <span class="reference-sep">|</span>
         <a href="#">Dr Albin Erlanson</a>
-       
     </div>
     
     <!-- Social icons at bottom center -->
