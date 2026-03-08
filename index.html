@@ -3,333 +3,457 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name · PhD Candidate in Economics</title>
+    <title>Tejpal S Sandhu · PhD Candidate in Economics</title>
     <style>
-        /* --- Global Styles & Variables (Inspired by Clean Academic Design) --- */
+        /* Simple, clean styling */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #1e293b; /* A soft, dark blue-grey for text */
+            color: #333333;
             background-color: #ffffff;
-            max-width: 1000px; /* Comfortable reading width */
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem 2.5rem;
+            padding: 0 2rem;
         }
-
-        h1, h2, h3 {
-            font-weight: 500; /* Medium weight, clean look */
-            color: #0f172a; /* Slightly darker for headings */
+        
+        /* Cherry color strip at top */
+        .cherry-strip {
+            background-color: #8B0000; /* Cherry color */
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.25rem;
-            line-height: 1.2;
+        
+        .strip-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.8rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-
-        h2 {
+        
+        /* Name on top left */
+        .site-title {
             font-size: 1.8rem;
-            margin: 2.5rem 0 1rem 0;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #e2e8f0; /* Light grey separator */
+            font-weight: 600;
+            color: white;
+            letter-spacing: 0.5px;
         }
-
-        h3 {
-            font-size: 1.3rem;
-            margin: 1.8rem 0 0.8rem 0;
-            font-weight: 600; /* Slightly bolder for subsections */
+        
+        /* Top right navigation */
+        .top-nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
         }
-
-        a {
-            color: #2563eb; /* A clean, professional blue */
+        
+        .top-nav a {
+            color: white;
             text-decoration: none;
-            transition: color 0.2s ease;
+            font-size: 1.1rem;
+            font-weight: 400;
+            transition: opacity 0.2s;
+            padding: 0.3rem 0;
         }
-
-        a:hover {
-            color: #1d4ed8;
-            text-decoration: underline;
+        
+        .top-nav a:hover {
+            opacity: 0.8;
         }
-
-        p {
-            margin-bottom: 1rem;
+        
+        /* Home link bold */
+        .top-nav a:first-child {
+            font-weight: 700;
         }
-
-        /* --- Layout Components --- */
-        .profile-header {
+        
+        /* Search container */
+        .search-container {
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 4px;
+            padding: 0.3rem 0.8rem;
+            margin-left: 1rem;
+        }
+        
+        .search-container input {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 0.95rem;
+            padding: 0.2rem;
+            width: 140px;
+        }
+        
+        .search-container input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .search-container input:focus {
+            outline: none;
+        }
+        
+        .search-container button {
+            background: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .search-container button:hover {
+            opacity: 0.8;
+        }
+        
+        /* Main content - add top padding for fixed strip */
+        .main-content {
+            margin-top: 80px; /* Space for fixed cherry strip */
+            padding: 2rem 0;
+        }
+        
+        /* Profile section - photo on left */
+        .profile-section {
             display: flex;
             gap: 3rem;
+            margin-bottom: 2.5rem;
             align-items: flex-start;
-            margin: 1.5rem 0 2.5rem 0;
         }
-
-        .profile-info {
-            flex: 2;
-        }
-
+        
         .profile-image {
-            flex: 1;
-            text-align: right;
+            flex: 0 0 280px; /* Fixed width for photo */
         }
-
+        
         .profile-image img {
-            max-width: 220px;
             width: 100%;
             height: auto;
-            border-radius: 4px; /* Slightly rounded corners */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+            border-radius: 8px;
+            border: 2px solid #f0f0f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-
-        .photo-credit {
-            font-size: 0.75rem;
-            color: #64748b;
-            margin-top: 0.25rem;
-            text-align: right;
+        
+        .profile-info {
+            flex: 1;
         }
-
-        .job-market-tag {
-            display: inline-block;
-            background-color: #e6f0ff; /* Very light blue */
-            color: #1e3a8a;
-            padding: 0.2rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
+        
+        /* Name in main content (if needed, but we already have it in strip) */
+        .profile-info h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #8B0000; /* Cherry color for name in main content */
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        p {
             margin: 1rem 0;
+            font-size: 1.05rem;
+            color: #444444;
         }
-
-        .contact-line {
-            font-size: 1.1rem;
-            margin-top: 0.5rem;
+        
+        /* Cherry color for CV and email */
+        .cherry-link {
+            color: #8B0000;
+            text-decoration: none;
+            font-weight: 500;
         }
-
-        /* --- Research & Teaching Listings (Clean, readable blocks) --- */
-        .paper-item {
-            margin-bottom: 2rem;
+        
+        .cherry-link:hover {
+            text-decoration: underline;
+            color: #6B0000;
         }
-
+        
+        /* Section headings */
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #8B0000; /* Cherry color for section headings */
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #8B0000;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #8B0000; /* Cherry color for subsection headings */
+            margin: 1.5rem 0 0.8rem 0;
+        }
+        
+        /* Paper titles in cherry */
         .paper-title {
             font-size: 1.2rem;
             font-weight: 600;
-            color: #0f172a;
+            color: #8B0000;
+            margin-bottom: 0.2rem;
         }
-
+        
         .paper-authors {
             font-size: 0.95rem;
-            color: #475569;
+            color: #555555;
             margin: 0.2rem 0;
         }
-
+        
         .paper-venue {
             font-size: 0.9rem;
             font-style: italic;
-            color: #64748b;
+            color: #666666;
             margin-bottom: 0.3rem;
         }
-
+        
         .paper-abstract {
             font-size: 0.95rem;
-            color: #334155;
-            margin-top: 0.5rem;
+            color: #444444;
+            margin: 0.5rem 0 1.5rem 0;
             padding-left: 0.5rem;
-            border-left: 3px solid #e2e8f0; /* Subtle indicator for abstract */
+            border-left: 3px solid #8B0000;
         }
-
+        
+        /* Teaching items */
         .teaching-item {
             margin-bottom: 1.5rem;
         }
-
+        
         .teaching-course {
             font-weight: 600;
             font-size: 1.1rem;
-            color: #0f172a;
+            color: #8B0000;
         }
-
+        
         .teaching-details {
             font-size: 0.95rem;
-            color: #475569;
-            margin: 0.2rem 0 0.2rem 0;
+            color: #555555;
+            margin: 0.2rem 0;
         }
-
-        .teaching-links a, .material-links a {
-            margin-right: 1rem;
-            font-size: 0.9rem;
-        }
-
+        
         .material-links {
             margin-top: 0.3rem;
         }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background: #e2e8f0;
-            margin: 2rem 0;
+        
+        .material-links a {
+            color: #8B0000;
+            text-decoration: none;
+            margin-right: 1rem;
+            font-size: 0.9rem;
         }
-
-        /* --- Footer / Update Info --- */
+        
+        .material-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Advisor names */
+        .advisor-link {
+            color: #8B0000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .advisor-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Job market tag */
+        .job-market-tag {
+            display: inline-block;
+            background-color: #8B0000;
+            color: white;
+            padding: 0.3rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin: 1rem 0;
+        }
+        
+        /* Footer */
         .footer-note {
             margin-top: 3rem;
-            font-size: 0.85rem;
-            color: #94a3b8;
-            text-align: center;
-            border-top: 1px solid #e2e8f0;
             padding-top: 1.5rem;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777777;
         }
-
-        /* --- Responsive Design --- */
-        @media (max-width: 700px) {
-            body {
-                padding: 1.5rem;
+        
+        /* Responsive */
+        @media (max-width: 800px) {
+            .strip-content {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 0.8rem 1rem;
             }
-
-            .profile-header {
-                flex-direction: column-reverse;
-                gap: 1.5rem;
+            
+            .top-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
             }
-
+            
+            .search-container {
+                margin-left: 0;
+                margin-top: 0.3rem;
+            }
+            
+            .profile-section {
+                flex-direction: column;
+            }
+            
             .profile-image {
-                text-align: center;
+                flex: 0 0 auto;
+                max-width: 250px;
+                margin: 0 auto;
             }
-
-            .profile-image img {
-                max-width: 200px;
+            
+            .main-content {
+                margin-top: 120px; /* More space for stacked strip on mobile */
             }
-
-            h1 {
-                font-size: 2rem;
-                text-align: center;
+        }
+        
+        @media (max-width: 500px) {
+            .search-container input {
+                width: 100px;
             }
-
-            .photo-credit {
-                text-align: center;
+            
+            .site-title {
+                font-size: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- Header with Name -->
-    <h1>Your Full Name</h1>
-
-    <!-- Profile Section: Info and Image -->
-    <div class="profile-header">
-        <div class="profile-info">
-            <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">
-                I am a PhD candidate in Economics at <strong>Your University</strong>.
-            </p>
-            <p>
-                Prior to [University], I received my [Degree] from [Previous University] in [Subject].
-            </p>
-            <p>
-                My research interests are in <strong>field 1, field 2, and field 3</strong>. 
-                My current projects focus on [brief description of research focus]. 
-                I am fortunate to be advised by <a href="#">Professor One</a> and <a href="#">Professor Two</a>.
-            </p>
-
-            <!-- Job Market Tag -->
-            <div class="job-market-tag">
-                📢 I am on the academic job market in 2025-26.
+    <!-- Cherry color strip at top -->
+    <div class="cherry-strip">
+        <div class="strip-content">
+            <!-- Name on top left -->
+            <div class="site-title">Tejpal S Sandhu</div>
+            
+            <!-- Top right navigation with search -->
+            <div class="top-nav">
+                <a href="index.html">Home</a>
+                <a href="research.html">Research</a>
+                <a href="teaching.html">Teaching</a>
+                
+                <!-- Search option -->
+                <div class="search-container">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit">🔍</button>
+                </div>
             </div>
-
-            <!-- CV and Contact -->
-            <p>
-                You can find my <a href="#">CV here</a>.
-            </p>
-            <p class="contact-line">
-                You can contact me at <a href="mailto:your.email@university.edu">your.email@university.edu</a>.
-            </p>
-        </div>
-
-        <div class="profile-image">
-            <!-- Replace 'your-photo.jpg' with your actual photo file name -->
-            <img src="your-photo.jpg" alt="Your Name" onerror="this.src='https://via.placeholder.com/220x260?text=Photo'">
-            <div class="photo-credit">Photo by [Your Name or Photographer]</div>
         </div>
     </div>
-
-    <!-- ========== RESEARCH SECTION ========== -->
-    <h2>Research</h2>
-
-    <!-- Work in Progress Subsection -->
-    <h3>Work in Progress</h3>
-
-    <div class="paper-item">
-        <div class="paper-title">Title of Your Job Market Paper</div>
-        <div class="paper-authors">(Job Market Paper)</div>
-        <div class="paper-abstract">
-            <strong>Abstract:</strong> This is where you place the abstract for your job market paper. Describe the research question, methodology, and key findings in a few clear sentences. This gives readers a quick overview of your main work.
+    
+    <!-- Main content -->
+    <div class="main-content">
+        <!-- Profile section with photo on left -->
+        <div class="profile-section">
+            <div class="profile-image">
+                <img src="your-photo.jpg" alt="Tejpal S Sandhu" onerror="this.src='https://via.placeholder.com/280x320?text=Photo'">
+            </div>
+            
+            <div class="profile-info">
+                <!-- Note: Name in strip above, but keeping this for structure -->
+                <p>
+                    I am a PhD candidate in Economics at the <strong>University of Essex</strong>. I also completed my MSc and MRes here. My research interests include <strong>microeconomic theory, industrial organisation, and auctions</strong>.
+                </p>
+                
+                <!-- Job market tag -->
+                <div class="job-market-tag">
+                    📢 I am on the 2025-2026 academic job market.
+                </div>
+                
+                <!-- CV and Email in cherry color -->
+                <p>
+                    📄 <a href="cv.pdf" class="cherry-link">CV</a><br>
+                    📧 <a href="mailto:tpsandhu.eco@gmail.com" class="cherry-link">tpsandhu.eco [at] gmail.com</a>
+                </p>
+                
+                <!-- Advisors -->
+                <p>
+                    <strong>Advisors:</strong> 
+                    <a href="#" class="advisor-link">Prof Daniel F Garrett</a> and 
+                    <a href="#" class="advisor-link">Dr Albin Erlanson</a>
+                </p>
+            </div>
+        </div>
+        
+        <!-- ========== RESEARCH SECTION ========== -->
+        <h2>Research</h2>
+        
+        <!-- Work in Progress -->
+        <h3>Work in Progress</h3>
+        
+        <div class="paper-item">
+            <div class="paper-title">Title of Your Job Market Paper</div>
+            <div class="paper-authors">(Job Market Paper)</div>
+            <div class="paper-abstract">
+                <strong>Abstract:</strong> This is where you place the abstract for your job market paper. Describe the research question, methodology, and key findings in a few clear sentences. This gives readers a quick overview of your main work.
+            </div>
+        </div>
+        
+        <div class="paper-item">
+            <div class="paper-title">Another Working Paper Title</div>
+            <div class="paper-authors">with Co-author Name</div>
+            <div class="paper-abstract">
+                <strong>Abstract:</strong> A brief description of this paper. Explain its contribution and main results. Keep it concise but informative.
+            </div>
+        </div>
+        
+        <!-- Publications -->
+        <h3>Publications</h3>
+        
+        <div class="paper-item">
+            <div class="paper-title">Title of Published Paper</div>
+            <div class="paper-authors">with Co-author(s) Name(s)</div>
+            <div class="paper-venue"><em>Journal Name</em>, Year, Volume(Issue), Pages</div>
+            <div class="paper-abstract">
+                <strong>Abstract:</strong> A short summary of the published paper. You can use the journal's official abstract.
+            </div>
+        </div>
+        
+        <!-- ========== TEACHING SECTION ========== -->
+        <h2>Teaching</h2>
+        
+        <p>
+            I am passionate about teaching microeconomic theory and industrial organisation. My goal is to create an engaging and supportive learning environment where students can develop the confidence to apply complex methods to real-world problems.
+        </p>
+        
+        <h3>Teaching Materials</h3>
+        
+        <div class="teaching-item">
+            <div class="teaching-course">ECON 101: Microeconomic Theory</div>
+            <div class="teaching-details">University of Essex | Undergraduate Level | Term</div>
+            <div class="teaching-details">Role: Teaching Assistant</div>
+            <div class="material-links">
+                <a href="#">[teaching evaluations]</a>
+                <a href="#">[section notes]</a>
+            </div>
+        </div>
+        
+        <div class="teaching-item">
+            <div class="teaching-course">ECON 202: Industrial Organisation</div>
+            <div class="teaching-details">University of Essex | Graduate Level | Term</div>
+            <div class="teaching-details">Role: Course Designer & Teaching Assistant</div>
+            <div class="material-links">
+                <a href="#">[teaching evaluations]</a>
+                <a href="#">[section notes]</a>
+            </div>
+        </div>
+        
+        <!-- ========== FOOTER ========== -->
+        <div class="footer-note">
+            Last updated: March 2026
         </div>
     </div>
-
-    <div class="paper-item">
-        <div class="paper-title">Another Working Paper Title</div>
-        <div class="paper-authors">with Co-author Name</div>
-        <div class="paper-abstract">
-            <strong>Abstract:</strong> A brief description of this paper. Explain its contribution and main results. Keep it concise but informative.
-        </div>
-    </div>
-
-    <!-- Publications Subsection -->
-    <h3>Publications</h3>
-
-    <div class="paper-item">
-        <div class="paper-title">Title of Published Paper</div>
-        <div class="paper-authors">with Co-author(s) Name(s)</div>
-        <div class="paper-venue"><em>Journal Name</em>, Year, Volume(Issue), Pages</div>
-        <div class="paper-abstract">
-            <strong>Abstract:</strong> A short summary of the published paper. You can use the journal's official abstract.
-        </div>
-    </div>
-
-    <!-- ========== TEACHING SECTION ========== -->
-    <h2>Teaching</h2>
-
-    <p>
-        I am passionate about teaching [your subjects]. My goal is to [describe your teaching philosophy briefly]. 
-    </p>
-
-    <!-- Optional: Teaching Awards -->
-    <p>
-        <strong>Teaching Awards & Recognition</strong><br>
-        • University Name, Department: Description of Award (Year)<br>
-        • University Name: Another Recognition (Year)
-    </p>
-
-    <!-- Teaching Materials / Courses -->
-    <h3>Teaching Materials</h3>
-
-    <div class="teaching-item">
-        <div class="teaching-course">ECON 101: Course Title</div>
-        <div class="teaching-details">University Name | Level | Term</div>
-        <div class="teaching-details">Role: Teaching Assistant</div>
-        <div class="material-links">
-            <a href="#">[teaching evaluations]</a>
-            <a href="#">[section notes]</a>
-            <a href="#">[data sets]</a>
-        </div>
-    </div>
-
-    <div class="teaching-item">
-        <div class="teaching-course">ECON 202: Another Course</div>
-        <div class="teaching-details">University Name | Level | Term</div>
-        <div class="teaching-details">Role: Course Designer & Teaching Assistant</div>
-        <div class="material-links">
-            <a href="#">[teaching evaluations]</a>
-            <a href="#">[section notes]</a>
-        </div>
-    </div>
-
-    <!-- ========== FOOTER ========== -->
-    <div class="footer-note">
-        页面更新时间：March 2026 <!-- Kept the original style from reference -->
-    </div>
-
 </body>
 </html>
