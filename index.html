@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tejpal S Sandhu · PhD Candidate in Economics</title>
     <style>
-        /* ===== PRINCETON INSPIRED STYLE ===== */
+        /* ===== PRINCETON INSPIRED STYLE - FULL WIDTH ===== */
         /* Colors: Black Strip (#000), Princeton Orange (#E77500), Off-White (#F8F5F0) */
         
         * {
@@ -20,8 +20,8 @@
             color: #1d1d1f;
             background-color: #FFFFFF;
             line-height: 1.6;
-            max-width: 1200px;
-            margin: 0 auto;
+            width: 100%;
+            margin: 0;
             padding: 0;
             min-height: 100vh;
             overflow-y: auto;
@@ -38,16 +38,16 @@
             right: 0;
             z-index: 1000;
             box-shadow: 0 1px 4px rgba(0,0,0,0.15);
-            height: 55px; /* Reduced height */
+            height: 60px;
             display: flex;
             align-items: center;
         }
         
         .strip-content {
-            max-width: 1200px;
             width: 100%;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 3rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -55,7 +55,7 @@
         
         /* Name on top left - White */
         .site-title {
-            font-size: 1.3rem; /* Slightly smaller for reduced strip */
+            font-size: 1.4rem;
             font-weight: 400;
             color: white;
             letter-spacing: normal;
@@ -64,14 +64,14 @@
         /* Top right navigation - White */
         .top-nav {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             align-items: center;
         }
         
         .top-nav a {
             color: white;
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 400;
             transition: opacity 0.2s;
             padding: 0.2rem 0;
@@ -92,7 +92,7 @@
         .cv-icon {
             color: white;
             font-size: 1.3rem;
-            margin-left: 1rem;
+            margin-left: 0.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -102,6 +102,8 @@
         .cv-icon a {
             color: white;
             text-decoration: none;
+            display: flex;
+            align-items: center;
         }
         
         .cv-icon:hover {
@@ -114,31 +116,7 @@
             fill: white;
         }
         
-        /* Inactive Research link */
-        .top-nav a.inactive-link {
-            opacity: 0.6;
-            position: relative;
-        }
-        
-        .top-nav a.inactive-link:hover {
-            opacity: 0.8;
-        }
-        
-        .top-nav a.inactive-link::after {
-            content: "(coming soon)";
-            font-size: 0.6rem;
-            position: absolute;
-            top: -12px;
-            right: -5px;
-            background-color: #666;
-            color: white;
-            padding: 2px 5px;
-            border-radius: 8px;
-            white-space: nowrap;
-            font-weight: 300;
-        }
-        
-        /* Search icon - optional, kept for consistency */
+        /* Search icon */
         .search-icon {
             color: white;
             font-size: 1.2rem;
@@ -167,15 +145,16 @@
         
         /* ===== MAIN CONTENT ===== */
         .main-content {
-            margin-top: 55px; /* Matches reduced strip height */
-            min-height: calc(100vh - 55px);
+            margin-top: 60px;
+            width: 100%;
         }
         
-        /* ===== PRINCETON ORANGE BACKGROUND SECTION (Name & University) ===== */
+        /* ===== PRINCETON ORANGE BACKGROUND SECTION (Name & University) - FULL WIDTH ===== */
         .orange-section {
             background-color: #E77500; /* Princeton Orange */
-            padding: 2.5rem 2rem;
+            padding: 2.5rem 3rem;
             color: white;
+            width: 100%;
         }
         
         .orange-content {
@@ -217,10 +196,11 @@
             opacity: 0.85;
         }
         
-        /* ===== OFF-WHITE BACKGROUND SECTION (Photo & Profile) ===== */
+        /* ===== OFF-WHITE BACKGROUND SECTION (Photo & Profile) - FULL WIDTH ===== */
         .offwhite-section {
             background-color: #F8F5F0; /* Off-white */
-            padding: 3rem 2rem;
+            padding: 3rem 3rem;
+            width: 100%;
         }
         
         .offwhite-content {
@@ -258,6 +238,12 @@
             line-height: 1.7;
         }
         
+        /* Research interests paragraph - separate */
+        .research-interests {
+            margin-top: 1.5rem;
+            padding-top: 0.5rem;
+        }
+        
         /* Links in profile - Princeton Orange */
         .profile-link {
             color: #E77500;
@@ -282,87 +268,12 @@
             text-decoration: underline;
         }
         
-        /* ===== RESEARCH & TEACHING SECTIONS (Off-white continues) ===== */
-        .content-section {
-            background-color: #F8F5F0; /* Continue off-white */
-            padding: 0 2rem 2rem 2rem;
-        }
-        
-        .content-wrapper {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        
-        h2 {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #E77500; /* Princeton Orange */
-            margin: 2.5rem 0 1.5rem 0;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #E77500;
-        }
-        
-        h3 {
-            font-size: 1.6rem;
-            font-weight: 500;
-            color: #E77500;
-            margin: 2rem 0 1rem 0;
-        }
-        
-        .research-placeholder {
-            margin: 1.5rem 0 2rem 0;
-            padding: 1.5rem;
-            background-color: #ffffff;
-            border-radius: 6px;
-            border-left: 4px solid #E77500;
-            color: #444444;
-            font-style: italic;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
-        }
-        
-        /* Teaching items */
-        .teaching-item {
-            margin-bottom: 2rem;
-            padding-left: 1rem;
-            border-left: 3px solid #E77500;
-        }
-        
-        .teaching-course {
-            font-weight: 600;
-            font-size: 1.3rem;
-            color: #222222;
-            margin-bottom: 0.3rem;
-        }
-        
-        .teaching-details {
-            font-size: 1rem;
-            color: #444444;
-            margin: 0.2rem 0;
-        }
-        
-        .teaching-role {
-            font-weight: 500;
-            color: #E77500;
-            margin-top: 0.2rem;
-        }
-        
-        .teaching-highlight {
-            background-color: #ffffff;
-            padding: 1rem 1.5rem;
-            border-radius: 6px;
-            border-left: 4px solid #E77500;
-            margin: 2rem 0 2rem 0;
-            font-weight: 500;
-            color: #222222;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
-        }
-        
-        /* ===== BLACK ADDRESS BAR ===== */
+        /* ===== BLACK ADDRESS BAR - FULL WIDTH ===== */
         .address-bar {
             background-color: #000000; /* Zed Black */
             color: #F8F5F0; /* Off-white text */
-            padding: 1.5rem 2rem;
-            margin-top: 2rem;
+            padding: 1.5rem 3rem;
+            width: 100%;
         }
         
         .address-content {
@@ -392,12 +303,13 @@
             opacity: 0.8;
         }
         
-        /* ===== MULTIMEDIA ICONS AT BOTTOM ===== */
+        /* ===== MULTIMEDIA ICONS AT BOTTOM - FULL WIDTH ===== */
         .multimedia-icons {
             background-color: #000000; /* Zed Black */
             color: #F8F5F0;
-            padding: 1rem 2rem 2rem 2rem;
+            padding: 1rem 3rem 2rem 3rem;
             text-align: center;
+            width: 100%;
         }
         
         .icons-container {
@@ -419,7 +331,7 @@
         
         .icon-label {
             font-size: 0.8rem;
-            margin-top: 0.2rem;
+            margin-top: 0.5rem;
             color: #F8F5F0;
             opacity: 0.8;
         }
@@ -427,11 +339,16 @@
         /* Responsive */
         @media (max-width: 800px) {
             .strip-content {
-                padding: 0 1rem;
+                padding: 0 1.5rem;
             }
             
             .top-nav {
-                gap: 1rem;
+                gap: 1.2rem;
+            }
+            
+            .orange-section, .offwhite-section, .address-bar, .multimedia-icons {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
             }
             
             .profile-row {
@@ -447,21 +364,12 @@
             .princeton-name {
                 font-size: 2.5rem;
             }
-            
-            .orange-section, .offwhite-section {
-                padding: 2rem 1.5rem;
-            }
-            
-            .icons-container a {
-                font-size: 1.6rem;
-                margin: 0 1rem;
-            }
         }
         
         @media (max-width: 500px) {
             .black-strip {
                 height: auto;
-                min-height: 55px;
+                min-height: 60px;
             }
             
             .strip-content {
@@ -473,6 +381,7 @@
             .top-nav {
                 flex-wrap: wrap;
                 justify-content: center;
+                gap: 1rem;
             }
             
             .princeton-name {
@@ -484,8 +393,8 @@
             }
             
             .icons-container a {
-                font-size: 1.4rem;
-                margin: 0 0.7rem;
+                font-size: 1.5rem;
+                margin: 0 0.8rem;
             }
         }
     </style>
@@ -500,12 +409,13 @@
             <!-- Name on top left - White -->
             <div class="site-title">Tejpal S Sandhu</div>
             
-            <!-- Top right navigation and icons -->
+            <!-- Top right navigation and icons - Home, CV, Research, Teaching, Search -->
             <div style="display: flex; align-items: center;">
                 <div class="top-nav">
                     <a href="index.html">Home</a>
-                    <a href="#" class="inactive-link">Research</a>
-                    <a href="#teaching">Teaching</a>
+                    <a href="TS_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+                    <a href="research.html">Research</a>
+                    <a href="teaching.html">Teaching</a>
                     
                     <!-- Search icon -->
                     <button class="search-icon" title="Search">
@@ -514,15 +424,6 @@
                         </svg>
                     </button>
                 </div>
-                
-                <!-- CV ICON - TOP RIGHT ON STRIP -->
-                <div class="cv-icon">
-                    <a href="TS_CV.pdf" target="_blank" rel="noopener noreferrer" title="Download CV">
-                        <svg viewBox="0 0 24 24" width="22" height="22">
-                            <path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm4-3H19v1h1.5V11H19v2h-1.5V7h3v1.5zM9 9.5h1v-1H9v1zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z"/>
-                        </svg>
-                    </a>
-                </div>
             </div>
         </div>
     </div>
@@ -530,7 +431,7 @@
     <!-- ===== MAIN CONTENT ===== -->
     <div class="main-content">
         
-        <!-- ===== PRINCETON ORANGE SECTION (Name & University) ===== -->
+        <!-- ===== PRINCETON ORANGE SECTION (Name & University) - FULL WIDTH ===== -->
         <div class="orange-section">
             <div class="orange-content">
                 <div class="princeton-name">Tejpal S Sandhu</div>
@@ -541,7 +442,7 @@
             </div>
         </div>
         
-        <!-- ===== OFF-WHITE SECTION (Photo & Profile) ===== -->
+        <!-- ===== OFF-WHITE SECTION (Photo & Profile) - FULL WIDTH ===== -->
         <div class="offwhite-section">
             <div class="offwhite-content">
                 <div class="profile-row">
@@ -551,98 +452,30 @@
                     
                     <div class="profile-info">
                         <p>
-                            I am a PhD candidate in Economics at the <a href="https://www.essex.ac.uk" class="profile-link" target="_blank" rel="noopener noreferrer">University of Essex</a>. I also completed my MSc and MRes here. My research interests include microeconomic theory, industrial organisation, and auctions.
+                            I am a PhD candidate in Economics at the <a href="https://www.essex.ac.uk" class="profile-link" target="_blank" rel="noopener noreferrer">University of Essex</a>. I also completed my MSc and MRes here.
                         </p>
                         
-                        <p>
-                            Email: <a href="mailto:tejpal.s.sandhu@essex.ac.uk" class="profile-link">tejpal.s.sandhu@essex.ac.uk</a>
-                        </p>
+                        <!-- Research interests in separate paragraph -->
+                        <div class="research-interests">
+                            <p>
+                                <strong>Research Interests:</strong> Microeconomic theory, industrial organisation, and auctions.
+                            </p>
+                        </div>
                         
-                        <p>
-                            Personal email: <a href="mailto:tpsandhu.eco@gmail.com" class="profile-link">tpsandhu.eco@gmail.com</a>
-                        </p>
+                        <!-- Email and CV lines REMOVED from profile summary -->
                         
+                        <!-- Advisors -->
                         <p>
                             <strong>Advisors:</strong> 
                             <a href="#" class="advisor-link">Prof Daniel F Garrett</a> and 
                             <a href="#" class="advisor-link">Dr Albin Erlanson</a>
-                        </p>
-                        
-                        <p>
-                            <a href="TS_CV.pdf" class="profile-link" target="_blank" rel="noopener noreferrer">Download CV</a> (also available at the top right)
                         </p>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- ===== RESEARCH & TEACHING SECTIONS ===== -->
-        <div class="content-section">
-            <div class="content-wrapper">
-                
-                <!-- Research Section -->
-                <h2>Research</h2>
-                
-                <h3>Working Papers</h3>
-                <div class="research-placeholder">
-                    Working paper details will appear here. Click on paper titles to view PDFs.
-                </div>
-                
-                <h3>Work in Progress</h3>
-                <div class="research-placeholder">
-                    Work in progress details will appear here.
-                </div>
-                
-                <h3>Publications</h3>
-                <div class="research-placeholder">
-                    Publication details will appear here.
-                </div>
-                
-                <!-- Teaching Section -->
-                <h2 id="teaching">Teaching</h2>
-                
-                <p>
-                    I am passionate about teaching microeconomic theory and industrial organisation. My goal is to create an engaging and supportive learning environment.
-                </p>
-                
-                <h3>Teaching Experience</h3>
-                
-                <!-- EC 202 -->
-                <div class="teaching-item">
-                    <div class="teaching-course">EC 202: Microeconomics (Intermediate)</div>
-                    <div class="teaching-details">University of Essex | Undergraduate Level | Autumn 2024 & Spring 2025</div>
-                    <div class="teaching-role">Role: Assistant Lecturer</div>
-                </div>
-                
-                <!-- EC 201 -->
-                <div class="teaching-item">
-                    <div class="teaching-course">EC 201: Macroeconomics (Intermediate)</div>
-                    <div class="teaching-details">University of Essex | Undergraduate Level | Spring 2025</div>
-                    <div class="teaching-role">Role: Assistant Lecturer</div>
-                </div>
-                
-                <!-- EC 111 -->
-                <div class="teaching-item">
-                    <div class="teaching-course">EC 111: Introduction to Economics</div>
-                    <div class="teaching-details">University of Essex | Undergraduate Level | Autumn 2023 & Spring 2024</div>
-                    <div class="teaching-role">Role: Assistant Lecturer</div>
-                </div>
-                
-                <!-- EC 115 -->
-                <div class="teaching-item">
-                    <div class="teaching-course">EC 115: Methods of Economic Analysis</div>
-                    <div class="teaching-details">University of Essex | Undergraduate Level | Autumn 2023 & Spring 2024</div>
-                    <div class="teaching-role">Role: Assistant Lecturer</div>
-                </div>
-                
-                <!-- Teaching recognition -->
-                <div class="teaching-highlight">
-                    Associate Fellow of the Higher Education Academy (Feb 2025)
-                </div>
-            </div>
-        </div>
-        
-        <!-- ===== BLACK ADDRESS BAR ===== -->
+        <!-- ===== BLACK ADDRESS BAR - FULL WIDTH ===== -->
         <div class="address-bar">
             <div class="address-content">
                 <div class="address-line">Room no. 3.314, Department of Economics</div>
@@ -655,14 +488,14 @@
             </div>
         </div>
         
-        <!-- ===== MULTIMEDIA ICONS AT BOTTOM ===== -->
+        <!-- ===== MULTIMEDIA ICONS AT BOTTOM - FULL WIDTH ===== -->
         <div class="multimedia-icons">
             <div class="icons-container">
                 <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google-scholar"></i></a>
                 <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-orcid"></i></a>
                 <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
                 <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
-                <div class="icon-label">scholar · orcid · github · x</div>
+                <div class="icon-label">google scholar · orcid · github · x</div>
             </div>
         </div>
         
