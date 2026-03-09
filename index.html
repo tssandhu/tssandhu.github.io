@@ -39,15 +39,15 @@
             justify-content: space-between;
             align-items: flex-end;
             padding: 1.8rem 0 0.8rem 0;
-            border-bottom: 4px solid #2a5db0; /* TRIPLED the size (was 2px, now 6px) */
+            border-bottom: 4px solid #2a5db0;
             margin-bottom: 1.8rem;
         }
         
         /* Name on top left - Zed Black */
         .site-title {
-            font-size: 32px; /* 32px as requested */
-            font-weight: 700; /* Width 700 as requested */
-            color: #000000; /* Zed black */
+            font-size: 32px;
+            font-weight: 700;
+            color: #000000;
             letter-spacing: -0.3px;
             line-height: 1.2;
         }
@@ -60,9 +60,9 @@
         }
         
         .top-nav a {
-            color: #222222; /* Dark grey for icons */
+            color: #222222;
             text-decoration: none;
-            font-size: 1.5rem;
+            font-size: 1.1rem; /* Reduced from 1.5rem for better proportion */
             font-weight: 400;
             transition: color 0.2s;
             padding: 0.2rem 0;
@@ -70,16 +70,16 @@
         }
         
         .top-nav a:hover {
-            color: #2a5db0; /* Blue on hover */
+            color: #2a5db0;
             border-bottom-color: #2a5db0;
         }
         
-        /* CV link */
+        /* CV link - opens in new tab (PDF) */
         .cv-link {
             color: #222222;
         }
         
-        /* ===== MAIN CONTENT - FITS WITHOUT SCROLLING ===== */
+        /* ===== MAIN CONTENT ===== */
         .main-content {
             flex: 1;
             width: 100%;
@@ -88,7 +88,7 @@
             justify-content: flex-start;
         }
         
-        /* ===== PROFILE SECTION - COMPACT ===== */
+        /* ===== PROFILE SECTION ===== */
         .profile-row {
             display: flex;
             gap: 2.5rem;
@@ -97,7 +97,7 @@
         }
         
         .profile-image {
-            flex: 0 0 240px; /* Slightly smaller */
+            flex: 0 0 240px;
         }
         
         .profile-image img {
@@ -110,14 +110,14 @@
         
         .profile-info {
             flex: 1;
-            margin-top:50px;
+            margin-top: 50px;
         }
         
-        /* Paragraph styling - compact */
+        /* Paragraph styling */
         p {
             margin-bottom: 0.8rem;
             font-size: 1rem;
-            color: #222222; /* Dark grey */
+            color: #222222;
             line-height: 1.5;
         }
         
@@ -133,7 +133,7 @@
             border-bottom-color: #2a5db0;
         }
         
-        /* Contact section - minimal, no border lines */
+        /* Contact section */
         .contact-section {
             margin: 1rem 0 0.5rem 0;
             padding: 0.5rem 0;
@@ -153,85 +153,7 @@
             color: #2a5db0;
         }
         
-        /* ===== RESEARCH & TEACHING SECTIONS ===== */
-        .section {
-            display: none;
-            margin-top: 1rem;
-            padding-top: 0.5rem;
-        }
-        
-        .section:target {
-            display: block;
-        }
-        
-        .section h2 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            color: #2a5db0;
-            margin: 1rem 0 1rem 0;
-            padding-bottom: 0.3rem;
-            border-bottom: 1px solid #e0d6cc;
-        }
-        
-        .section h3 {
-            font-size: 1.3rem;
-            font-weight: 400;
-            color: #2a5db0;
-            margin: 1.2rem 0 0.8rem 0;
-        }
-        
-        .paper-item {
-            margin-bottom: 1.2rem;
-            padding-left: 1rem;
-            border-left: 2px solid #2a5db0;
-        }
-        
-        .paper-title {
-            font-weight: 500;
-            font-size: 1.1rem;
-            color: #222222;
-            margin-bottom: 0.1rem;
-        }
-        
-        .paper-authors {
-            font-size: 0.9rem;
-            color: #555555;
-            font-style: italic;
-        }
-        
-        .teaching-item {
-            margin-bottom: 1.2rem;
-            padding-left: 1rem;
-            border-left: 2px solid #2a5db0;
-        }
-        
-        .teaching-course {
-            font-weight: 500;
-            font-size: 1.1rem;
-            color: #222222;
-            margin-bottom: 0.1rem;
-        }
-        
-        .teaching-details {
-            font-size: 0.95rem;
-            color: #444444;
-        }
-        
-        .teaching-role {
-            font-weight: 500;
-            color: #2a5db0;
-            margin-top: 0.1rem;
-            font-size: 0.95rem;
-        }
-        
-        .back-link {
-            display: inline-block;
-            margin: 0.5rem 0 0.8rem 0;
-            color: #2a5db0;
-            font-size: 0.95rem;
-        }
-        
-        /* Footer - minimal */
+        /* Footer */
         footer {
             margin-top: 0.8rem;
             font-size: 0.85rem;
@@ -272,6 +194,10 @@
             .site-title {
                 font-size: 28px;
             }
+            
+            .top-nav a {
+                font-size: 1rem;
+            }
         }
     </style>
     
@@ -279,24 +205,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header with name and navigation - ONE LINE with thick blue border -->
+    <!-- Header with name and navigation -->
     <div class="header">
         <div class="site-title">Tejpal S Sandhu</div>
         
         <div class="top-nav">
-            <a href="#home">Home</a>
+            <a href="index.html">Home</a>
             <a href="TS_CV.pdf" target="_blank" rel="noopener noreferrer" class="cv-link">CV</a>
-            <a href="#research">Research</a>
-            <a href="#teaching">Teaching</a>
+            <a href="research.html">Research</a>   <!-- Opens in same tab -->
+            <a href="teaching.html">Teaching</a>    <!-- Opens in same tab -->
         </div>
     </div>
     
-    <!-- Main content - FITS WITHOUT SCROLLING -->
+    <!-- Main content -->
     <div class="main-content">
         
-        <!-- HOME SECTION (always visible) -->
+        <!-- HOME SECTION -->
         <div id="home">
-            <!-- Profile Section - compact -->
+            <!-- Profile Section -->
             <div class="profile-row">
                 <div class="profile-image">
                     <img src="5.jpg" alt="Tejpal S Sandhu" onerror="this.src='https://via.placeholder.com/240x300?text=Photo'">
@@ -307,16 +233,13 @@
                         I am a PhD candidate in Economics at the <a href="https://www.essex.ac.uk" target="_blank" rel="noopener noreferrer">University of Essex</a>. I also completed my MSc and MRes here.
                     </p>
                     
-                    <!-- NEW: Research methods line (replaces research interests) -->
                     <p>
                         I use methods from Empirical Industrial Organization to study questions related to Auctions.
                     </p>
-                    
-                    <!-- NOTE: Supervisors removed as requested -->
                 </div>
             </div>
             
-            <!-- Contact Information - with email (only in one place now) -->
+            <!-- Contact Information -->
             <div class="contact-section">
                 <div class="contact-line">Room 3.314, Department of Economics</div>
                 <div class="contact-line">University of Essex, Wivenhoe Park</div>
@@ -327,89 +250,11 @@
             </div>
         </div>
         
-        <!-- RESEARCH SECTION (hidden until clicked) -->
-        <div id="research" class="section">
-            <a href="#home" class="back-link">← Back to Home</a>
-            
-            <h2>Research</h2>
-            
-            <h3>Working Papers</h3>
-            <div class="paper-item">
-                <div class="paper-title">Job Market Paper Title</div>
-                <div class="paper-authors">(Job Market Paper)</div>
-            </div>
-            
-            <h3>Work in Progress</h3>
-            <div class="paper-item">
-                <div class="paper-title">Working Paper Title</div>
-                <div class="paper-authors">with Co-author Name</div>
-            </div>
-            
-            <h3>Publications</h3>
-            <div class="paper-item">
-                <div class="paper-title">Publication Title</div>
-                <div class="paper-authors">with Co-author(s)</div>
-            </div>
-        </div>
-        
-        <!-- TEACHING SECTION (hidden until clicked) -->
-        <div id="teaching" class="section">
-            <a href="#home" class="back-link">← Back to Home</a>
-            
-            <h2>Teaching</h2>
-            
-            <h3>University of Essex</h3>
-            
-            <div class="teaching-item">
-                <div class="teaching-course">EC 202: Microeconomics (Intermediate)</div>
-                <div class="teaching-details">Undergraduate | Autumn 2024 & Spring 2025</div>
-                <div class="teaching-role">Assistant Lecturer</div>
-            </div>
-            
-            <div class="teaching-item">
-                <div class="teaching-course">EC 201: Macroeconomics (Intermediate)</div>
-                <div class="teaching-details">Undergraduate | Spring 2025</div>
-                <div class="teaching-role">Assistant Lecturer</div>
-            </div>
-            
-            <div class="teaching-item">
-                <div class="teaching-course">EC 111: Introduction to Economics</div>
-                <div class="teaching-details">Undergraduate | Autumn 2023 & Spring 2024</div>
-                <div class="teaching-role">Assistant Lecturer</div>
-            </div>
-            
-            <div class="teaching-item">
-                <div class="teaching-course">EC 115: Methods of Economic Analysis</div>
-                <div class="teaching-details">Undergraduate | Autumn 2023 & Spring 2024</div>
-                <div class="teaching-role">Assistant Lecturer</div>
-            </div>
-            
-            <h3>Teaching Recognition</h3>
-            <div class="teaching-item">
-                <div class="teaching-course">Associate Fellow of the Higher Education Academy</div>
-                <div class="teaching-details">Feb 2025</div>
-            </div>
-        </div>
-        
     </div>
     
     <footer>
         Last updated: March 2026
     </footer>
     
-    <!-- Smooth scroll for hash links -->
-    <script>
-        document.querySelectorAll('.top-nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
