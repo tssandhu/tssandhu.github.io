@@ -152,7 +152,7 @@
         /* Profile row - photo left, text right */
         .profile-row {
             display: flex;
-            gap: 3rem;
+            gap: 4rem;
             align-items: flex-start;
             margin-bottom: 2rem;
         }
@@ -164,17 +164,24 @@
         .profile-image img {
             width: 100%;
             height: auto;
-            border-radius: 6px;
-            border: 1px solid #e0d6cc;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            border: 1px solid #f0e7dc;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
         }
-        
+        .profile-image img{
+transition: transform 0.25s ease;
+}
+
+.profile-image img:hover{
+transform: scale(1.02);
+}
         .profile-info {
             flex: 1;
+           padding-top:6px
         }
         
         .profile-info p {
-            margin: 1rem 0;
+            margin: 1.1rem 0;
             font-size: 1rem;
             color: #222222;
             line-height: 1.6;
