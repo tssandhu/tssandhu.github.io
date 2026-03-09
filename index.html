@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name · Economist</title>
+    <title>Tejpal S Sandhu · PhD Candidate in Economics</title>
     <style>
         /* ===== MINIMALIST STYLE - INSPIRED BY EDUARD BOEHM ===== */
-        /* Colors: Near-black text (#111), clean white background, subtle grey for secondary elements */
+        /* Clean, typography-focused design with cream background and cherry red accents */
         
         * {
             margin: 0;
@@ -16,117 +16,287 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            font-size: 18px; /* Comfortable reading size */
-            color: #111111;
-            background-color: #FFFFFF;
+            font-size: 18px;
+            color: #222222;
+            background-color: #F8F5F0; /* Cream background */
             line-height: 1.6;
-            max-width: 700px; /* Optimal line length for reading */
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 2.5rem 2rem; /* Ample white space */
+            padding: 3rem 2rem;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
         
-        /* Main content area */
+        /* Main content */
         main {
             flex: 1;
+            width: 100%;
         }
         
-        /* Name styling */
+        /* ===== NAME AT TOP ===== */
         h1 {
-            font-size: 2.4rem;
-            font-weight: 500; /* Medium weight, clean look */
+            font-size: 3.2rem;
+            font-weight: 500;
             color: #000000;
-            margin-bottom: 1.8rem;
+            margin-bottom: 0.8rem;
             line-height: 1.2;
-            letter-spacing: -0.5px; /* Slight tightening, common in modern designs */
+            letter-spacing: -0.5px;
+        }
+        
+        .subhead {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #444444;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid #e0d6cc;
+            padding-bottom: 1.5rem;
+        }
+        
+        /* ===== PROFILE SECTION ===== */
+        .profile-row {
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+            margin: 2rem 0 3rem 0;
+        }
+        
+        .profile-image {
+            flex: 0 0 260px;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #e0d6cc;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+            transition: transform 0.25s ease;
+        }
+        
+        .profile-image img:hover {
+            transform: scale(1.02);
+        }
+        
+        .profile-info {
+            flex: 1;
+            padding-top: 0;
         }
         
         /* Paragraph styling */
         p {
-            margin-bottom: 1.4rem;
+            margin-bottom: 1.2rem;
             font-size: 1.1rem;
             color: #222222;
         }
         
-        /* Link styling */
+        /* Research interests */
+        .research-interests {
+            margin: 1.5rem 0 1rem 0;
+            padding: 1rem 0 0.5rem 0;
+            border-top: 1px solid #e0d6cc;
+        }
+        
+        /* Link styling - Cherry Red */
         a {
-            color: #2c5f8a; /* Professional, muted blue */
+            color: #880000;
             text-decoration: none;
             border-bottom: 1px solid transparent;
             transition: border-color 0.2s ease;
         }
         
         a:hover {
-            border-bottom-color: #2c5f8a;
+            border-bottom-color: #880000;
         }
         
-        /* Email address styling (optional subtle highlight) */
-        .email {
-            font-family: 'Menlo', 'Courier New', monospace;
-            background-color: #f5f5f5;
-            padding: 0.2rem 0.4rem;
-            border-radius: 4px;
-            font-size: 0.95rem;
-            border: 1px solid #eaeaea;
-            color: #2c5f8a;
+        /* Advisor links */
+        .advisor-link {
+            color: #880000;
+            text-decoration: none;
+            font-weight: 400;
         }
         
-        /* Simple footer (optional) */
+        .advisor-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Contact section */
+        .contact-section {
+            margin: 2.5rem 0 2rem 0;
+            padding: 1.5rem 0;
+            border-top: 1px solid #e0d6cc;
+            border-bottom: 1px solid #e0d6cc;
+        }
+        
+        .contact-line {
+            margin: 0.3rem 0;
+            color: #444444;
+        }
+        
+        .contact-email {
+            margin: 0.5rem 0 0 0;
+        }
+        
+        .contact-email a {
+            color: #880000;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+        
+        .contact-email a:hover {
+            border-bottom-color: #880000;
+        }
+        
+        /* Multimedia icons */
+        .multimedia-icons {
+            margin: 2.5rem 0 1rem 0;
+            text-align: center;
+        }
+        
+        .icons-container {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+        }
+        
+        .icons-container a {
+            color: #880000;
+            font-size: 1.8rem;
+            transition: opacity 0.2s;
+            border-bottom: none;
+        }
+        
+        .icons-container a:hover {
+            opacity: 0.7;
+            border-bottom: none;
+        }
+        
+        .icon-label {
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+            color: #880000;
+            opacity: 0.8;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+        
+        /* Footer */
         footer {
             margin-top: 3rem;
             font-size: 0.9rem;
             color: #777777;
-            border-top: 1px solid #eeeeee;
+            border-top: 1px solid #e0d6cc;
             padding-top: 1.5rem;
             text-align: left;
         }
         
-        /* Responsive adjustment for smaller screens */
-        @media (max-width: 600px) {
+        /* Responsive */
+        @media (max-width: 700px) {
             body {
-                padding: 1.5rem;
+                padding: 2rem 1.5rem;
             }
+            
             h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
+            }
+            
+            .profile-row {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .profile-image {
+                max-width: 240px;
+                margin: 0 auto;
+            }
+            
+            .icons-container {
+                gap: 1.8rem;
+            }
+            
+            .icons-container a {
+                font-size: 1.6rem;
             }
         }
     </style>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <main>
-        <!-- Your Name -->
-        <h1>Your Full Name</h1>
+        <!-- Name and Title -->
+        <h1>Tejpal S Sandhu</h1>
+        <div class="subhead">PhD Candidate in Economics</div>
         
-        <!-- Your Position & Affiliation -->
-        <p>
-            I am a [Your Position, e.g., PhD Candidate / Assistant Professor] in the 
-            <a href="[Link to your department]" target="_blank" rel="noopener noreferrer">Department of Economics</a> 
-            at [Your University, e.g., University of Essex].
-        </p>
-        
-        <!-- Your Research Description -->
-        <p>
-            My research interests include [Your Field 1], [Your Field 2], and [Your Field 3].
-        </p>
+        <!-- Profile Section -->
+        <div class="profile-row">
+            <div class="profile-image">
+                <img src="5.jpg" alt="Tejpal S Sandhu" onerror="this.src='https://via.placeholder.com/260x320?text=Photo'">
+            </div>
+            
+            <div class="profile-info">
+                <p>
+                    I am a PhD candidate in Economics at the <a href="https://www.essex.ac.uk" target="_blank" rel="noopener noreferrer">University of Essex</a>. I also completed my MSc and MRes here.
+                </p>
+                
+                <!-- Research interests -->
+                <div class="research-interests">
+                    <p>
+                        <strong>Research interests:</strong> Microeconomic theory, industrial organisation, and auctions.
+                    </p>
+                </div>
+                
+                <!-- Advisors -->
+                <p>
+                    <strong>Advisors:</strong> 
+                    <a href="https://sites.google.com/site/dfgarrett/" class="advisor-link" target="_blank" rel="noopener noreferrer">Daniel F Garrett</a> and 
+                    <a href="https://erlanson.weebly.com/" class="advisor-link" target="_blank" rel="noopener noreferrer">Albin Erlanson</a>
+                </p>
+            </div>
+        </div>
         
         <!-- Contact Information -->
-        <p>
-            You can reach me at 
-            <a href="mailto:your.email@university.ac.uk" class="email">your.email@university.ac.uk</a>.
-        </p>
+        <div class="contact-section">
+            <div class="contact-line">Room 3.314, Department of Economics</div>
+            <div class="contact-line">University of Essex, Wivenhoe Park</div>
+            <div class="contact-line">Colchester, CO4 3SQ, United Kingdom</div>
+            <div class="contact-email">
+                <a href="mailto:tejpal.s.sandhu@essex.ac.uk">tejpal.s.sandhu@essex.ac.uk</a>
+            </div>
+        </div>
         
-        <!-- Optional: Add links to CV, Google Scholar, etc., in a simple line -->
-        <p style="margin-top: 2rem;">
-            <a href="[Link to your CV]">CV</a> · 
-            <a href="[Link to your Google Scholar]">Google Scholar</a> · 
-            <a href="[Link to your GitHub]">GitHub</a>
+        <!-- Multimedia Icons -->
+        <div class="multimedia-icons">
+            <div class="icons-container">
+                <div>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google-scholar"></i></a>
+                    <div class="icon-label">Scholar</div>
+                </div>
+                <div>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-orcid"></i></a>
+                    <div class="icon-label">ORCID</div>
+                </div>
+                <div>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                    <div class="icon-label">GitHub</div>
+                </div>
+                <div>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                    <div class="icon-label">X</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Optional links to other pages (can be added if needed) -->
+        <p style="margin-top: 2rem; font-size: 1rem;">
+            <a href="research.html">Research</a> · 
+            <a href="teaching.html">Teaching</a> · 
+            <a href="TS_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
         </p>
         
     </main>
     
-    <!-- Optional footer with last updated date -->
     <footer>
         Last updated: March 2026
     </footer>
