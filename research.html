@@ -84,30 +84,19 @@
             border-bottom-color: rgba(255,255,255,0.5);
         }
         
-        .cv-icon {
-            color: white;
-            font-size: 1.3rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: opacity 0.2s;
-        }
-        
-        .cv-icon a {
+        .cv-link {
             color: white;
             text-decoration: none;
-            display: flex;
-            align-items: center;
+            font-size: 1rem;
+            font-weight: 400;
+            transition: opacity 0.2s;
+            padding: 0.2rem 0;
+            border-bottom: 1px solid transparent;
         }
         
-        .cv-icon:hover {
+        .cv-link:hover {
             opacity: 0.8;
-        }
-        
-        .cv-icon svg {
-            width: 22px;
-            height: 22px;
-            fill: white;
+            border-bottom-color: rgba(255,255,255,0.5);
         }
         
         .search-icon {
@@ -284,19 +273,13 @@
         <div class="strip-content">
             <div class="site-title">Tejpal S Sandhu</div>
             
+            <!-- CORRECT ORDER: Home · CV · Research · Teaching · Search Icon -->
             <div class="nav-items">
                 <div class="nav-links">
                     <a href="index.html">Home</a>
+                    <a href="TS_CV.pdf" target="_blank" rel="noopener noreferrer" class="cv-link">CV</a>
                     <a href="research.html">Research</a>
                     <a href="teaching.html">Teaching</a>
-                </div>
-                
-                <div class="cv-icon">
-                    <a href="TS_CV.pdf" target="_blank" rel="noopener noreferrer" title="Download CV">
-                        <svg viewBox="0 0 24 24" width="22" height="22">
-                            <path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm4-3H19v1h1.5V11H19v2h-1.5V7h3v1.5zM9 9.5h1v-1H9v1zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z"/>
-                        </svg>
-                    </a>
                 </div>
                 
                 <button class="search-icon" title="Search">
