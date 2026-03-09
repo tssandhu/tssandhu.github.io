@@ -6,7 +6,7 @@
     <title>Tejpal S Sandhu · Research</title>
     <style>
         /* ===== CHERRY & CREAM STYLE - FULL WIDTH ===== */
-        /* Colors: Black Strip (#000), Cherry Red (#880000), Cream (#F8F5F0) */
+        /* Colors: Cherry Red (#880000), Cream (#F8F5F0), Black text for contrast */
         
         * {
             margin: 0;
@@ -28,9 +28,9 @@
             scroll-behavior: smooth;
         }
         
-        /* ===== BLACK STRIP AT TOP ===== */
-        .black-strip {
-            background-color: #000000;
+        /* ===== CHERRY RED STRIP AT TOP ===== */
+        .cherry-strip {
+            background-color: #880000; /* Cherry Red */
             width: 100%;
             position: fixed;
             top: 0;
@@ -56,7 +56,7 @@
         .site-title {
             font-size: 1.3rem;
             font-weight: 400;
-            color: white;
+            color: #F8F5F0; /* Cream text */
         }
         
         .nav-items {
@@ -72,7 +72,7 @@
         }
         
         .nav-links a {
-            color: white;
+            color: #F8F5F0; /* Cream text */
             text-decoration: none;
             font-size: 1rem;
             font-weight: 400;
@@ -83,11 +83,11 @@
         
         .nav-links a:hover {
             opacity: 0.8;
-            border-bottom-color: rgba(255,255,255,0.5);
+            border-bottom-color: rgba(248, 245, 240, 0.5);
         }
         
         .cv-link {
-            color: white;
+            color: #F8F5F0; /* Cream text */
             text-decoration: none;
             font-size: 1rem;
             font-weight: 400;
@@ -98,11 +98,11 @@
         
         .cv-link:hover {
             opacity: 0.8;
-            border-bottom-color: rgba(255,255,255,0.5);
+            border-bottom-color: rgba(248, 245, 240, 0.5);
         }
         
         .search-icon {
-            color: white;
+            color: #F8F5F0; /* Cream text */
             font-size: 1.2rem;
             cursor: pointer;
             display: flex;
@@ -117,13 +117,13 @@
         }
         
         .search-icon:hover {
-            background-color: rgba(255, 255, 255, 0.15);
+            background-color: rgba(248, 245, 240, 0.15);
         }
         
         .search-icon svg {
             width: 18px;
             height: 18px;
-            fill: white;
+            fill: #F8F5F0; /* Cream */
         }
         
         .main-content {
@@ -131,12 +131,13 @@
             width: 100%;
         }
         
-        /* ===== CHERRY RED PAGE HEADER ===== */
+        /* ===== CREAM PAGE HEADER WITH CHERRY RED TEXT ===== */
         .page-header {
-            background-color: #880000; /* Cherry Red */
+            background-color: #F8F5F0; /* Cream */
             padding: 2.5rem 3rem;
-            color: #F8F5F0; /* Cream text */
+            color: #880000; /* Cherry Red text */
             width: 100%;
+            border-bottom: 2px solid #880000; /* Cherry Red border */
         }
         
         .page-header-content {
@@ -146,15 +147,15 @@
         
         .page-title {
             font-size: 2.8rem;
-            font-weight: 300; /* Lighter weight */
-            color: #F8F5F0; /* Cream */
+            font-weight: 300;
+            color: #880000; /* Cherry Red */
             margin-bottom: 0.3rem;
         }
         
         .page-subtitle {
             font-size: 1.2rem;
             font-weight: 300;
-            color: #F8F5F0; /* Cream */
+            color: #880000; /* Cherry Red */
             opacity: 0.9;
         }
         
@@ -206,9 +207,9 @@
             text-decoration: underline;
         }
         
-        /* ===== BLACK FOOTER ===== */
+        /* ===== CHERRY RED FOOTER ===== */
         .footer-note {
-            background-color: #000000;
+            background-color: #880000; /* Cherry Red */
             color: #F8F5F0; /* Cream text */
             text-align: center;
             padding: 1.5rem 3rem;
@@ -243,7 +244,7 @@
         }
         
         @media (max-width: 500px) {
-            .black-strip {
+            .cherry-strip {
                 height: auto;
                 min-height: 55px;
             }
@@ -274,11 +275,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <div class="black-strip">
+    <!-- ===== CHERRY RED STRIP AT TOP ===== -->
+    <div class="cherry-strip">
         <div class="strip-content">
             <div class="site-title">Tejpal S Sandhu</div>
             
-            <!-- CORRECT ORDER: Home · CV · Research · Teaching · Search Icon -->
+            <!-- ORDER: Home · CV · Research · Teaching · Search Icon -->
             <div class="nav-items">
                 <div class="nav-links">
                     <a href="index.html">Home</a>
@@ -297,7 +299,7 @@
     </div>
     
     <div class="main-content">
-        <!-- ===== CHERRY RED HEADER ===== -->
+        <!-- ===== CREAM HEADER WITH CHERRY RED TEXT ===== -->
         <div class="page-header">
             <div class="page-header-content">
                 <div class="page-title">Research</div>
@@ -331,7 +333,7 @@
             </div>
         </div>
         
-        <!-- ===== BLACK FOOTER ===== -->
+        <!-- ===== CHERRY RED FOOTER ===== -->
         <div class="footer-note">
             Last updated: March 2026
         </div>
