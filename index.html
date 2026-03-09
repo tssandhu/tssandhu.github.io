@@ -6,7 +6,7 @@
     <title>Tejpal S Sandhu · PhD Candidate in Economics</title>
     <style>
         /* ===== PRINCETON INSPIRED STYLE - FULL WIDTH ===== */
-        /* Colors: Black Strip (#000), Cherry Red (#880000), Off-White (#F8F5F0) */
+        /* Colors: Cherry Red (#880000), Cream (#F8F5F0) */
         
         * {
             margin: 0;
@@ -18,7 +18,7 @@
             font-family: 'Roboto', Arial, sans-serif;
             font-size: 16px;
             color: #1d1d1f;
-            background-color: #F8F5F0; /* Off-white background */
+            background-color: #F8F5F0; /* Cream background */
             line-height: 1.6;
             width: 100%;
             margin: 0;
@@ -137,62 +137,36 @@
             width: 100%;
         }
         
-        /* ===== CHERRY RED BACKGROUND SECTION (Name & University) ===== */
-        .cherry-section {
-            background-color: #880000; /* Cherry Red */
-            padding: 1.8rem 3rem;
-            color: white;
+        /* ===== WALLPAPER SECTION (REPLACES CHERRY NAME STRIP) ===== */
+        .wallpaper-section {
             width: 100%;
+            background-color: #F8F5F0; /* Cream background */
+            padding: 2rem 3rem 1rem 3rem;
         }
         
-        .cherry-content {
+        .wallpaper-container {
             max-width: 1100px;
             margin: 0 auto;
-            text-align: left;
+            text-align: center;
         }
         
-        .cherry-name {
-            font-size: 2.8rem;
-            font-weight: 300;
-            color: white;
-            margin-bottom: 0.2rem;
-            line-height: 1.2;
+        .wallpaper-image {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid #e0d6cc;
         }
         
-        .cherry-title {
-            font-size: 1.3rem;
-            font-weight: 300;
-            color: white;
-            opacity: 0.95;
-            margin-bottom: 0.1rem;
-        }
-        
-        .cherry-university {
-            font-size: 1.2rem;
-            font-weight: 300;
-            color: white;
-            opacity: 0.9;
-        }
-        
-        .cherry-university a {
-            color: white;
-            text-decoration: underline;
-            text-underline-offset: 4px;
-            font-weight: 300;
-        }
-        
-        .cherry-university a:hover {
-            opacity: 0.8;
-        }
-        
-        /* ===== OFF-WHITE BACKGROUND SECTION (Photo & Profile) ===== */
-        .offwhite-section {
-            background-color: #F8F5F0; /* Off-white */
-            padding: 2rem 3rem;
+        /* ===== PROFILE SECTION (Photo & Profile) - CREAM BACKGROUND ===== */
+        .profile-section {
+            background-color: #F8F5F0; /* Cream */
+            padding: 1rem 3rem 2rem 3rem;
             width: 100%;
         }
         
-        .offwhite-content {
+        .profile-content {
             max-width: 1100px;
             margin: 0 auto;
         }
@@ -261,7 +235,7 @@
         /* ===== CHERRY RED CONTACT BAR ===== */
         .contact-bar {
             background-color: #880000; /* Cherry Red */
-            color: #F8F5F0; /* Off-white text */
+            color: #F8F5F0; /* Cream text */
             padding: 1.5rem 3rem;
             width: 100%;
         }
@@ -300,7 +274,7 @@
         
         /* ===== MULTIMEDIA ICONS AT BOTTOM ===== */
         .multimedia-icons {
-            background-color: #F8F5F0; /* Off-white */
+            background-color: #F8F5F0; /* Cream */
             color: #880000;
             padding: 2rem 3rem 2.5rem 3rem;
             text-align: center;
@@ -349,7 +323,7 @@
                 gap: 1rem;
             }
             
-            .cherry-section, .offwhite-section, .contact-bar, .multimedia-icons {
+            .wallpaper-section, .profile-section, .contact-bar, .multimedia-icons {
                 padding-left: 1.5rem;
                 padding-right: 1.5rem;
             }
@@ -364,8 +338,8 @@
                 margin: 0 auto;
             }
             
-            .cherry-name {
-                font-size: 2.2rem;
+            .wallpaper-image {
+                max-height: 150px;
             }
         }
         
@@ -392,17 +366,13 @@
                 gap: 0.8rem;
             }
             
-            .cherry-name {
-                font-size: 1.8rem;
-            }
-            
-            .cherry-title {
-                font-size: 1.1rem;
-            }
-            
             .icons-container a {
                 font-size: 1.6rem;
                 margin: 0 1rem;
+            }
+            
+            .wallpaper-image {
+                max-height: 120px;
             }
         }
     </style>
@@ -439,23 +409,19 @@
     <!-- ===== MAIN CONTENT ===== -->
     <div class="main-content">
         
-        <!-- ===== CHERRY RED SECTION (Name & University) ===== -->
-        <div class="cherry-section">
-            <div class="cherry-content">
-                <div class="cherry-name">Tejpal S Sandhu</div>
-                <div class="cherry-title">PhD Candidate in Economics</div>
-                <div class="cherry-university">
-                    <a href="https://www.essex.ac.uk" target="_blank" rel="noopener noreferrer">University of Essex</a>
-                </div>
+        <!-- ===== WALLPAPER SECTION (REPLACES CHERRY NAME STRIP) ===== -->
+        <div class="wallpaper-section">
+            <div class="wallpaper-container">
+                <img src="wallpaper.jpg" alt="University of Essex" class="wallpaper-image" onerror="this.src='https://via.placeholder.com/1100x200?text=University+of+Essex'">
             </div>
         </div>
         
-        <!-- ===== OFF-WHITE SECTION (Photo & Profile) ===== -->
-        <div class="offwhite-section">
-            <div class="offwhite-content">
+        <!-- ===== PROFILE SECTION (Photo & Profile) - CREAM BACKGROUND ===== -->
+        <div class="profile-section">
+            <div class="profile-content">
                 <div class="profile-row">
                     <div class="profile-image">
-                        <!-- UPDATED: Photo link changed to 5.jpg -->
+                        <!-- Photo link - 5.jpg -->
                         <img src="5.jpg" alt="Tejpal S Sandhu" onerror="this.src='https://via.placeholder.com/280x340?text=Photo'">
                     </div>
                     
@@ -477,8 +443,6 @@
                             <a href="https://sites.google.com/site/dfgarrett/" class="advisor-link" target="_blank" rel="noopener noreferrer">Daniel F Garrett</a> and 
                             <a href="https://erlanson.weebly.com/" class="advisor-link" target="_blank" rel="noopener noreferrer">Albin Erlanson</a>
                         </p>
-                        
-                        <!-- NOTE: Email and CV lines removed from profile summary as requested -->
                     </div>
                 </div>
             </div>
