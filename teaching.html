@@ -6,7 +6,7 @@
     <title>Tejpal S Sandhu · Teaching</title>
     <style>
         /* ===== MATCHING INDEX.HTML STYLE ===== */
-        /* Colors: Cambridge Blue (#85B09A), Dark Teal (#2f6f6f), White background (#FFFFFF) */
+        /* Colors: Black Strip (#000), Cambridge Blue (#85B09A), Dark Teal (#2f6f6f), White background (#FFFFFF) */
         
         * {
             margin: 0;
@@ -33,59 +33,63 @@
             overflow-y: auto;
         }
         
-        /* ===== HEADER STRIP AT TOP ===== */
-        .header-strip {
-            background-color: #FFFFFF;
+        /* ===== BLACK STRIP AT TOP (MATCHING INDEX.HTML) ===== */
+        .black-strip {
+            background-color: #000000; /* Zed Black */
             width: 100%;
-            border-bottom: 4px solid #85B09A; /* Cambridge Blue border */
-            padding: 1.8rem 0 0.8rem 0;
-            margin-bottom: 1.8rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+            height: 50px;
+            display: flex;
+            align-items: center;
         }
         
         .strip-content {
             width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
+        /* Name on top left - White (matching index.html) */
         .site-title {
-            font-size: 32px;
-            font-weight: 700;
-            color: #000000;
-            letter-spacing: -0.3px;
-            line-height: 1.2;
-        }
-        
-        .nav-items {
-            display: flex;
-            align-items: center;
-            gap: 1.8rem;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 1.8rem;
-            align-items: center;
-        }
-        
-        .nav-links a {
-            color: #222222;
-            text-decoration: none;
             font-size: 1.3rem;
             font-weight: 400;
-            transition: color 0.2s;
+            color: white;
+            letter-spacing: normal;
+        }
+        
+        /* Top right navigation - White (matching index.html) */
+        .top-nav {
+            display: flex;
+            gap: 2.2rem;
+            align-items: center;
+        }
+        
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 400;
+            transition: opacity 0.2s;
             padding: 0.2rem 0;
             border-bottom: 1px solid transparent;
         }
         
-        .nav-links a:hover {
-            color: #2f6f6f; /* Dark teal on hover */
-            border-bottom-color: #2f6f6f;
+        .top-nav a:hover {
+            opacity: 0.8;
+            border-bottom-color: rgba(255,255,255,0.5);
         }
         
         .main-content {
-            flex: 1;
+            margin-top: 50px; /* Match index.html margin */
             width: 100%;
         }
         
@@ -111,7 +115,7 @@
         .page-subtitle {
             font-size: 1.1rem;
             font-weight: 300;
-            color: #85B09A; /* Changed to Cambridge Blue */
+            color: #85B09A; /* Cambridge Blue */
             opacity: 0.9;
         }
         
@@ -217,25 +221,11 @@
             }
             
             .strip-content {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
+                padding: 0 1.5rem;
             }
             
-            .nav-items {
-                gap: 1.2rem;
-            }
-            
-            .nav-links {
-                gap: 1.2rem;
-            }
-            
-            .site-title {
-                font-size: 26px;
-            }
-            
-            .nav-links a {
-                font-size: 0.95rem;
+            .top-nav {
+                gap: 1.5rem;
             }
             
             .page-title {
@@ -251,18 +241,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- ===== HEADER STRIP ===== -->
-    <div class="header-strip">
+    <!-- ===== BLACK STRIP AT TOP (MATCHING INDEX.HTML) ===== -->
+    <div class="black-strip">
         <div class="strip-content">
+            <!-- Name on top left - White -->
             <div class="site-title">Tejpal S Sandhu</div>
             
-            <div class="nav-items">
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="research.html">Research</a>
-                    <a href="teaching.html">Teaching</a>
-                    <a href="TS_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-                </div>
+            <!-- Top right navigation: Home · Research · Teaching · CV -->
+            <div class="top-nav">
+                <a href="index.html">Home</a>
+                <a href="research.html">Research</a>
+                <a href="teaching.html">Teaching</a>
+                <a href="TS_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
             </div>
         </div>
     </div>
