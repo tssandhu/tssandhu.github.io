@@ -24,13 +24,19 @@
             color: #313A3D;
             background-color: #FFFFFF;
             line-height: 1.65;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+        
+        /* Content wrapper to contain the page content */
+        .content-wrapper {
             max-width: 870px;
             margin: 0 auto;
             padding: 0 2rem;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            overflow-y: auto;
+            width: 100%;
         }
         
         /* ===== BLACK STRIP AT TOP (MATCHING INDEX.HTML) ===== */
@@ -88,22 +94,19 @@
             border-bottom-color: rgba(255,255,255,0.5);
         }
         
-        .main-content {
-            margin-top: 50px; /* Match index.html margin */
-            width: 100%;
-        }
-        
-        /* ===== CAMBRIDGE BLUE SECOND STRIP (MATCHING INDEX.HTML) ===== */
+        /* ===== CAMBRIDGE BLUE SECOND STRIP (FULL WIDTH) ===== */
         .cambridge-strip {
             background-color: #85B09A; /* Cambridge Blue */
-            padding: 1.8rem 3rem;
-            color: #000000; /* Black text */
             width: 100%;
+            margin-top: 50px; /* Push below fixed black strip */
+            padding: 1.8rem 0;
+            color: #000000; /* Black text */
         }
         
         .cambridge-content {
-            max-width: 1100px;
+            max-width: 870px;
             margin: 0 auto;
+            padding: 0 2rem;
             text-align: left;
         }
         
@@ -123,11 +126,17 @@
             margin-top: 0.1rem;
         }
         
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            width: 100%;
+            background-color: #FFFFFF;
+        }
+        
         /* ===== TEACHING CONTENT ===== */
         .teaching-content {
-            max-width: 1100px;
+            max-width: 870px;
             margin: 0 auto;
-            padding: 2rem 3rem 3rem 3rem;
+            padding: 2rem 2rem 3rem 2rem;
             background-color: #FFFFFF;
             width: 100%;
         }
@@ -208,13 +217,12 @@
         
         /* ===== FOOTER ===== */
         .footer-note {
-            background-color: #FFFFFF;
+            max-width: 870px;
+            margin: 0 auto;
+            padding: 0.6rem 2rem 0.6rem 2rem;
             color: #777777;
-            text-align: left;
-            margin-top: 0.6rem;
             font-size: 0.8rem;
             border-top: 1px solid #e0d6cc;
-            padding-top: 0.6rem;
             width: 100%;
         }
         
@@ -228,8 +236,8 @@
                 gap: 1rem;
             }
             
-            .cambridge-strip {
-                padding: 1.5rem 1.5rem;
+            .cambridge-content {
+                padding: 0 1.5rem;
             }
             
             .cambridge-title {
@@ -242,6 +250,10 @@
             
             .teaching-content {
                 padding: 1.5rem 1.5rem 2rem 1.5rem;
+            }
+            
+            .footer-note {
+                padding: 0.6rem 1.5rem;
             }
         }
         
@@ -274,7 +286,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- ===== BLACK STRIP AT TOP (MATCHING INDEX.HTML) ===== -->
+    <!-- ===== BLACK STRIP AT TOP (FIXED) ===== -->
     <div class="black-strip">
         <div class="strip-content">
             <!-- Name on top left - White -->
@@ -290,7 +302,7 @@
         </div>
     </div>
     
-    <!-- ===== CAMBRIDGE BLUE SECOND STRIP (MATCHING INDEX.HTML) ===== -->
+    <!-- ===== CAMBRIDGE BLUE SECOND STRIP (FULL WIDTH) ===== -->
     <div class="cambridge-strip">
         <div class="cambridge-content">
             <div class="cambridge-title">Teaching</div>
@@ -298,6 +310,7 @@
         </div>
     </div>
     
+    <!-- ===== MAIN CONTENT ===== -->
     <div class="main-content">
         <!-- ===== TEACHING CONTENT ===== -->
         <div class="teaching-content">
