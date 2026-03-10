@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tejpal S Sandhu · Research</title>
+    <style>
+        /* ===== MATCHING INDEX.HTML STYLE ===== */
+        /* Colors: Cambridge Blue (#85B09A), Dark Teal (#2f6f6f), White background (#FFFFFF) */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 16px;
+            color: #313A3D;
+            background-color: #FFFFFF;
+            line-height: 1.65;
+            max-width: 870px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        
+        /* ===== HEADER STRIP AT TOP ===== */
+        .header-strip {
+            background-color: #FFFFFF;
+            width: 100%;
+            border-bottom: 4px solid #85B09A; /* Cambridge Blue border */
+            padding: 1.8rem 0 0.8rem 0;
+            margin-bottom: 1.8rem;
+        }
+        
+        .strip-content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .site-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #000000;
+            letter-spacing: -0.3px;
+            line-height: 1.2;
+        }
+        
+        .nav-items {
+            display: flex;
+            align-items: center;
+            gap: 1.8rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #222222;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 400;
+            transition: color 0.2s;
+            padding: 0.2rem 0;
+            border-bottom: 1px solid transparent;
+        }
+        
+        .nav-links a:hover {
+            color: #2f6f6f; /* Dark teal on hover */
+            border-bottom-color: #2f6f6f;
+        }
+        
+        .main-content {
+            flex: 1;
+            width: 100%;
+        }
+        
+        /* ===== PAGE HEADER ===== */
+        .page-header {
+            background-color: #FFFFFF;
+            padding: 1rem 0 1rem 0;
+            width: 100%;
+        }
+        
+        .page-header-content {
+            max-width: 100%;
+            margin: 0;
+        }
+        
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: #2f6f6f; /* Dark teal */
+            margin-bottom: 0.2rem;
+        }
+        
+        .page-subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: #444444;
+        }
+        
+        /* ===== RESEARCH CONTENT ===== */
+        .research-content {
+            max-width: 100%;
+            margin: 0;
+            padding: 1rem 0 2rem 0;
+            background-color: #FFFFFF;
+            width: 100%;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #2f6f6f; /* Dark teal */
+            margin: 1.5rem 0 1rem 0;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid #e0d6cc;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #2f6f6f; /* Dark teal */
+            margin: 1.2rem 0 0.8rem 0;
+        }
+        
+        .paper-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid #2f6f6f; /* Dark teal border */
+        }
+        
+        .paper-title {
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #222222;
+            margin-bottom: 0.2rem;
+        }
+        
+        .paper-authors {
+            font-size: 0.95rem;
+            color: #444444;
+            font-style: italic;
+            margin-bottom: 0.2rem;
+        }
+        
+        .paper-venue {
+            font-size: 0.9rem;
+            color: #666666;
+            margin-bottom: 0.3rem;
+        }
+        
+        .section-placeholder {
+            margin: 0.5rem 0 1rem 0;
+            padding: 0.5rem 0 0.5rem 1rem;
+            background-color: transparent;
+            border-left: 2px solid #2f6f6f; /* Dark teal border */
+            color: #444444;
+            font-style: italic;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin: 0.5rem 0 1rem 0;
+            color: #2f6f6f; /* Dark teal */
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-bottom: 1px solid transparent;
+        }
+        
+        .back-link:hover {
+            border-bottom-color: #2f6f6f;
+        }
+        
+        /* ===== FOOTER ===== */
+        .footer-note {
+            background-color: #FFFFFF;
+            color: #777777;
+            text-align: left;
+            margin-top: 0.6rem;
+            font-size: 0.8rem;
+            border-top: 1px solid #e0d6cc;
+            padding-top: 0.6rem;
+            width: 100%;
+        }
+        
+        /* Responsive */
+        @media (max-width: 700px) {
+            body {
+                padding: 0 1.5rem;
+            }
+            
+            .strip-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .nav-items {
+                gap: 1.2rem;
+            }
+            
+            .nav-links {
+                gap: 1.2rem;
+            }
+            
+            .site-title {
+                font-size: 26px;
+            }
+            
+            .nav-links a {
+                font-size: 0.95rem;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- ===== HEADER STRIP ===== -->
+    <div class="header-strip">
+        <div class="strip-content">
+            <div class="site-title">Tejpal S Sandhu</div>
+            
+            <div class="nav-items">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="research.html">Research</a>
+                    <a href="teaching.html">Teaching</a>
+                    <a href="TS_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <!-- ===== PAGE HEADER ===== -->
+        <div class="page-header">
+            <div class="page-header-content">
+                <div class="page-title">Research</div>
+                <div class="page-subtitle">Working Papers · Work in Progress · Publications</div>
+            </div>
+        </div>
+        
+        <!-- ===== RESEARCH CONTENT ===== -->
+        <div class="research-content">
+            <a href="index.html" class="back-link">← Back to Home</a>
+            
+            <h2>Working Papers</h2>
+            
+            <h3>Job Market Paper</h3>
+            <div class="paper-item">
+                <div class="paper-title">Job Market Paper Title</div>
+                <div class="paper-authors">(Job Market Paper)</div>
+                <div class="section-placeholder">
+                    Abstract and details will appear here.
+                </div>
+            </div>
+            
+            <h3>Other Working Papers</h3>
+            <div class="paper-item">
+                <div class="paper-title">Working Paper Title</div>
+                <div class="paper-authors">with Co-author Name</div>
+                <div class="section-placeholder">
+                    Abstract and details will appear here.
+                </div>
+            </div>
+            
+            <h2>Work in Progress</h2>
+            <div class="paper-item">
+                <div class="paper-title">Work in Progress Title</div>
+                <div class="paper-authors">with Co-author Name (if any)</div>
+                <div class="section-placeholder">
+                    Preliminary details will appear here.
+                </div>
+            </div>
+            
+            <h2>Publications</h2>
+            <div class="paper-item">
+                <div class="paper-title">Publication Title</div>
+                <div class="paper-authors">with Co-author(s)</div>
+                <div class="paper-venue">Journal Name, Year</div>
+                <div class="section-placeholder">
+                    Abstract and details will appear here.
+                </div>
+            </div>
+        </div>
+        
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-note">
+            Last updated: March 2026
+        </div>
+    </div>
+</body>
+</html>
