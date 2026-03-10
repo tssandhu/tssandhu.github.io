@@ -93,37 +93,41 @@
             width: 100%;
         }
         
-        /* ===== PAGE HEADER ===== */
-        .page-header {
-            background-color: #FFFFFF;
-            padding: 1rem 0 1rem 0;
+        /* ===== CAMBRIDGE BLUE SECOND STRIP (MATCHING INDEX.HTML) ===== */
+        .cambridge-strip {
+            background-color: #85B09A; /* Cambridge Blue */
+            padding: 1.8rem 3rem;
+            color: #000000; /* Black text */
             width: 100%;
         }
         
-        .page-header-content {
-            max-width: 100%;
-            margin: 0;
+        .cambridge-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: left;
         }
         
-        .page-title {
-            font-size: 2.2rem;
-            font-weight: 400;
-            color: #2f6f6f; /* Dark teal */
+        .cambridge-title {
+            font-size: 2.4rem;
+            font-weight: 250;
+            color: #000000; /* Black */
             margin-bottom: 0.2rem;
+            line-height: 1.2;
         }
         
-        .page-subtitle {
-            font-size: 1.1rem;
+        .cambridge-subtitle {
+            font-size: 1.3rem;
             font-weight: 300;
-            color: #85B09A; /* Cambridge Blue */
+            color: #000000; /* Black */
             opacity: 0.9;
+            margin-top: 0.1rem;
         }
         
         /* ===== TEACHING CONTENT ===== */
         .teaching-content {
-            max-width: 100%;
-            margin: 0;
-            padding: 1rem 0 2rem 0;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 3rem 3rem 3rem;
             background-color: #FFFFFF;
             width: 100%;
         }
@@ -145,7 +149,7 @@
         }
         
         .teaching-philosophy {
-            margin: 0 0 1.5rem 0;
+            margin: 1.5rem 0 1.5rem 0;
             padding: 0;
             background-color: transparent;
             border-left: none;
@@ -191,7 +195,7 @@
         
         .back-link {
             display: inline-block;
-            margin: 0.5rem 0 1rem 0;
+            margin: 0.5rem 0 1.5rem 0;
             color: #2f6f6f; /* Dark teal */
             text-decoration: none;
             font-size: 0.95rem;
@@ -215,24 +219,53 @@
         }
         
         /* Responsive */
-        @media (max-width: 700px) {
-            body {
-                padding: 0 1.5rem;
-            }
-            
+        @media (max-width: 800px) {
             .strip-content {
                 padding: 0 1.5rem;
             }
             
             .top-nav {
-                gap: 1.5rem;
+                gap: 1rem;
             }
             
-            .page-title {
+            .cambridge-strip {
+                padding: 1.5rem 1.5rem;
+            }
+            
+            .cambridge-title {
                 font-size: 2rem;
             }
             
-            .page-subtitle {
+            .cambridge-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .teaching-content {
+                padding: 1.5rem 1.5rem 2rem 1.5rem;
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .black-strip {
+                height: auto;
+                min-height: 50px;
+            }
+            
+            .strip-content {
+                flex-direction: column;
+                gap: 0.3rem;
+                padding: 0.5rem 1rem;
+            }
+            
+            .top-nav {
+                gap: 0.8rem;
+            }
+            
+            .cambridge-title {
+                font-size: 1.8rem;
+            }
+            
+            .cambridge-subtitle {
                 font-size: 1rem;
             }
         }
@@ -257,15 +290,15 @@
         </div>
     </div>
     
-    <div class="main-content">
-        <!-- ===== PAGE HEADER ===== -->
-        <div class="page-header">
-            <div class="page-header-content">
-                <div class="page-title">Teaching</div>
-                <div class="page-subtitle">Courses · Experience · Recognition</div>
-            </div>
+    <!-- ===== CAMBRIDGE BLUE SECOND STRIP (MATCHING INDEX.HTML) ===== -->
+    <div class="cambridge-strip">
+        <div class="cambridge-content">
+            <div class="cambridge-title">Teaching</div>
+            <div class="cambridge-subtitle">Courses · Experience · Recognition</div>
         </div>
-        
+    </div>
+    
+    <div class="main-content">
         <!-- ===== TEACHING CONTENT ===== -->
         <div class="teaching-content">
             <a href="index.html" class="back-link">← Back to Home</a>
