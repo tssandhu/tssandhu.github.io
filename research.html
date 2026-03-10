@@ -96,19 +96,19 @@
         
         /* ===== CAMBRIDGE BLUE SECOND STRIP (FULL WIDTH, MATCHING HOME HEIGHT) ===== */
         .cambridge-strip {
-            background-color: #85B09A; /* Cambridge Blue */
-            width: 100%;
-            margin-top: 50px; /* Push below fixed black strip */
-            padding: 1.8rem 0; /* Matching home screen padding (1.8rem) */
-            color: #000000; /* Black text */
-        }
-        
-        .cambridge-content {
-            max-width: 870px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            text-align: left;
-        }
+    background-color: #85B09A;
+    width: 100%;
+    margin-top: 50px;
+    padding: 1.8rem 3rem;  /* EXACTLY like home screen - with side padding */
+    color: #000000;
+}
+
+.cambridge-content {
+    max-width: 870px;
+    margin: 0 auto;
+    padding: 0;  /* Remove inner padding since parent has it */
+    text-align: left;
+}
         
         .cambridge-title {
             font-size: 2.4rem;
