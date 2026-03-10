@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tejpal S Sandhu · PhD Candidate in Economics</title>
     <style>
-        /* ===== PRINCETON INSPIRED STYLE - FULL WIDTH ===== */
-        /* Colors: Cherry Red (#880000), Cream (#F8F5F0) */
+        /* ===== STANFORD CARDINAL RED STYLE - FULL WIDTH ===== */
+        /* Colors: Stanford Cardinal Red (#8c1515), White (#FFFFFF), Cream (#F8F5F0) for profile section */
         
         * {
             margin: 0;
@@ -18,7 +18,7 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";  
             font-size: 16px;
             color: #1d1d1f;
-            background-color: #F8F5F0; /* Cream background */
+            background-color: #FFFFFF; /* White background */
             line-height: 1.6;
             width: 100%;
             margin: 0;
@@ -28,9 +28,9 @@
             scroll-behavior: smooth;
         }
         
-        /* ===== CHERRY RED STRIP AT TOP ===== */
-        .cherry-strip {
-            background-color: #8C1515; /* Cherry Red */
+        /* ===== STANFORD CARDINAL RED STRIP AT TOP ===== */
+        .cardinal-strip {
+            background-color: #8c1515; /* Stanford Cardinal Red */
             width: 100%;
             position: fixed;
             top: 0;
@@ -79,14 +79,15 @@
             text-decoration: none;
             font-size: 1rem;
             font-weight: 400;
-            transition: opacity 0.2s;
+            transition: color 0.2s, border-bottom-color 0.2s;
             padding: 0.2rem 0;
             border-bottom: 1px solid transparent;
         }
         
         .nav-links a:hover {
-            opacity: 0.8;
-            border-bottom-color: rgba(255,255,255,0.5);
+            color: white;
+            opacity: 0.9;
+            border-bottom-color: rgba(255,255,255,0.7);
         }
         
         /* CV link */
@@ -101,8 +102,8 @@
         }
         
         .cv-link:hover {
-            opacity: 0.8;
-            border-bottom-color: rgba(255,255,255,0.5);
+            opacity: 0.9;
+            border-bottom-color: rgba(255,255,255,0.7);
         }
         
         /* Search icon */
@@ -160,24 +161,22 @@
         .profile-image {
             flex: 0 0 280px;
         }
-     .profile-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 1px solid #f0e7dc;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-}
+        .profile-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #f0e7dc;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            transition: transform 0.25s ease;
+        }
 
-.profile-image img{
-    transition: transform 0.25s ease;
-}
-
-.profile-image img:hover{
-    transform: scale(1.05);
-}
+        .profile-image img:hover {
+            transform: scale(1.05);
+        }
+        
         .profile-info {
             flex: 1;
-           padding-top:6px
+            padding-top: 6px;
         }
         
         .profile-info p {
@@ -187,40 +186,37 @@
             line-height: 1.6;
         }
         
-        /* Research interests paragraph - separate */
-        .research-interests {
-            margin-top: 1rem;
-            padding-top: 0.2rem;
-        }
-        
-        /* Links in profile - Cherry Red */
+        /* Links in profile - Stanford Cardinal Red with darker hover */
         .profile-link {
-            color: #880000;
+            color: #8c1515; /* Stanford Cardinal Red */
             text-decoration: none;
             font-weight: 500;
             border-bottom: 1px solid transparent;
-            transition: border-bottom-color 0.2s;
+            transition: border-bottom-color 0.2s, color 0.2s;
         }
         
         .profile-link:hover {
-            border-bottom-color: #880000;
+            color: #820000; /* Darker red on hover */
+            border-bottom-color: #820000;
         }
         
         /* Advisor links */
         .advisor-link {
-            color: #880000;
+            color: #8c1515; /* Stanford Cardinal Red */
             text-decoration: none;
             font-weight: 500;
+            transition: color 0.2s;
         }
         
         .advisor-link:hover {
+            color: #820000; /* Darker red on hover */
             text-decoration: underline;
         }
         
-        /* ===== CHERRY RED CONTACT BAR ===== */
+        /* ===== STANFORD CARDINAL RED CONTACT BAR ===== */
         .contact-bar {
-            background-color: #880000; /* Cherry Red */
-            color: #F8F5F0; /* Cream text */
+            background-color: #8c1515; /* Stanford Cardinal Red */
+            color: white; /* White text */
             padding: 1.5rem 3rem;
             width: 100%;
         }
@@ -234,18 +230,19 @@
         
         .contact-line {
             margin: 0.2rem 0;
-            color: #F8F5F0;
+            color: white; /* White text */
         }
         
         .contact-email {
             margin: 0.4rem 0 0 0;
-            color: #F8F5F0;
+            color: white;
         }
         
         .contact-email a {
-            color: #F8F5F0;
+            color: white; /* White text */
             text-decoration: underline;
             text-underline-offset: 3px;
+            transition: opacity 0.2s;
         }
         
         .contact-email a:hover {
@@ -259,8 +256,8 @@
         
         /* ===== MULTIMEDIA ICONS AT BOTTOM ===== */
         .multimedia-icons {
-            background-color: #F8F5F0; /* Cream */
-            color: #880000;
+            background-color: #FFFFFF; /* White */
+            color: #8c1515; /* Stanford Cardinal Red */
             padding: 2rem 3rem 2.5rem 3rem;
             text-align: center;
             width: 100%;
@@ -269,26 +266,37 @@
         .icons-container {
             max-width: 1100px;
             margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
         }
         
         .icons-container a {
-            color: #880000; /* Cherry Red */
+            color: #8c1515; /* Stanford Cardinal Red */
             font-size: 2rem;
-            margin: 0 1.5rem;
-            transition: opacity 0.2s;
+            transition: color 0.2s, transform 0.2s;
             display: inline-block;
         }
         
         .icons-container a:hover {
-            opacity: 0.7;
+            color: #820000; /* Darker red on hover */
+            transform: translateY(-2px);
         }
         
         .icon-label {
             font-size: 0.8rem;
             margin-top: 0.5rem;
-            color: #880000;
+            color: #8c1515;
             opacity: 0.8;
             letter-spacing: 1px;
+        }
+        
+        /* Individual icon containers for better spacing */
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         /* ===== NO RESEARCH/TEACHING SECTIONS ON MAIN PAGE ===== */
@@ -322,10 +330,18 @@
                 max-width: 240px;
                 margin: 0 auto;
             }
+            
+            .icons-container {
+                gap: 1.5rem;
+            }
+            
+            .icons-container a {
+                font-size: 1.8rem;
+            }
         }
         
         @media (max-width: 500px) {
-            .cherry-strip {
+            .cardinal-strip {
                 height: auto;
                 min-height: 55px;
             }
@@ -347,9 +363,12 @@
                 gap: 0.8rem;
             }
             
+            .icons-container {
+                gap: 1.2rem;
+            }
+            
             .icons-container a {
                 font-size: 1.6rem;
-                margin: 0 1rem;
             }
         }
     </style>
@@ -358,8 +377,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- ===== CHERRY RED STRIP AT TOP ===== -->
-    <div class="cherry-strip">
+    <!-- ===== STANFORD CARDINAL RED STRIP AT TOP ===== -->
+    <div class="cardinal-strip">
         <div class="strip-content">
             <!-- Name on top left - White -->
             <div class="site-title">Tejpal S Sandhu</div>
@@ -408,7 +427,7 @@
             </div>
         </div>
         
-        <!-- ===== CHERRY RED CONTACT BAR ===== -->
+        <!-- ===== STANFORD CARDINAL RED CONTACT BAR ===== -->
         <div class="contact-bar">
             <div class="contact-content">
                 <div class="contact-line">Room no. 3.314, Department of Economics</div>
@@ -421,14 +440,22 @@
             </div>
         </div>
         
-        <!-- ===== MULTIMEDIA ICONS AT BOTTOM ===== -->
+        <!-- ===== MULTIMEDIA ICONS AT BOTTOM - X REMOVED ===== -->
         <div class="multimedia-icons">
             <div class="icons-container">
-                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google-scholar"></i></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-orcid"></i></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
-                <div class="icon-label">google scholar · orcid · github · x</div>
+                <div class="icon-item">
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google-scholar"></i></a>
+                    <span class="icon-label">scholar</span>
+                </div>
+                <div class="icon-item">
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-orcid"></i></a>
+                    <span class="icon-label">orcid</span>
+                </div>
+                <div class="icon-item">
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                    <span class="icon-label">github</span>
+                </div>
+                <!-- X icon removed as requested -->
             </div>
         </div>
         
