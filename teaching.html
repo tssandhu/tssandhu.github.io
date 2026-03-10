@@ -134,8 +134,9 @@
         /* ===== PAGE HEADER ===== */
         .page-header {
             background-color: #FFFFFF; /* White */
-            padding: 2.5rem 3rem 1.5rem 3rem;
+            padding: 2.5rem 3rem 1rem 3rem;
             width: 100%;
+            border-bottom: 2px solid #8c1515; /* Full-width Stanford Cardinal Red border */
         }
         
         .page-header-content {
@@ -153,15 +154,16 @@
         .page-subtitle {
             font-size: 1.2rem;
             font-weight: 300;
-            color: #444444;
+            color: #8c1515; /* Changed from #444444 to Stanford Cardinal Red */
             opacity: 0.9;
+            margin-bottom: 1rem;
         }
         
         /* ===== TEACHING CONTENT - WHITE BACKGROUND ===== */
         .teaching-content {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 1rem 3rem 3rem 3rem;
+            padding: 2rem 3rem 3rem 3rem;
             background-color: #FFFFFF; /* White */
             width: 100%;
         }
@@ -234,7 +236,7 @@
         
         .back-link {
             display: inline-block;
-            margin: 0.5rem 0 1.5rem 0;
+            margin: 0 0 1.5rem 0;
             color: #8c1515; /* Stanford Cardinal Red */
             text-decoration: none;
             font-weight: 500;
@@ -275,11 +277,15 @@
             }
             
             .teaching-content {
-                padding: 1rem 1.5rem 2rem 1.5rem;
+                padding: 1.5rem 1.5rem 2rem 1.5rem;
             }
             
             .page-title {
                 font-size: 2.2rem;
+            }
+            
+            .page-subtitle {
+                font-size: 1rem;
             }
         }
         
@@ -308,6 +314,10 @@
             
             .page-title {
                 font-size: 1.8rem;
+            }
+            
+            .page-subtitle {
+                font-size: 0.95rem;
             }
             
             .teaching-philosophy {
@@ -350,7 +360,7 @@
     <!-- ===== MAIN CONTENT ===== -->
     <div class="main-content">
         
-        <!-- ===== PAGE HEADER ===== -->
+        <!-- ===== PAGE HEADER WITH FULL-WIDTH BORDER ===== -->
         <div class="page-header">
             <div class="page-header-content">
                 <div class="page-title">Teaching</div>
