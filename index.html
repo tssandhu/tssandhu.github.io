@@ -125,20 +125,20 @@
         .orange-section {
             background-color: #E77500;
             padding: 1.8rem 3rem;
-            color: black; /* Changed from white to black */
+            color: black;
             width: 100%;
         }
         
         .orange-content {
             max-width: 1100px;
             margin: 0 auto;
-            text-align: left; /* Right-aligned */
+            text-align: left;
             margin-left: 550px;
         }
         
         .princeton-name {
             font-size: 2.4rem;
-            font-weight: 250; /* Reduced from 600 to 300 (lighter) */
+            font-weight: 250;
             color: black;
             margin-bottom: 0.2rem;
             line-height: 1.2;
@@ -146,7 +146,7 @@
         
         .princeton-title {
             font-size: 1.3rem;
-            font-weight: 300; /* Lighter weight */
+            font-weight: 300;
             color: black;
             opacity: 0.9;
             margin-bottom: 0.1rem;
@@ -154,7 +154,7 @@
         
         .princeton-university {
             font-size: 1.2rem;
-            font-weight: 300; /* Lighter weight */
+            font-weight: 300;
             color: black;
             opacity: 0.9;
         }
@@ -163,7 +163,7 @@
             color: black;
             text-decoration: underline;
             text-underline-offset: 4px;
-            font-weight: 300; /* Lighter weight */
+            font-weight: 300;
         }
         
         .princeton-university a:hover {
@@ -240,6 +240,19 @@
         
         .advisor-link:hover {
             text-decoration: underline;
+        }
+        
+        /* ===== PRINCETON ORANGE FOR UNIVERSITY LINK ===== */
+        .princeton-link {
+            color: #E77500;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom-color 0.2s;
+        }
+        
+        .princeton-link:hover {
+            border-bottom-color: #E77500;
         }
         
         /* ===== BLACK ADDRESS BAR - FULL WIDTH ===== */
@@ -345,7 +358,8 @@
             }
             
             .orange-content {
-                text-align: center; /* Center on mobile */
+                text-align: center;
+                margin-left: 0; /* Reset on mobile */
             }
         }
         
@@ -419,7 +433,6 @@
     <div class="main-content">
         
         <!-- ===== PRINCETON ORANGE SECTION (Name & University) - FULL WIDTH ===== -->
-        <!-- NOW RIGHT-ALIGNED WITH BLACK TEXT AND LIGHTER FONT WEIGHT -->
         <div class="orange-section">
             <div class="orange-content">
                 <div class="princeton-name">Tejpal S Sandhu</div>
@@ -435,19 +448,17 @@
             <div class="offwhite-content">
                 <div class="profile-row">
                     <div class="profile-image">
-                        <!-- UPDATED: Photo link changed to 7.png -->
                         <img src="5.jpg" alt="Tejpal S Sandhu" onerror="this.src='https://via.placeholder.com/280x340?text=Photo'">
                     </div>
                     
                     <div class="profile-info">
+                        <p>
+                            I am a PhD candidate in Economics at the <a href="https://www.essex.ac.uk" class="princeton-link" target="_blank" rel="noopener noreferrer">University of Essex</a>. I also completed my MSc and MRes here.
+                        </p>   
                         
-                          <p>
-    I am a PhD candidate in Economics at the <a href="https://www.essex.ac.uk" class="princeton-link" target="_blank" rel="noopener noreferrer">University of Essex</a>. I also completed my MSc and MRes here.
-</p>   
-                     
-                    
-                        I use methods from Empirical Industrial Organization to study questions related to Auctions.
-                    </p>
+                        <p>
+                            I use methods from Empirical Industrial Organization to study questions related to Auctions.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -461,7 +472,6 @@
                 <div class="address-line">Colchester, Essex, CO4 3SQ</div>
                 <div class="address-line">United Kingdom</div>
                 <div class="address-email">
-                    <!-- UPDATED: Removed email icon, now plain text with link -->
                     <span class="email-text"><a href="mailto:tejpal.s.sandhu@essex.ac.uk">tejpal.s.sandhu@essex.ac.uk</a></span>
                 </div>
             </div>
