@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tejpal S Sandhu · PhD Candidate in Economics</title>
+    <style>
+        /* ===== CAMBRIDGE INSPIRED STYLE - FULL WIDTH ===== */
+        /* Colors: Black Strip (#000), Cambridge Blue (#85B09A), White (#FFFFFF) */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 16px;
+            color: #1d1d1f;
+            background-color: #FFFFFF;
+            line-height: 1.6;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+        }
+        
+        /* ===== BLACK STRIP AT TOP (REDUCED HEIGHT) ===== */
+        .black-strip {
+            background-color: #000000; /* Zed Black */
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .strip-content {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        /* Name on top left - White */
+        .site-title {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: white;
+            letter-spacing: normal;
+        }
+        
+        /* Top right navigation - White */
+        .top-nav {
+            display: flex;
+            gap: 2.2rem;
+            align-items: center;
+        }
+        
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 400;
+            transition: opacity 0.2s;
+            padding: 0.2rem 0;
+            border-bottom: 1px solid transparent;
+        }
+        
+        .top-nav a:hover {
+            opacity: 0.8;
+            border-bottom-color: rgba(255,255,255,0.5);
+        }
+        
+        /* Home link - normal weight */
+        .top-nav a:first-child {
+            font-weight: 400;
+        }
+        
+        /* Search icon */
+        .search-icon {
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-left: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            border: none;
+            width: 26px;
+            height: 26px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        
+        .search-icon:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        .search-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: white;
+        }
+        
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            margin-top: 50px;
+            width: 100%;
+        }
+        
+        /* ===== CAMBRIDGE BLUE BACKGROUND SECTION (Name & University) - FULL WIDTH ===== */
+        .cambridge-section {
+            background-color: #85B09A; /* Cambridge Blue */
+            padding: 1.8rem 3rem;
+            color: #000000; /* Black text for contrast */
+            width: 100%;
+        }
+        
+        .cambridge-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: left;
+            margin-left: 550px;
+        }
+        
+        .cambridge-name {
+            font-size: 2.4rem;
+            font-weight: 250;
+            color: #000000; /* Black */
+            margin-bottom: 0.2rem;
+            line-height: 1.2;
+        }
+        
+        .cambridge-title {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: #000000; /* Black */
+            opacity: 0.9;
+            margin-bottom: 0.1rem;
+        }
+        
+        .cambridge-university {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #000000; /* Black */
+            opacity: 0.9;
+        }
+        
+        .cambridge-university a {
+            color: #000000; /* Black */
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            font-weight: 300;
+        }
+        
+        .cambridge-university a:hover {
+            opacity: 0.7;
+        }
+        
+        /* ===== WHITE BACKGROUND SECTION (Photo & Profile) ===== */
+        .white-section {
+            background-color: #FFFFFF; /* White */
+            padding: 2rem 3rem;
+            width: 100%;
+        }
+        
+        .white-content {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        /* Profile row - photo left, text right */
+        .profile-row {
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+        
+        .profile-image {
+            flex: 0 0 280px;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #e0d6cc;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        
+        .profile-info {
+            flex: 1;
+        }
+        
+        .profile-info p {
+            margin: 1rem 0;
+            font-size: 1rem;
+            color: #222222; /* Dark grey for readability */
+            line-height: 1.6;
+        }
+        
+        /* Research interests paragraph - separate */
+        .research-interests {
+            margin-top: 1rem;
+            padding-top: 0.2rem;
+        }
+        
+        /* Links in profile - Cambridge Blue */
+        .profile-link {
+            color: #85B09A; /* Cambridge Blue */
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom-color 0.2s;
+        }
+        
+        .profile-link:hover {
+            border-bottom-color: #85B09A;
+        }
+        
+        /* Advisor links */
+        .advisor-link {
+            color: #85B09A; /* Cambridge Blue */
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .advisor-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* ===== CAMBRIDGE BLUE FOR UNIVERSITY LINK ===== */
+        .cambridge-link {
+            color: #85B09A; /* Cambridge Blue */
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom-color 0.2s;
+        }
+        
+        .cambridge-link:hover {
+            border-bottom-color: #85B09A;
+        }
+        
+        /* ===== BLACK ADDRESS BAR - FULL WIDTH ===== */
+        .address-bar {
+            background-color: #000000;
+            color: #FFFFFF; /* White text */
+            padding: 1.2rem 3rem;
+            width: 100%;
+        }
+        
+        .address-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .address-line {
+            margin: 0.2rem 0;
+            color: #FFFFFF; /* White */
+        }
+        
+        .address-email {
+            margin: 0.4rem 0 0 0;
+            color: #FFFFFF;
+        }
+        
+        .address-email a {
+            color: #FFFFFF; /* White */
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        
+        .address-email a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Email without icon - just plain text */
+        .email-text {
+            display: inline;
+        }
+        
+        /* ===== MULTIMEDIA ICONS AT BOTTOM - FULL WIDTH ===== */
+        .multimedia-icons {
+            background-color: #000000;
+            color: #FFFFFF;
+            padding: 0.8rem 3rem 1.5rem 3rem;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .icons-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .icons-container a {
+            color: #FFFFFF; /* White */
+            font-size: 1.6rem;
+            margin: 0 1rem;
+            transition: opacity 0.2s;
+            display: inline-block;
+        }
+        
+        .icons-container a:hover {
+            opacity: 0.7;
+        }
+        
+        .icon-label {
+            font-size: 0.75rem;
+            margin-top: 0.4rem;
+            color: #FFFFFF;
+            opacity: 0.8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 800px) {
+            .strip-content {
+                padding: 0 1.5rem;
+            }
+            
+            .top-nav {
+                gap: 1rem;
+            }
+            
+            .cambridge-section, .white-section, .address-bar, .multimedia-icons {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+            
+            .profile-row {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .profile-image {
+                max-width: 240px;
+                margin: 0 auto;
+            }
+            
+            .cambridge-name {
+                font-size: 2.2rem;
+            }
+            
+            .cambridge-content {
+                text-align: center;
+                margin-left: 0; /* Reset on mobile */
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .black-strip {
+                height: auto;
+                min-height: 50px;
+            }
+            
+            .strip-content {
+                flex-direction: column;
+                gap: 0.3rem;
+                padding: 0.5rem 1rem;
+            }
+            
+            .top-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.8rem;
+            }
+            
+            .top-nav a {
+                font-size: 0.9rem;
+            }
+            
+            .cambridge-name {
+                font-size: 1.8rem;
+            }
+            
+            .cambridge-title {
+                font-size: 1.1rem;
+            }
+            
+            .icons-container a {
+                font-size: 1.3rem;
+                margin: 0 0.6rem;
+            }
+        }
+    </style>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- ===== BLACK STRIP AT TOP (REDUCED HEIGHT) ===== -->
+    <div class="black-strip">
+        <div class="strip-content">
+            <!-- Name on top left - White -->
+            <div class="site-title">Tejpal S Sandhu</div>
+            
+            <!-- Top right navigation and icons - Home, CV, Research, Teaching, Search -->
+            <div style="display: flex; align-items: center;">
+                <div class="top-nav">
+                    <a href="index.html">Home</a>
+                    <a href="TS_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+                    <a href="research.html">Research</a>
+                    <a href="teaching.html">Teaching</a>
+                    
+                    <!-- Search icon -->
+                    <button class="search-icon" title="Search">
+                        <svg viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="main-content">
+        
+        <!-- ===== CAMBRIDGE BLUE SECTION (Name & University) - FULL WIDTH ===== -->
+        <div class="cambridge-section">
+            <div class="cambridge-content">
+                <div class="cambridge-name">Tejpal S Sandhu</div>
+                <div class="cambridge-title">PhD Candidate in Economics</div>
+                <div class="cambridge-university">
+                    <a href="https://www.essex.ac.uk" target="_blank" rel="noopener noreferrer">University of Essex</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ===== WHITE SECTION (Photo & Profile) - FULL WIDTH ===== -->
+        <div class="white-section">
+            <div class="white-content">
+                <div class="profile-row">
+                    <div class="profile-image">
+                        <img src="5.jpg" alt="Tejpal S Sandhu" onerror="this.src='https://via.placeholder.com/280x340?text=Photo'">
+                    </div>
+                    
+                    <div class="profile-info">
+                        <p>
+                            I am a PhD candidate in Economics at the <a href="https://www.essex.ac.uk" class="cambridge-link" target="_blank" rel="noopener noreferrer">University of Essex</a>. I also completed my MSc and MRes here.
+                        </p>   
+                        
+                        <p>
+                            I use methods from Empirical Industrial Organization to study questions related to Auctions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ===== BLACK ADDRESS BAR - FULL WIDTH ===== -->
+        <div class="address-bar">
+            <div class="address-content">
+                <div class="address-line">Room no. 3.314, Department of Economics</div>
+                <div class="address-line">University of Essex, Wivenhoe Park</div>
+                <div class="address-line">Colchester, Essex, CO4 3SQ</div>
+                <div class="address-line">United Kingdom</div>
+                <div class="address-email">
+                    <span class="email-text"><a href="mailto:tejpal.s.sandhu@essex.ac.uk">tejpal.s.sandhu@essex.ac.uk</a></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ===== MULTIMEDIA ICONS AT BOTTOM - FULL WIDTH ===== -->
+        <div class="multimedia-icons">
+            <div class="icons-container">
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google-scholar"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-orcid"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                <div class="icon-label">google scholar · orcid · github · x</div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
