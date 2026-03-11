@@ -146,7 +146,7 @@
             font-size: 1.1rem;
         }
 
-        /* link styling – cherry colour updated to #2f6f6f */
+        /* link styling – colour #2f6f6f */
         a {
             color: #2f6f6f;
             text-decoration: underline;
@@ -158,9 +158,33 @@
             color: #1f4f4f;
         }
 
-        /* advisors line (keep from original) */
+        /* advisors line */
         .advisors {
             margin: 1.2rem 0;
+        }
+
+        /* contact row (email) */
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        .email-icon {
+            color: #2f6f6f;
+            font-size: 1.8rem;
+        }
+
+        .email-link {
+            color: #2f6f6f;
+            text-decoration: none;
+            border-bottom: 1px dotted #2f6f6f;
+            padding-bottom: 2px;
+        }
+        .email-link:hover {
+            border-bottom: 1px solid;
         }
 
         /* section headings – colour #2f6f6f, Playfair Display */
@@ -237,30 +261,6 @@
             font-family: 'Roboto', sans-serif;
         }
 
-        /* contact row (email) */
-        .contact-row {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin: 1.5rem 0;
-            font-size: 1.2rem;
-        }
-
-        .email-icon {
-            color: #2f6f6f;
-            font-size: 1.8rem;
-        }
-
-        .email-link {
-            color: #2f6f6f;
-            text-decoration: none;
-            border-bottom: 1px dotted #2f6f6f;
-            padding-bottom: 2px;
-        }
-        .email-link:hover {
-            border-bottom: 1px solid;
-        }
-
         /* social icons – colour #2f6f6f */
         .social-icons {
             margin: 2.5rem 0 1rem 0;
@@ -324,26 +324,34 @@
         <!-- main name on texture (colour #85B09A) -->
         <h1 class="main-heading">Tejpal S Sandhu</h1>
 
-        <!-- optional job market tag (you can remove if not needed) -->
-        <!-- <div class="job-market-tag">📌 I am on the 2025-26 job market.</div> -->
+        <!-- WELCOME LINE (exactly as specified) -->
+        <p style="font-size: 1.2rem; margin-top: 0.5rem; margin-bottom: 1.5rem; font-weight: 400;">
+            Welcome to my website!
+        </p>
 
-        <!-- profile section (photo + intro) exactly as original -->
+        <!-- profile section (photo + intro text) with updated content -->
         <div class="profile-section">
             <div class="profile-image">
                 <img src="5.jpg" alt="Tejpal S Sandhu">
             </div>
             <div class="profile-info">
                 <p>
-                    I am a PhD candidate in Economics at the <a href="https://www.essex.ac.uk" target="_blank">University of Essex</a>. I also completed my MSc and MRes here. My research interests include microeconomic theory, industrial organisation, and auctions.
+                    I am a PhD candidate in economics at the <a href="https://www.essex.ac.uk" target="_blank">University of Essex</a>. 
+                    My main areas of research interest are microeconomic theory, industrial organization, auctions.
                 </p>
                 <p>
-                    You can find my <a href="TS_CV.pdf" target="_blank" rel="noopener noreferrer">CV here</a>.
+                    I hold a Master’s degree and an MRes in Economics from the University of Essex, and both a Bachelor’s and a Master’s degree in Economics from Punjabi University, India.
                 </p>
-                <p>
-                    You can contact me at <a href="mailto:tejpal.s.sandhu@essex.ac.uk">tejpal.s.sandhu@essex.ac.uk</a>.
-                </p>
-                <p class="advisors">
-                    <strong>Advisors:</strong> Prof Daniel F Garrett and Dr Albin Erlanson
+                
+                <!-- Email line (as specified) -->
+                <div class="contact-row" style="margin-top: 1.2rem; margin-bottom: 0.5rem;">
+                    <i class="fas fa-envelope email-icon"></i>
+                    <a href="mailto:tejpal.s.sandhu@essex.ac.uk" class="email-link">tejpal.s.sandhu@essex.ac.uk</a>
+                </div>
+                
+                <!-- Advisors line (exactly as given) -->
+                <p class="advisors" style="margin-top: 0.5rem;">
+                    <strong>Advisors:</strong> Daniel F Garrett · Albin Erlanson
                 </p>
             </div>
         </div>
