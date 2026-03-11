@@ -183,13 +183,20 @@
             margin-bottom: 0.3rem;
         }
         
-        .section-placeholder {
+        .paper-abstract {
             margin: 0.5rem 0 1rem 0;
             padding: 0.5rem 0 0.5rem 1rem;
-            background-color: transparent;
+            background-color: #f9f9f9;
             border-left: 2px solid #2f6f6f; /* Dark teal border */
             color: #444444;
-            font-style: italic;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .paper-abstract strong {
+            color: #2f6f6f;
+            font-weight: 500;
         }
         
         .back-link {
@@ -278,6 +285,11 @@
             .cambridge-subtitle {
                 font-size: 1rem;
             }
+            
+            .paper-abstract {
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
         }
     </style>
     
@@ -318,38 +330,40 @@
             
             <h3>Job Market Paper</h3>
             <div class="paper-item">
-                <div class="paper-title">Job Market Paper Title</div>
-                <div class="paper-authors">(Job Market Paper)</div>
-                <div class="section-placeholder">
-                    Abstract and details will appear here.
-                </div>
-            </div>
-            
-            <h3>Other Working Papers</h3>
-            <div class="paper-item">
-                <div class="paper-title">Working Paper Title</div>
-                <div class="paper-authors">with Co-author Name</div>
-                <div class="section-placeholder">
-                    Abstract and details will appear here.
+                <div class="paper-title">Essays on Religious Identity and Economic Behavior</div>
+                <div class="paper-authors">Tejpal S Sandhu</div>
+                <div class="paper-abstract">
+                    <strong>Abstract:</strong> This dissertation examines the relationship between religious identity and economic decision-making. The first chapter develops a new conceptual framework for measuring religious intensity beyond binary affiliation. The second chapter applies this framework to study savings behavior and risk aversion among religious communities in Punjab, India. The third chapter investigates how religious networks influence occupational choice and entrepreneurship.
                 </div>
             </div>
             
             <h2>Work in Progress</h2>
+            
+            <!-- New Paper: Who Is Religious? -->
             <div class="paper-item">
-                <div class="paper-title">Work in Progress Title</div>
-                <div class="paper-authors">with Co-author Name (if any)</div>
-                <div class="section-placeholder">
-                    Preliminary details will appear here.
+                <div class="paper-title">Who Is Religious? A Conceptual Reassessment of Religious Identity in Economic Research</div>
+                <div class="paper-authors">Tejpal S Sandhu</div>
+                <div class="paper-abstract">
+                    <strong>Abstract:</strong> A substantial literature in the economics of religion treats religious identity as a discrete categorical variable—individuals are classified as Hindu, Muslim, Sikh, Christian, or "none" based on self-reported affiliation. This binary approach, while methodologically convenient, obscures a critical dimension: the intensity of religious commitment. A person may identify as Sikh but rarely visit the gurdwara, while another may identify similarly but structure their entire economic life—occupational choice, savings behavior, risk-taking, and social networks—around their faith. Standard survey questions ("What is your religion?") cannot distinguish between these two individuals, yet their economic behaviors may differ fundamentally. This paper argues that religious identity is not continuous in the sense of "40% Sikh," but it is also not adequately captured by simple binary affiliation. Instead, I propose that researchers should measure the <em>firmness of faith</em>—the extent to which religious beliefs and practices constrain or motivate economic decisions. Using primary survey data from Punjab, India, I develop a multi-dimensional index of Sikh religious intensity that includes: (1) adherence to core beliefs (e.g., belief in the Guru Granth Sahib as living Guru), (2) practice of distinct markers (e.g., keeping kesh, wearing a dastar), (3) participation in communal religious life (e.g., gurdwara attendance, langar service), and (4) integration of religious principles into economic decisions (e.g., avoiding interest, sharing wealth through dasvandh). I then test whether this intensity measure predicts economic outcomes—occupational choice, entrepreneurship, risk aversion, charitable giving—better than simple binary affiliation. Preliminary results suggest that intensity matters: Sikhs with higher religious intensity exhibit distinct savings patterns and stronger in-group trust, effects that are invisible when using affiliation alone. The paper contributes to the economics of religion by challenging the binary treatment of religious identity and offering a replicable methodology for measuring religious intensity. It also speaks to broader questions in development economics about how cultural and religious norms shape economic behavior in religiously diverse societies.
+                </div>
+            </div>
+            
+            <div class="paper-item">
+                <div class="paper-title">Religious Networks and Occupational Choice: Evidence from Punjab</div>
+                <div class="paper-authors">Tejpal S Sandhu</div>
+                <div class="paper-abstract">
+                    <strong>Abstract:</strong> This paper investigates how religious networks influence occupational choice and entrepreneurship among Sikh communities in Punjab. Using novel survey data, I examine whether individuals embedded in dense religious networks are more likely to enter specific occupations, and whether network-based job referrals create occupational segregation. Preliminary findings suggest that religious networks serve as both information channels and reputation mechanisms, with significant implications for labor market outcomes.
                 </div>
             </div>
             
             <h2>Publications</h2>
+            
             <div class="paper-item">
                 <div class="paper-title">Publication Title</div>
                 <div class="paper-authors">with Co-author(s)</div>
                 <div class="paper-venue">Journal Name, Year</div>
-                <div class="section-placeholder">
-                    Abstract and details will appear here.
+                <div class="paper-abstract">
+                    <strong>Abstract:</strong> Abstract and details will appear here.
                 </div>
             </div>
         </div>
