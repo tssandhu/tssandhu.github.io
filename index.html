@@ -1,432 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tejpal S Sandhu · PhD Candidate in Economics</title>
-    <!-- Google Fonts (classic, similar to reference) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons (v6 free) for top icons and CV -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* RESET & BASE */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<title>Tejpal S Sandhu</title>
 
-        html {
-            scroll-behavior: smooth; /* for smooth navigation to sections */
-        }
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
 
-        body {
-            background-color: #fcfcfc;  /* exactly as requested */
-            font-family: 'Source Sans Pro', 'Helvetica', Arial, sans-serif;
-            color: #2c3e2f;             /* dark green base for text */
-            line-height: 1.6;
-            font-size: 17px;
-            font-weight: 300;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+<style>
 
-        /* main container: clean centered layout */
-        .page-wrapper {
-            max-width: 960px;
-            margin: 0 auto;
-            width: 90%;
-            padding: 1.5rem 1rem 2rem 1rem;
-            flex: 1;
-        }
+body{
+background:#faf9f6;
+font-family:'Source Sans Pro',sans-serif;
+color:#222;
+line-height:1.6;
+}
 
-        /* TOP BAR – no strip, just name left, icons right */
-        .top-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 0 0.8rem 0;
-            border-bottom: 1px solid #d1d9cf;   /* very subtle separation, like reference */
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
+.container{
+max-width:820px;
+margin:auto;
+padding:40px;
+}
 
-        .name-left {
-            font-family: 'Merriweather', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: #1f3b2c;             /* dark green – almost black-green */
-            letter-spacing: 0.5px;
-        }
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #ddd;
+padding-bottom:12px;
+margin-bottom:30px;
+}
 
-        .nav-right {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            flex-wrap: wrap;
-        }
+.name{
+font-family:'Merriweather',serif;
+font-size:28px;
+font-weight:700;
+}
 
-        .nav-right a {
-            text-decoration: none;
-            font-weight: 600;            /* bold as requested */
-            color: #1f3b2c;               /* dark green */
-            font-size: 1.2rem;
-            transition: opacity 0.2s;
-            border-bottom: 1px solid transparent;
-        }
+.nav a{
+margin-left:25px;
+text-decoration:none;
+color:#1a4e8a;
+font-weight:600;
+}
 
-        .nav-right a:hover {
-            opacity: 0.7;
-            border-bottom: 1px solid #1f3b2c;
-        }
+.nav a:hover{
+text-decoration:underline;
+}
 
-        /* top icons (dark green) */
-        .icon-link {
-            color: #1f3b2c;
-            font-size: 1.5rem;
-            margin-left: 0.5rem;
-            transition: opacity 0.2s;
-        }
-        .icon-link:hover {
-            opacity: 0.7;
-        }
+.profile{
+display:flex;
+gap:40px;
+align-items:flex-start;
+}
 
-        /* MAIN NAME (in profile area) – h1 style */
-        .main-name {
-            font-family: 'Merriweather', serif;
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: #1f3b2c;
-            margin: 0.5rem 0 0.2rem 0;
-            line-height: 1.2;
-        }
+.photo img{
+width:220px;
+border:1px solid #ddd;
+}
 
-        /* profile section – left column (name, intro, CV line) and right column (photo) */
-        .profile-section {
-            display: flex;
-            gap: 3rem;
-            align-items: flex-start;
-            margin: 1.5rem 0 2.5rem 0;
-            flex-wrap: wrap;
-        }
+h1{
+font-family:'Merriweather',serif;
+font-size:34px;
+margin-bottom:10px;
+}
 
-        .profile-left {
-            flex: 2;
-            min-width: 280px;
-        }
+p{
+margin:15px 0;
+}
 
-        .profile-right {
-            flex: 1;
-            min-width: 220px;
-            text-align: right;        /* image aligned right, like reference often does */
-        }
+a{
+color:#1a4e8a;
+}
 
-        .profile-right img {
-            width: 100%;
-            max-width: 250px;
-            height: auto;
-            border-radius: 2px;       /* subtle rounding, not too much */
-            border: 1px solid #d0d9cd;
-            background: #fff;
-        }
+.footer{
+margin-top:40px;
+border-top:1px solid #ddd;
+padding-top:10px;
+font-size:14px;
+color:#666;
+}
 
-        /* paragraphs and text */
-        p {
-            margin: 1.2rem 0;
-            font-size: 1.1rem;
-            color: #2c4435;            /* slightly softer dark green */
-        }
-
-        /* CV line – inline with icon */
-        .cv-line {
-            margin: 1.5rem 0 0.5rem 0;
-            font-size: 1.1rem;
-        }
-        .cv-line a {
-            color: #1f3b2c;
-            text-decoration: underline;
-            text-underline-offset: 3px;
-            text-decoration-thickness: 1px;
-            font-weight: 400;
-            margin-left: 0.3rem;
-        }
-        .cv-line a:hover {
-            color: #0f2b1a;
-        }
-        .cv-line i {
-            color: #1f3b2c;
-            font-size: 1.2rem;
-            margin-right: 0.4rem;
-        }
-
-        /* contact email line */
-        .contact-email {
-            margin: 1rem 0;
-            font-size: 1.1rem;
-            word-break: break-word;
-        }
-        .contact-email i {
-            color: #1f3b2c;
-            margin-right: 0.6rem;
-            width: 1.2rem;
-        }
-        .contact-email a {
-            color: #1f3b2c;
-            text-decoration: underline;
-            text-decoration-style: dotted;
-            text-underline-offset: 3px;
-        }
-        .contact-email a:hover {
-            text-decoration-style: solid;
-        }
-
-        /* advisors line (smaller, muted) */
-        .advisors {
-            margin: 1rem 0 1.5rem 0;
-            color: #3d5a4b;
-            font-size: 1rem;
-        }
-
-        /* section headings – always dark green */
-        h2 {
-            font-family: 'Merriweather', serif;
-            font-size: 1.9rem;
-            color: #1f3b2c;
-            margin: 2.5rem 0 1.2rem 0;
-            font-weight: 700;
-            border-bottom: 1px solid #cad3c5;
-            padding-bottom: 6px;
-        }
-
-        h3 {
-            font-family: 'Merriweather', serif;
-            color: #1f3b2c;
-            margin: 1.5rem 0 0.8rem 0;
-            font-size: 1.4rem;
-        }
-
-        /* teaching items – compact, clean */
-        .teaching-item {
-            margin-bottom: 1.5rem;
-        }
-
-        .teaching-course {
-            font-weight: 600;
-            font-size: 1.2rem;
-            color: #1f3b2c;
-        }
-
-        .teaching-details {
-            color: #3d5a4b;
-            margin: 0.2rem 0 0.2rem 0;
-        }
-
-        .teaching-role {
-            font-weight: 500;
-            color: #2f4d3a;
-            margin-top: 0.1rem;
-        }
-
-        .teaching-highlight {
-            background: #e6e9e2;
-            padding: 0.8rem 1.5rem;
-            border-radius: 30px;
-            display: inline-block;
-            margin: 1.5rem 0;
-            border-left: 4px solid #1f3b2c;
-            font-weight: 400;
-        }
-
-        /* research placeholder – subtle to match style */
-        .research-note {
-            background: #eaece6;
-            padding: 1.2rem 1.8rem;
-            border-radius: 6px;
-            color: #2c4435;
-            margin: 1.5rem 0 2rem 0;
-            border: 1px solid #cbd3c4;
-            font-style: italic;
-        }
-
-        /* CV pop-out link – we make the "CV here" link open in new tab */
-        .cv-popout {
-            display: inline-block;
-            background: #e0e6dd;
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-weight: 500;
-            margin-left: 0.5rem;
-            border: 1px solid #b0c0ab;
-            transition: background 0.2s;
-        }
-        .cv-popout:hover {
-            background: #ccd7c8;
-        }
-        .cv-popout i {
-            font-size: 0.9rem;
-            margin-left: 0.4rem;
-        }
-
-        /* no social icons, so we remove any extra */
-        /* footer simple */
-        .footer-note {
-            margin-top: 4rem;
-            padding: 1.5rem 0 0.5rem 0;
-            font-size: 0.9rem;
-            color: #5a715e;
-            border-top: 1px solid #d0d9cd;
-            text-align: left;
-        }
-
-        /* ensure page does not scroll unnecessarily — but content will scroll if needed; 
-           we set container to fit viewport but allow natural scroll if content exceeds.
-           "no scroll down" is interpreted as single page with sections visible without excessive scrolling,
-           but typical academic bios need some scrolling. We'll keep minimal vertical.
-           To reduce scroll, we limit content height with vh? better to rely on content. 
-           We'll keep teaching summary short. */
-        .compact {
-            margin-bottom: 0.5rem;
-        }
-
-        /* responsive */
-        @media (max-width: 700px) {
-            .profile-section {
-                flex-direction: column-reverse;
-            }
-            .profile-right {
-                text-align: left;
-            }
-            .top-bar {
-                flex-direction: column;
-                align-items: start;
-                gap: 0.8rem;
-            }
-            .nav-right {
-                justify-content: flex-start;
-            }
-            .name-left {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+</style>
 </head>
+
 <body>
 
-<div class="page-wrapper">
+<div class="container">
 
-    <!-- TOP SECTION: name left, bold nav and icons right (no strip) -->
-    <div class="top-bar">
-        <div class="name-left">Tejpal S Sandhu</div>
-        <div class="nav-right">
-            <a href="#home" style="font-weight: 700;">Home</a>          <!-- bold as requested -->
-            <a href="#research">Research</a>
-            <a href="#teaching">Teaching</a>
-            <!-- top right icons (dark green) -->
-            <a href="#" class="icon-link" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
-            <a href="#" class="icon-link" aria-label="ORCID"><i class="fa-brands fa-orcid"></i></a>
-            <a href="#" class="icon-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        </div>
-    </div>
+<div class="topbar">
 
-    <!-- anchor for home -->
-    <div id="home"></div>
+<div class="name">Tejpal S Sandhu</div>
 
-    <!-- MAIN NAME (again, like reference: Christiane Szerman appears as h1) -->
-    <h1 class="main-name">Tejpal S Sandhu</h1>
+<div class="nav">
+<a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="teaching.html">Teaching</a>
+</div>
 
-    <!-- PROFILE SECTION: left text, right photo (no social icons) -->
-    <div class="profile-section">
-        <div class="profile-left">
-            <!-- intro exactly as you provided, with updated details -->
-            <p>
-                I am a PhD candidate in economics at the <a href="https://www.essex.ac.uk" target="_blank" style="color: #1f3b2c;">University of Essex</a>. 
-                My main areas of research interest are microeconomic theory, industrial organization, auctions.
-            </p>
-            <p>
-                I hold a Master’s degree and an MRes in Economics from the University of Essex, and both a Bachelor’s and a Master’s degree in Economics from Punjabi University, India.
-            </p>
-            
-            <!-- CV line: "Here is my CV." with half-open/pop-out link (opens new tab) -->
-            <div class="cv-line">
-                <i class="fas fa-file-pdf"></i> Here is my <a href="TS_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a> 
-                <span class="cv-popout"><i class="fas fa-external-link-alt"></i> pop-out</span>
-            </div>
-            
-            <!-- contact email (no icons? but we keep minimal) – using icon only as subtle -->
-            <div class="contact-email">
-                <i class="far fa-envelope" style="color: #1f3b2c;"></i> 
-                <a href="mailto:tejpal.s.sandhu@essex.ac.uk">tejpal.s.sandhu@essex.ac.uk</a>
-            </div>
-            
-            <!-- advisors line -->
-            <div class="advisors">
-                <strong>Advisors:</strong> Daniel F Garrett · Albin Erlanson
-            </div>
-        </div>
+</div>
 
-        <div class="profile-right">
-            <!-- your profile photo (5.jpg) -->
-            <img src="5.jpg" alt="Tejpal S Sandhu">
-        </div>
-    </div>
+<div class="profile">
 
-    <!-- RESEARCH SECTION (opens on same page) -->
-    <h2 id="research">Research</h2>
-    <div class="research-note">
-        <p style="margin: 0;">Research section is currently being updated. Working papers and abstracts will appear here soon.</p>
-        <!-- you can later replace with actual content -->
-    </div>
+<div class="text">
 
-    <!-- TEACHING SECTION (opens on same page) -->
-    <h2 id="teaching">Teaching</h2>
-    <p>
-        I am passionate about teaching microeconomic theory and industrial organisation. My goal is to create an engaging and supportive learning environment where students can develop the confidence to apply complex methods to real-world problems.
-    </p>
+<h1>Tejpal S Sandhu</h1>
 
-    <h3>Teaching Experience</h3>
+<p>
+I am a PhD candidate in Economics at the 
+<a href="https://www.essex.ac.uk" target="_blank">University of Essex</a>.
+My main research interests are microeconomic theory, industrial organization, and auctions.
+</p>
 
-    <div class="teaching-item">
-        <div class="teaching-course">EC 202: Microeconomics (Intermediate)</div>
-        <div class="teaching-details">University of Essex | Undergraduate Level | Autumn 2024 & Spring 2025</div>
-        <div class="teaching-role">Role: Assistant Lecturer</div>
-    </div>
+<p>
+I hold a Master’s degree and an MRes in Economics from the University of Essex, 
+and both a Bachelor’s and a Master’s degree in Economics from Punjabi University, India.
+</p>
 
-    <div class="teaching-item">
-        <div class="teaching-course">EC 201: Macroeconomics (Intermediate)</div>
-        <div class="teaching-details">University of Essex | Undergraduate Level | Spring 2025</div>
-        <div class="teaching-role">Role: Assistant Lecturer</div>
-    </div>
+<p>
+Here is my <a href="TS_CV.pdf" target="_blank">CV</a>.
+</p>
 
-    <div class="teaching-item">
-        <div class="teaching-course">EC 111: Introduction to Economics</div>
-        <div class="teaching-details">University of Essex | Undergraduate Level | Autumn 2023 & Spring 2024</div>
-        <div class="teaching-role">Role: Assistant Lecturer</div>
-    </div>
+<p>
+Email:  
+<a href="mailto:tejpal.s.sandhu@essex.ac.uk">tejpal.s.sandhu@essex.ac.uk</a>
+</p>
 
-    <div class="teaching-item">
-        <div class="teaching-course">EC 115: Methods of Economic Analysis</div>
-        <div class="teaching-details">University of Essex | Undergraduate Level | Autumn 2023 & Spring 2024</div>
-        <div class="teaching-role">Role: Assistant Lecturer</div>
-    </div>
+<p>
+<strong>Advisors:</strong> Daniel F Garrett · Albin Erlanson
+</p>
 
-    <!-- Teaching recognition -->
-    <div class="teaching-highlight">
-        <i class="fas fa-award" style="color: #1f3b2c; margin-right: 0.5rem;"></i> 
-        Associate Fellow of the Higher Education Academy (Feb 2025)
-    </div>
+</div>
 
-    <!-- no social icons at bottom (as requested) -->
-    
-    <!-- footer (minimal) -->
-    <div class="footer-note">
-        Last updated: March 2026 · background: #f3efe6
-    </div>
+<div class="photo">
+<img src="5.jpg">
+</div>
 
-</div> <!-- end page-wrapper -->
+</div>
 
-<!-- optional: small script to ensure CV pop-out is just a link style, already done -->
+<div class="footer">
+Last updated: March 2026
+</div>
+
+</div>
+
 </body>
 </html>
