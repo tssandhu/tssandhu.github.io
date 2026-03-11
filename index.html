@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tejpal S Sandhu · PhD Candidate in Economics</title>
+    <!-- Google Fonts: Playfair Display for headings, Roboto for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons (v6 free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', 'Open Sans', sans-serif; /* Body font: Roboto (Open Sans fallback) */
+            background: #fcf9f5; /* warm off-white fallback */
+            /* Texture image: 25.jpg – make sure the file is in the same folder as this HTML */
+            background-image: url('25.jpg');
+            background-repeat: repeat; /* adjust if texture should tile; 'repeat' is common for subtle paper */
+            background-size: auto;      /* keeps original texture size */
+            color: #1e2b2b; /* very dark teak/grey for text, soft on eyes */
+            line-height: 1.7;
+            font-size: 16px;
+            font-weight: 300;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* main container: mimics the clean centered look of the reference site */
+        .page-wrapper {
+            max-width: 960px;   /* comfortable reading width */
+            margin: 0 auto;
+            width: 90%;
+            flex: 1;
+            /* we create padding that visually equals the width of the top strip's side margins */
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        /* TOP STRIP – exactly as requested: colour #2f6f6f, with internal spacing so that text aligns with side padding */
+        .top-strip {
+            background-color: #2f6f6f;    /* the specified teal-ish tone */
+            width: 100vw;                  /* full viewport width */
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            color: white;
+            font-family: 'Playfair Display', serif;  /* headings font used for name */
+        }
+
+        /* inner container for strip content to align with page-wrapper padding */
+        .strip-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.9rem 0;        /* vertical comfort, matches reference site height */
+            /* left/right padding set to 0 because .page-wrapper already gives 2rem side space */
+        }
+
+        /* site name in strip – color white as on reference, but you also mentioned "name on texture 85B09A" – that will apply to the name on the main page. Here we keep white on coloured strip. */
+        .site-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #ffffff;           /* white stands out on #2f6f6f */
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        /* navigation links in strip */
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 1.1rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            transition: opacity 0.2s;
+        }
+        .nav-links a:hover {
+            opacity: 0.85;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* MAIN NAME (on texture) – colour 85B09A, Playfair Display */
+        .main-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #85B09A;            /* muted sage green */
+            margin: 2.5rem 0 0.5rem 0;  /* top spacing gives breathing room below strip */
+            line-height: 1.2;
+            text-align: left;
+        }
+
+        /* subtitle or chinese equivalent – you may adapt, but we follow reference simplicity */
+        .subhead {
+            font-size: 1.4rem;
+            color: #3a5a5a;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* content sections */
+        .content-section {
+            margin: 2rem 0 3rem 0;
+        }
+
+        p {
+            margin: 1.2rem 0;
+            font-size: 1.1rem;
+            max-width: 780px;          /* comfortable line length */
+        }
+
+        /* link styling */
+        a {
+            color: #2f6f6f;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            font-weight: 400;
+        }
+        a:hover {
+            color: #1f4f4f;
+        }
+
+        /* email / icons row */
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 2rem 0 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .email-icon {
+            color: #2f6f6f;            /* icon colour same as strip */
+            font-size: 1.8rem;
+            margin-right: 0.3rem;
+            vertical-align: middle;
+        }
+
+        .email-link {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            color: #2f6f6f;
+            text-decoration: none;
+            border-bottom: 1px dotted #2f6f6f;
+            padding-bottom: 2px;
+        }
+        .email-link:hover {
+            border-bottom: 1px solid;
+        }
+
+        /* social / academic icons – colour #2f6f6f as requested "top icons and name is 2f6f6f" – these are below strip but we apply same colour */
+        .icon-set {
+            margin: 2rem 0;
+        }
+        .icon-set a {
+            color: #2f6f6f;
+            font-size: 2rem;
+            margin-right: 1.5rem;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .icon-set a:hover {
+            color: #1b4c4c;
+        }
+
+        /* job market indicator (like reference "I am on the 2025-26 job market.") */
+        .job-market-tag {
+            background-color: #e9f1ed;   /* very light mint */
+            color: #1e4a4a;
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
+            display: inline-block;
+            font-weight: 500;
+            margin: 1rem 0 0.5rem;
+            font-size: 1.1rem;
+            border-left: 4px solid #85B09A;
+        }
+
+        /* footer minimal */
+        .footer-note {
+            margin-top: 4rem;
+            padding: 1rem 0;
+            font-size: 0.85rem;
+            color: #5f6e6e;
+            border-top: 1px solid #d0dbd1;
+            width: 100%;
+        }
+
+        /* ensure texture touches bottom: body background already covers, content padding-bottom */
+        .page-wrapper {
+            padding-bottom: 0;  /* last element goes to edge */
+        }
+
+        /* responsive adjustments */
+        @media (max-width: 650px) {
+            .main-heading { font-size: 2.8rem; }
+            .strip-inner { flex-direction: column; gap: 0.5rem; }
+            .nav-links a { margin: 0 1rem; }
+            .site-title { font-size: 1.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- RED STRIP (actually #2f6f6f strip) exactly as described: blank space on left/right = padding of page wrapper -->
+    <div class="top-strip">
+        <div class="strip-inner">
+            <div class="site-title">Tejpal S Sandhu</div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Research</a>
+                <a href="#teaching">Teaching</a>
+                <a href="#">CV</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- main content wrapper – side padding gives the blank space equal to strip's side space -->
+    <div class="page-wrapper">
+
+        <!-- main name on texture, in colour #85B09A -->
+        <h1 class="main-heading">Tejpal S Sandhu</h1>
+
+        <!-- optional: chinese / script if you like, but we keep simple like reference -->
+        <!-- <div class="subhead"></div>  leave empty or add later -->
+
+        <!-- job market line (copy from reference) -->
+        <div class="job-market-tag">📌 I am on the 2025-26 job market.</div>
+
+        <!-- welcome / intro paragraph (inspired by Zhiyao Deng) -->
+        <div class="content-section">
+            <p>
+                I am a PhD candidate in economics at the <a href="https://www.essex.ac.uk" target="_blank">University of Essex</a>. 
+                My main areas of research interest are microeconomic theory, industrial organisation, and auctions.
+            </p>
+            <p>
+                I hold an MSc and MRes in Economics from the University of Essex, and a Bachelor's degree in Economics from [Your University].
+            </p>
+        </div>
+
+        <!-- advisors line (from your original) -->
+        <p><strong>Advisors:</strong> Prof Daniel F Garrett and Dr Albin Erlanson</p>
+
+        <!-- contact row: email with icon, consistent with #2f6f6f -->
+        <div class="contact-row">
+            <i class="fas fa-envelope email-icon"></i>
+            <a href="mailto:tejpal.s.sandhu@essex.ac.uk" class="email-link">tejpal.s.sandhu@essex.ac.uk</a>
+        </div>
+
+        <!-- academic icons with colour #2f6f6f (as specified for top icons, but we also use for these) -->
+        <div class="icon-set">
+            <a href="#" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
+            <a href="#" aria-label="ORCID"><i class="fa-brands fa-orcid"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" aria-label="CV"><i class="fa-solid fa-file-pdf"></i></a>
+        </div>
+
+        <!-- teaching heading (example, using heading font) -->
+        <h2 style="font-family: 'Playfair Display', serif; color: #2f6f6f; margin-top: 3rem; font-weight: 700; border-bottom: 2px solid #d0e0d5; padding-bottom: 0.3rem;">Teaching</h2>
+
+        <!-- sample teaching entry – keeps texture background visible -->
+        <div style="margin: 1.5rem 0;">
+            <p style="font-weight: 500; margin-bottom: 0.2rem;">EC 202: Microeconomics (Intermediate)</p>
+            <p style="color: #2d5555; margin-top: 0;">Assistant Lecturer · Autumn 2024, Spring 2025</p>
+        </div>
+
+        <!-- Associate Fellow badge (like reference highlights) -->
+        <div style="background: #eef4f0; padding: 1rem 2rem; border-radius: 30px; display: inline-block; margin: 2rem 0; border-left: 4px solid #85B09A;">
+            <i class="fas fa-award" style="color: #2f6f6f; margin-right: 0.5rem;"></i> 
+            Associate Fellow of the Higher Education Academy (Feb 2025)
+        </div>
+
+        <!-- footer (touches bottom) -->
+        <div class="footer-note">
+            Last updated: March 2026 · background texture: 25.jpg
+        </div>
+
+    </div> <!-- end page-wrapper -->
+</body>
+</html>
