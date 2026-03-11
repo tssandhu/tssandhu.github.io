@@ -83,7 +83,8 @@ margin-top:80px;
 display:flex;
 gap:2.5rem;
 align-items:flex-start;
-margin-top:40px;
+margin-top:0; /* Reset margin */
+padding-top:40px; /* Add padding instead */
 }
 
 .profile-image{
@@ -92,6 +93,7 @@ flex:0 0 260px;
 
 .profile-image img{
 width:100%;
+height:auto;
 border-radius:4px;
 border:1px solid #eaecef;
 }
@@ -99,17 +101,10 @@ border:1px solid #eaecef;
 .profile-info{
 flex:1;
 max-width:680px;
+margin-top:40px; /* Align with top of photo */
 }
 
-/* WELCOME POSITION - moved down */
-
-.welcome-heading{
-font-size:2rem;
-margin-left:360px;
-margin-bottom:15px;
-margin-top:80px; /* Increased to move down */
-color:#1a1a1a;
-}
+/* WELCOME POSITION - REMOVED */
 
 /* TEXT */
 
@@ -254,12 +249,12 @@ color:#666;
 
 <div class="main-content">
 
-<div class="welcome-heading">Welcome!</div>
+<!-- WELCOME HEADING REMOVED -->
 
 <div class="profile-section">
 
 <div class="profile-image">
-<img src="2.jpg" alt="Tejpal S Sandhu">
+<img src="5.jpg" alt="Tejpal S Sandhu">
 </div>
 
 <div class="profile-info">
@@ -276,9 +271,7 @@ You can find my <a href="TS_CV.pdf" class="cherry-link">CV here</a>.
 You can contact me at <a href="mailto:tejpal.s.sandhu@essex.ac.uk" class="cherry-link">tejpal.s.sandhu@essex.ac.uk</a>.
 </p>
 
-<p>
-Personal email: <a href="mailto:tpsandhu.eco@gmail.com" class="cherry-link">tpsandhu.eco@gmail.com</a>
-</p>
+<!-- PERSONAL EMAIL REMOVED -->
 
 <p>
 <strong>Advisors:</strong> Prof Daniel F Garrett and Dr Albin Erlanson
@@ -344,7 +337,6 @@ Associate Fellow of the Higher Education Academy (Feb 2025)
 <a href="#"><i class="fa-brands fa-google-scholar"></i></a> 
 <a href="#"><i class="fa-brands fa-orcid"></i></a> 
 <a href="#"><i class="fa-brands fa-github"></i></a> 
-<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
 
 </div>
 
